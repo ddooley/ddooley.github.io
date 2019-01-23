@@ -16,9 +16,9 @@ If you find a term that’s close enough, but would like additions or changes ma
 - the [`IRI`](https://en.wikipedia.org/wiki/Internationalized_resource_identifier){:target="_blank"} that identifies the term (something like [`http://pur l.obolibrary.org/obo/OBI_0000070`](http://purl.obolibrary.org/obo/OBI_0000070){:target="_blank"})
 - a description of the changes you would like made and reasons for the changes
 
-When you are ready, follow this link to create a new ticket: [`https://github.com/obi-ontology/obi/issues/new`](https://github.com/obi-ontology/obi/issues/new){:target="_blank"}
+When you are ready, follow this link to create a new ticket (a GitHub account is required): 
 
-(A GitHub account is required.)
+[`https://github.com/obi-ontology/obi/issues/new`](https://github.com/obi-ontology/obi/issues/new){:target="_blank"} 
 
 ## New Terms
 
@@ -32,11 +32,9 @@ If you don’t find the term you’re looking for, but it’s within OBI’s sco
 1. example of usage
 1. term editor: your name, and that of any collaborators, as it should appear in OBI
 
-When you’ve collected as much of this information as possible, please follow this link to submit a term request to our tracker:
+When you’ve collected as much of this information as possible, please follow this link to submit a term request to our tracker (a GitHub account is required): 
 
 [`https://github.com/obi-ontology/obi/issues/new`](https://github.com/obi-ontology/obi/issues/new){:target="_blank"}
-
-(A GitHub account is required.)
 
 ## More Details
 

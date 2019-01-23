@@ -2,7 +2,7 @@
 layout: single
 title: Ontology for Biomedical Investigations
 sidebar:
-  title: Test
+  nav: "docs"
 excerpt: "Community Standard for Scientific Data Integration"
 header:
   overlay_color: "#0092ca"

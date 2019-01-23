@@ -7,6 +7,25 @@ main:
   - title: "Media"
     url: /media/
 
+docs:
+  - title: Doc Home
+    url: /docs/
+
+  - title: Core Model
+    url: /docs/core-model/
+    children:
+     - title: Core Classes
+       url: /docs/core-classes/
+     - title: Data modelling
+       url: /docs/data-intro/
+       children:
+       - title: Data Types
+         url: /docs/data-types/
+       - title: Value Specs vs Data Properties
+         url: /docs/vs-vs-dp/
+       - title: Time-stamped Data
+         url: /docs/time-stamped-datums/  
+ 
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"

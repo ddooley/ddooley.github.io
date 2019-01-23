@@ -206,7 +206,7 @@ A duration is a difference in time calculated from an interval of two time point
 
 ## Datetime
 
-Of XML's native date/time datatypes, OWL has currently adopted [xsd:date](http://www.datypic.com/sc/xsd11/t-xsd_date.html), [xsd:datetime](http://www.datypic.com/sc/xsd11/t-xsd_dateTime.html) (format [-]CCYY-MM-DDThh:mm:ss.sss[Z|(+|-)hh:mm] according to the ISO 8601 standard) and [xsd:dateTimeStamp](http://www.datypic.com/sc/xsd11/t-xsd_dateTimeStamp.html) (format CCYY-MM-DDThh:mm:ss.sss(Z|(+|-)hh:mm), i.e. time zone required) into its reasoning specification.  A Gregorian calendar 24 hour clock instant of time is used, and will be compared down to the second and timezone offset for xsd:dateTime/Stamp formats.
+Of XML's native date/time datatypes, OWL has currently adopted [xsd:date](http://www.datypic.com/sc/xsd11/t-xsd_date.html), [xsd:datetime](http://www.datypic.com/sc/xsd11/t-xsd_dateTime.html) (format [-]CCYY-MM-DDThh:mm:ss.sss[Z|(+||-)hh:mm] according to the ISO 8601 standard) and [xsd:dateTimeStamp](http://www.datypic.com/sc/xsd11/t-xsd_dateTimeStamp.html) (format CCYY-MM-DDThh:mm:ss.sss(Z||(+||-)hh:mm), i.e. time zone required) into its reasoning specification.  A Gregorian calendar 24 hour clock instant of time is used, and will be compared down to the second and timezone offset for xsd:dateTime/Stamp formats.
  
 [//]: # (    Class: 'date value specification'
         subClassOf 'value specification'

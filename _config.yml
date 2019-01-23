@@ -287,10 +287,10 @@ compress_html:
 defaults:
   defaults:
   # documentation images
-  - scope:
-      path: "_pages/docs/figs"
-    values:
-      image: true
+  #- scope:
+  #    path: "_pages/docs/figs"
+  #  values:
+  #    image: true
 
 
   # _posts

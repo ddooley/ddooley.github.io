@@ -13,7 +13,7 @@ sidebar:
 
 In addition to reasoning prowess, using an OWL ontology to detail types of assay data - parameters, measurables, independent and dependent variables - will encourage standardization of their usage, enable experimental reproducibility, and facilitate data exchange and conversion.
 
-Note that the diagrams in this section are contained in a [figs/data_obi_draw.io.xml](/docs/figs/data_obi_draw.io.xml) file, in [draw.io](http://draw.io) diagram format for reuse in ontology design work.  *Most of the diagrams below skip relation cardinality details (e.g. "X 'is about' [[some / all / max 3 / only]] Y"), but these do exist in OBI to enforce more structure, and are detailed in OWL code examples.*
+Note that the diagrams in this section are contained in a [figs/data_obi_draw.io.xml](/assets/files/data_obi_draw.io.xml) file, in [draw.io](http://draw.io) diagram format for reuse in ontology design work.  *Most of the diagrams below skip relation cardinality details (e.g. "X 'is about' [[some / all / max 3 / only]] Y"), but these do exist in OBI to enforce more structure, and are detailed in OWL code examples.*
 
 *Aligning with BFO, OBI divides references about study design and assay structure into roughly four domains - **[`material entities`](http://purl.obolibrary.org/obo/BFO_0000040)**, their observable **[`qualities`](http://purl.obolibrary.org/obo/BFO_0000019)**, **[`planned processes`](http://purl.obolibrary.org/obo/OBI_0000011)**, and **[`information artifacts`](http://purl.obolibrary.org/obo/IAO_0000030)**, which all show up in process and data modelling.*
 
@@ -21,11 +21,7 @@ Note that the diagrams in this section are contained in a [figs/data_obi_draw.io
 
 *Under `material entity` we find OBI's **[`organism`](http://purl.obolibrary.org/obo/OBI_0100026)** - the usual focus of biomedical investigations. Organism related terms - whether in OBI or in other ontologies that cover taxonomic, anatomic, developmental, pathological, environmental etc. aspects - will likely occur in study design objectives, protocols and experimental observations.*
 
-<img align="right" src="/docs/figs/data_john_mass_entity_property.png">
-
-<img align="right" src="/_pages/docs/figs/data_john_mass_entity_property.png">
-
-<img align="right" src="data_john_mass_entity_property.png">
+<img align="right" src="/assets/images/docs/data_john_mass_entity_property.png">
 
 *We use **entity property diagrams** to show material entities and selected object properties (that link them to qualities) and class-subclass relations, which together illustrate OBI core "terminological component" (Tbox) contents. In this example, a `material entity` [`has quality`](http://purl.obolibrary.org/obo/RO_0000086) some [`mass`](http://purl.obolibrary.org/obo/PATO_0000125). This axiom is not currently in OBI but is included to show the potential for relation inheritance.  Formally, `has quality` is a generic object property existing between a BFO independent continuent entity (the bearer) and a quality, which is a dependent continuent (i.e. something that depends on the existence of its continuent).  [`Homo sapiens`](http://purl.obolibrary.org/obo/NCBITaxon_9606) is shown as a descendent of `organism`, a subclass of `material entity`, so the descendants also inherit a mass quality that can be referenced.  (A dashed arrow between entities indicates that several intermediate taxon classes have been omitted)*
 

@@ -1,7 +1,7 @@
 # main links
 main:
   - title: "Docs"
-    url: /docs/
+    url: /pages/docs.md
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"

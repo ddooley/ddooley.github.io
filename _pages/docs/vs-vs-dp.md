@@ -1,5 +1,10 @@
-
-## Value specification vs data property
+---
+layout: single
+title: Value specification vs data property
+permalink: /docs/vs-vs-dp/
+sidebar:
+  nav: "docs"
+---
 
 <img align="right" src="figs/data_john_data_properties.png">
 

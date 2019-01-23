@@ -1,3 +1,11 @@
+---
+layout: single
+title: Core Classes
+permalink: /docs/core-classes/
+sidebar:
+  nav: "docs"
+---
+
 The top-level organization of the main classes of the ontology is laid out in the following figure:
 
 ![Basic Class Hierarchy](figs/journal.pone.0154556.g001.PNG)

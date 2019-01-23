@@ -1,5 +1,10 @@
-
-# Time-stamped datums
+---
+layout: single
+title: Time-stamped Datums
+permalink: /docs/time-stamped-datums/
+sidebar:
+  nav: "docs"
+---
 
 OBI's preferred datum, quality, and value specification approach can be enhanced with time data points in a few ways.   
 

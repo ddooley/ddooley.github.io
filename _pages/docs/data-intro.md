@@ -1,11 +1,12 @@
-[//]: # (Please put comments like this one into the text to communicate with other OBI-ers)
+---
+layout: single
+title: Introduction to OBI data modelling
+permalink: /docs/data-intro/
+sidebar:
+  nav: "docs"
+---
 
-* [Introduction](#introduction-to-obi-process-and-data-modelling)
-* [Material entities and their properties](#material-entities-and-their-properties)
-* [Information content entities](#information-content-entities)
-* [Process modelling](#process-modelling)
-* [Data value specification](#data-value-specification)
-* [A combined view](#a-combined-view)
+[//]: # (Please put comments like this one into the text to communicate with other OBI-ers)
 
 #Introduction to OBI process and data modelling
 

@@ -1,3 +1,11 @@
+---
+layout: single
+title: Data Types
+permalink: /docs/data-types/
+sidebar:
+  nav: "docs"
+---
+
 [//]: # (Please put comments like this one into the text to communicate with other OBI-ers)
 
 

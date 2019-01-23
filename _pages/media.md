@@ -1,6 +1,5 @@
 ---
 layout: single
-title: Media
 permalink: /media/
 ---
 

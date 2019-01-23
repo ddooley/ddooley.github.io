@@ -15,8 +15,8 @@
 
 }
 
-.page__hero--overlay > p.page__lead {
-	max-width: auto !important;
+.page__hero--overlay > .page__lead {
+	max-width: none !important;
 }
 
 .page__hero--overlay > a.btn {margin: 0 2em !important;}

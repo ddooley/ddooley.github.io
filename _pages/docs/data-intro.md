@@ -35,7 +35,7 @@ Note that the diagrams in this section are contained in a [figs/data_obi_draw.io
 
 [//]: # (The defining characteristic of an `Information Content Entity` is that it is 'about' something. Thus, the scope of the OBI representation of data is to capture the details and characteristics of the information, rather than the thing that it describes. This is a crucial scoping step in developing representations in OBI.)
 
-<img align="right" src="/docs/figs/data_iao_branch.png">
+<img align="right" src="/assets/images/docs/data_iao_branch.png">
 
 The `information content entity` **[`data item`](http://purl.obolibrary.org/obo/IAO_0000027)** class holds singular entities or collections of entities that specifically record inputs or outputs of processes / equipment / human interaction. OBI distinguishes the following singular types of data items, usually called "datums", as follows:
 
@@ -49,7 +49,7 @@ All ICEs are allowed a **[`value specification`](http://purl.obolibrary.org/obo/
 
 *Generally a **[`process`](http://purl.obolibrary.org/obo/BFO_0000015)** can have other processes as parts, and can have instances with start and end times associated with them.  A **[`planned process`](http://purl.obolibrary.org/obo/OBI_0000011)** is carried out by agent(s) who are guided by some kind of **[`plan specification`](http://purl.obolibrary.org/obo/IAO_0000104)**, an ICE which has **[`objective`](http://purl.obolibrary.org/obo/IAO_0000005)** and **[`action`](http://purl.obolibrary.org/obo/IAO_0000007)** components. A **[`study design`](http://purl.obolibrary.org/obo/OBI_0500000)** and its **[`protocol`](http://purl.obolibrary.org/obo/OBI_0000272)** part(s) are subclasses of `plan specification`. This is documented in the [`Study Design`]() page.* 
 
-<img align="right" src="/docs/figs/data_assay_2.png">
+<img align="right" src="/assets/images/docs/data_assay_2.png">
 
 *A **process / datum model diagram** shows how material entities or data items can be an input or output of some process. This diagram often includes parts of entity property diagrams in order to reference components as inputs or in aboutness clauses.*
 
@@ -58,7 +58,7 @@ All ICEs are allowed a **[`value specification`](http://purl.obolibrary.org/obo/
 <br clear="both">
 
 
-<img align="right" src="/docs/figs/data_john_mass_process.png">
+<img align="right" src="/assets/images/docs/data_john_mass_process.png">
 
 *The next example shows a **[`mass measurement assay`](http://purl.obolibrary.org/obo/OBI_0000445)** which takes in some material and outputs a **[`mass measurement datum`](http://purl.obolibrary.org/obo/IAO_0000414)**.  The output datum is stated to be a measure of (only) mass quality. The **[`is quality measurement of`](http://purl.obolibrary.org/obo/IAO_0000221)** object property is actually a sub-property of `is about` which is used when the target of aboutness is a quality.*
 
@@ -77,7 +77,7 @@ All ICEs are allowed a **[`value specification`](http://purl.obolibrary.org/obo/
 
 ### Material processing
 
-<img align="right" src="/docs/figs/data_processed_material.png">
+<img align="right" src="/assets/images/docs/data_processed_material.png">
 
 *Processes don't necessarily generate information products.  The OBI [`material processing`](http://purl.obolibrary.org/obo/OBI_0000094) class covers many kinds of process such as sample preparation, manufacturing, and staining. [`processed specimen`](http://purl.obolibrary.org/obo/OBI_0000953) is likely needed as part of experimental protocol modeling involving biosamples. It remains a material entity, rather than a `data item` that assays output.* 
 
@@ -93,7 +93,7 @@ All ICEs are allowed a **[`value specification`](http://purl.obolibrary.org/obo/
 
 *This brings us to the collection of data - where specific protocols or instruments are used, generating data on particular scales and scientific units.  One can have data about entities which bear various qualities, and their value specifications, without necessarily having connections to a model layer of processes and datums.  One can document tabular data column metadata independently of experimental protocol process descriptions that explain how the data was generated.  Here **data specification diagrams** are useful for showing a given observation's type of variable and permitted units. This diagram and modelling approach can exist independently of the process model described above, but is designed to fit seamlessly with it as well.*
 
-<img align="right" src="/docs/figs/data_john_mass_value_spec.png">
+<img align="right" src="/assets/images/docs/data_john_mass_value_spec.png">
 
 To establish constraints on what a datum can have for a value, OBI introduces a **[`value specification`](http://purl.obolibrary.org/obo/OBI_0001933)** (VS) class which can express those constraints in axioms (for example pertinent numeric data type, units, or valid categorical choices). An instance of a value specification can have a **[`has specified value`](http://purl.obolibrary.org/obo/OBI_0002135)** data property that holds its literal value. A value specification details allowable values for a given purpose. 
 
@@ -105,7 +105,7 @@ The connection between a measurement datum (or any ICE term) and a value specifi
 
 In the case where a value specification and/or measurement datum is about the conjunction of a few different things, the aboutness target can be a precomposed term or instance of those components, with one component, usually a quality, providing the primary type of the measure.  For example "eye color" is primarily about color - and so limited to ways that can be reported, but secondarily about the body part being observed, and finally - in the instance, references a particular organism being observed. An example generic value specification and measurement datum both pointing to John's eye color being brown (in this case "specifies value of" points directly to the value specification's essentially categorical value. Here the `color value specification` provides the range of choices permitted for the instance of color quality.
 
-<img src="/docs/figs/data_john_eye.png">
+<img src="/assets/images/docs/data_john_eye.png">
 
 ***DRAFT NOTE: Is it best to say "eye part of some mamallia", or "eye located in mammalia" as a shortcut? Or do we say the complete UBERON ... "eye part of some visual system", "visual system part of some mammalia?***
 
@@ -117,7 +117,7 @@ In the case where a value specification and/or measurement datum is about the co
 
 *A diagram that combines material entity, quality, process, data collection standards, and derived information, allows us to see the big picture - the data structure architecture that enables constructive reasoning. By tracing classes further up the inheritance hierarchy, we can see the impact on instance data.*
 
-<img align="right" src="/docs/figs/data_john_mass.png">
+<img align="right" src="/assets/images/docs/data_john_mass.png">
 
 ([full-sized image](figs/data_john_mass.png))
 

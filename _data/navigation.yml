@@ -22,10 +22,10 @@ docs:
     children:
       - title: Introduction
         url: /docs/data-intro/
-      - title: Data Types
-        url: /docs/data-types/
       - title: Value Specs vs Data Properties
         url: /docs/vs-vs-dp/
+      - title: Data Types
+        url: /docs/data-types/
       - title: Time-stamped Data
         url: /docs/time-stamped-datums/  
 

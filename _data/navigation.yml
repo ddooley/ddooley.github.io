@@ -1,9 +1,9 @@
 # main links
 main:
   - title: "Docs"
-    url: /pages/docs.md
+    url: /docs/
   - title: "Papers"
-    url: /pages/papers.md
+    url: /papers/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"

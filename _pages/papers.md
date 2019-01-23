@@ -1,7 +1,7 @@
 ---
 layout: single
 author_profile: false
-permalink: /docs/
+permalink: /papers/
 ---
 
-# OBI Documentation
+# OBI Papers

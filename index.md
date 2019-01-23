@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: single
 title: OBI | Home
 header: |
   <div class="jumbotron">

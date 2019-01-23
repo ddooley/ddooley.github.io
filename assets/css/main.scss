@@ -15,10 +15,12 @@
 
 }
 
-.page__hero--overlay > p.page__lead {max-width: auto}
+.page__hero--overlay > p.page__lead {
+	max-width: auto !important;
+}
 
-.page__hero--overlay > a.btn {margin: 0 2em}
+.page__hero--overlay > a.btn {margin: 0 2em !important;}
 
 .page__content p, .page__content li, .page__content dl {
-    font-size: 0.9 rem;
+    font-size: 0.9 rem !important;
 }

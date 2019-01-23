@@ -23,13 +23,13 @@ docs:
       - title: Material Entities
         url: /docs/material-entities/
       - title: Information Content Entities
-        url /docs/ice/
+        url: /docs/ice/
       - title: Process Modelling Basics
-        url /docs/process-modelling-basics/
+        url: /docs/process-modelling-basics/
       - title: Value Specifications
-        url /docs/value-specifications/
+        url: /docs/value-specifications/
       - title: A combined view
-        url /docs/combined-view/
+        url: /docs/combined-view/
       - title: Data Types
         url: /docs/data-types/
       - title: Value Specs vs Data Properties

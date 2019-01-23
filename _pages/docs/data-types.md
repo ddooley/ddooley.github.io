@@ -9,9 +9,6 @@ sidebar:
 
 [//]: # (Please put comments like this one into the text to communicate with other OBI-ers)
 
-
-[//]: # (# Basic Implementation Issues: RDF, OWL, etc. )
-
 [//]: # (OWL-driven reasoning and SPARQL querying can be applied to data represented in a graph to compare sets of specimen qualities or phenotypes like weight, length, life stage, handedness, and other dimensions.) 
 
 OWL inherits most of RDF's ability to specify XML string, numeric, datetime, and URI datatype values as data properties of an entity, and can compare data properties across entities (see [here](https://www.w3.org/TR/xmlschema-2/) and [here](https://www.w3.org/TR/swbp-xsch-datatypes)).  OWL can also be used to specify constraints on string value length and content, and can specify numeric bounds on numbers.  OBI currently focuses on reuse of RDF/XML datatypes to capture experimental data.  Those who need further functionality may find other datatype representations useful (e.g. [here](https://www.sciencedirect.com/science/article/pii/S0020025515005800)). 
@@ -24,9 +21,11 @@ An OWL data property can hold a string as a plain literal with an optional langu
 
 For example, one could construct the following representation to store and validate international postal codes generally, and the US Zip Code subclass (a string of 5 digits).
 
+<!--
 [//]: # (        Class: 'string value specification'        subClassOf 'has specified value' only xsd:string)
 
 [//]: # (        subClassOf 'string value specification')
+-->
 
     Class: 'postal code specification'
         subClassOf 'value specification'
@@ -41,7 +40,9 @@ For example, one could construct the following representation to store and valid
 
 String length constraints can be set via "length", "minLength" and "maxLength" parameters, e.g. "xsd:string[length "5"^^xsd:integer].  A "pattern" parameter supports [regular expression](https://www.regular-expressions.info/xml.html) syntax to some extent, allowing "[0-9] [a-z] [A-Z] . ? * + {m,n}" components.  Thus we can express fairly well-validated  [email addresses](http://purl.obolibrary.org/obo/IAO_0000429):
 
+<!--
 [//]: # (        subClassOf 'string value specification')
+-->
 
     Class: 'email address specification'
         subClassOf 'value specification'
@@ -65,8 +66,6 @@ For example, an "E-coli K antigen value specification" can be represented as:
         subClassOf 'specifies value of' only 'K antigen'
         subClassOf 'has specified value' only xsd:string[pattern "K(1|2a|2ac|3|4|5|6|7|8|9|10|11|12|13|14|15|16|18a|18ab|19|20|22|23|24|26|27|28|29|30|31|34|37|39|40|41|42|43|44|45|46|47|49|50|51|52|53|54|56|96|55|74|82|84|85ab|85ac|87|92|93|95|97|98|100|101|102|103|X104|X105|X106)"]]
 
-[diagram]
-
 This allows a reasoner to raise the unsatisfiable alarm when an instance of `E-coli K antigen value specification`  `has specified value` 'K17a'.
 
 One can potentially leave the `has specified value` axiom out, in which case validation enforcement would need to occur outside the OWL reasoning context.
@@ -84,8 +83,9 @@ However, this is not permitted in OWL since **`has specified value`** data prope
 In a different approach, an OBI example using categorical value specification focuses on describing a tumor grading standard [`histologic grade according to AJCC 7th edition`](http://purl.obolibrary.org/obo/OBI_0002205).  Here the value specification class has individuals which are each interpreted as grades, and which could potentially be augmented with data properties that detail their assessment differentiae.  This approach is suited to cases where selections are not already established (and would not be in the future) as ontology classes situated within their own hierarchic context. 
 
 Alternately one could use the `specifies value of` relation to point to existing categorical choices (qualities, etc.):
-
+<!-- 
 [//]: # (        subClassOf 'categorical ontology value specification')
+-->
 
     Class: 'handedness value specification'
         subClassOf 'categorical value specification'
@@ -108,10 +108,12 @@ Now an instance of `handedness value specification` can have a **`specifies valu
 Under discussion is the formalization of a "boolean value specification" datatype that pertains to the presence
 or absence of a quality or categorical entity. Essentially any quality taken on its own can be treated as a boolean variable.  The information that an animal is characterized as a [`neonate`](http://www.ebi.ac.uk/efo/EFO_0001372), for example may be the focus of interest in a study even if a more comprehensive categorical value specification of its [`developmental stage`](http://www.ebi.ac.uk/efo/EFO_0000399)  could have been posed as a Likert scale.
 
+<!-- 
 [//]: # (    Class: 'boolean value specification'
         subClassOf 'has specified value' only xsd:boolean
 )
 [//]: # (        subClassOf 'boolean value specification')
+-->
 
     Class: 'neonate value specification'
         subClassOf 'value specification'
@@ -134,10 +136,12 @@ OBI currently does not provide functionality for dealing with numeric precision 
 
 ### Decimal
 
+<!--
 [//]: # (        Class 'decimal value specification'
         subClassOf 'has specified value' only xsd:decimal
 )
 [//]: # (        subClassOf 'decimal value specification')
+-->
 
 Here the pH acidity scale is effectively characterized as a decimal between 0.0 and 14.0:
 
@@ -153,11 +157,13 @@ Note that the Protege axiom editor can be very fussy about exactly how the >,>=,
 
 Some variables are inherently integers - countable things that can't meaningfully have fractions except as intermediate calculations (quantities of water can be described in decimal to handle portions like 1.5 cups, while basepairs are not meaningful as fractions. Use xsd:integer where rounding during comparison won't be an issue.
 
+<!-- 
 [//]: # (    Class 'integer value specification'
         subClassOf 'has specified value' only xsd:integer
         subClassOf 'decimal value specification'
 )
 [//]: # (        subClassOf 'integer value specification')
+-->
 
     Class 'MIC diffusion measurement specification'
         subClassOf 'scalar value specification'
@@ -169,11 +175,13 @@ Some variables are inherently integers - countable things that can't meaningfull
 
 ### Float
 
+<!--
 [//]: # (    Class 'float value specification'
         subClassOf 'decimal value specification'
         subClassOf 'has specified value' only xsd:float
 )
 [//]: # (        subClassOf 'float value specification')
+-->
 
     Class 'MIC dilution measurement specification'
         subClassOf 'scalar value specification'
@@ -190,13 +198,16 @@ A value specification can select at a general level all the permissible units wh
 Units extend to countable things like nucleotide 'basepairs' and potentially even 'oranges' or 'fruit' etc. In this respect they indicate the aboutness of the value specification.
 
 ## Duration
+
 A duration is a difference in time calculated from an interval of two time points. (Semantically the interval is about those points and the events they mark). Value specifications for date and time durations or intervals are generally handled by decimal value specifications with one or more time units attached to them. This allows for decimal fraction amounts, e.g. 2.5 days. An 'age since birth' value specification could be:
 
+<!--
 [//]: # (Class: 'duration value specification'
         subClassOf 'value specification'
         subClassOf 'specifies value of' only xsd:decimal
 )
 [//]: # (        subClassOf 'duration value specification')
+-->
 
     Class: 'age since birth value specification'
         subClassOf 'scalar value specification'
@@ -207,12 +218,14 @@ A duration is a difference in time calculated from an interval of two time point
 ## Datetime
 
 Of XML's native date/time datatypes, OWL has currently adopted [xsd:date](http://www.datypic.com/sc/xsd11/t-xsd_date.html), [xsd:datetime](http://www.datypic.com/sc/xsd11/t-xsd_dateTime.html) (format [-]CCYY-MM-DDThh:mm:ss.sss[Z|(+||-)hh:mm] according to the ISO 8601 standard) and [xsd:dateTimeStamp](http://www.datypic.com/sc/xsd11/t-xsd_dateTimeStamp.html) (format CCYY-MM-DDThh:mm:ss.sss(Z||(+||-)hh:mm), i.e. time zone required) into its reasoning specification.  A Gregorian calendar 24 hour clock instant of time is used, and will be compared down to the second and timezone offset for xsd:dateTime/Stamp formats.
- 
+
+<!--
 [//]: # (    Class: 'date value specification'
         subClassOf 'value specification'
         subClassOf 'has specified value' only xsd:date
 )
 [//]: # (        subClassOf 'date value specification')
+-->
 
     Class: 'hospital admission date specification'
         subClassOf 'scalar value specification'

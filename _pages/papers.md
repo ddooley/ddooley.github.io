@@ -1,7 +1,5 @@
 ---
 layout: single
-author_profile: false
+title: papers
 permalink: /papers/
 ---
-
-# OBI Papers

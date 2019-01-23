@@ -1,9 +1,8 @@
 ---
 layout: single
-permalink: /requests/
+title: OBI Term Guidelines
+permalink: /obi-term-guidelines/
 ---
-
-#OBI Term Guidelines
 
 OBI is a community effort, and we greatly appreciate submissions of new terms! Here are some tips to help you get started.
 

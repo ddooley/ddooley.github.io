@@ -1,7 +1,6 @@
 ---
 layout: single
-author_profile: false
+title: OBI Documentation
 permalink: /docs/
 ---
-
-# OBI Documentation
+yada

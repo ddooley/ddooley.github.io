@@ -4,6 +4,8 @@ main:
     url: /docs/
   - title: "Papers"
     url: /papers/
+  - title: "Term Requests"
+    url: /obi-term-guidelines/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"

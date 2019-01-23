@@ -159,7 +159,6 @@ include:
   - .htaccess
   - _pages
   - _pages/docs
-  - _pages/docs/figs
 
 exclude:
   - "*.sublime-project"
@@ -286,6 +285,13 @@ compress_html:
 
 # Defaults
 defaults:
+  defaults:
+  # documentation images
+  - scope:
+      path: "_pages/docs/figs"
+    values:
+      image: true
+
   # _posts
   - scope:
       path: ""

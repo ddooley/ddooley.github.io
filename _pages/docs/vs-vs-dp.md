@@ -6,7 +6,7 @@ sidebar:
   nav: "docs"
 ---
 
-<img align="right" src="figs/data_john_data_properties.png">
+<img align="right" src="/assets/images/docs/data_john_data_properties.png">
 
 Using value specifications to record entity qualities and other measurables reduces the need for a plethora of data properties. Rather than establish a `has age` data property, we express a value specification about age.  Both hold a value, but the latter allows us to focus on defining the semantics of the quality 'age' and its subclasses - `age since planting` etc. In this view a data property is analogous to a kind of compressed and semantically opaque value specification because a data property's semantic detail is limited to a few attributes (functional, domain, and range constraints). Examples of why they are limiting is described below.
 
@@ -16,7 +16,7 @@ A data property doesn't support a relevant time of measurement value.  For examp
 
 For these reasons, OBI has a handful of data properties (e.g. `has specified value`), and a larger and growing set of measurement / setting / prediction datums and the material entity qualities that they are about, complements of PATO and other ontologies.
 
-<img align="right" src="figs/data_john_properties_as_vs.png">
+<img align="right" src="/assets/images/docs/data_john_properties_as_vs.png">
 
 ***EDITOR NOTES***
 
@@ -26,8 +26,8 @@ For these reasons, OBI has a handful of data properties (e.g. `has specified val
 
 Shall we allow including ICE values directly, avoiding 'value specification' and just using a new 'has value' data property to connect an ICE to a value? For example a "person 'bearer of' some name"; "anon instance of person has value John".
 
-Can we allow identifier string values in value specification? See: [issue 985](https://github.com/obi-ontology/obi/issues/985)
+Can we allow identifier string values in value specification? See: [issue 985](https://github.com/obi-ontology/obi/issues/985){:target="_blank"}
 
-Next section: [`Data types`](data-types.md)
+Next section: [`Data types`](/docs/data-types.md)
 
 

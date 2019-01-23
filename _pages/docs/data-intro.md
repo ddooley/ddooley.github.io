@@ -119,9 +119,9 @@ In the case where a value specification and/or measurement datum is about the co
 
 <img align="right" src="/assets/images/docs/data_john_mass.png">
 
-([full-sized image](figs/data_john_mass.png))
+([full-sized image](/assets/images/docs/data_john_mass.png))
 
-Next section: [`Value specifications vs data properties`](data-value-specs-vs-data-properties.md)
+Next section: [`Value specifications vs data properties`](/docs/vss-vs-dp.md)
 
 ***
 References: 

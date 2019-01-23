@@ -1,28 +1,28 @@
 ---
 layout: single
-header: |
-  <div class="jumbotron">
-    <h1>Ontology for Biomedical Investigations</h1>
-    <p class="lead">Community Standard for Scientific Data Integration</p>
-    <p>
-      <a class="btn btn-md btn-success" href="http://www.ontobee.org/ontology/OBI" role="button">Browse OBI</a>
-      <a class="btn btn-md btn-success" href="http://purl.obolibrary.org/obo/obi.owl" role="button">Download OBI</a>
-      <a class="btn btn-md btn-success" href="https://github.com/obi-ontology/obi" role="button">View on Github</a>
-    </p>
-  </div>
-  |
+title: Ontology for Biomedical Investigations
+excerpt: "Community Standard for Scientific Data Integration"
+header:
+  overlay_color: "#FFF"
+  actions:
+    - label: "Browse OBI"
+      url: "http://www.ontobee.org/ontology/OBI"
+    - label: "Download OBI"
+      url: "http://purl.obolibrary.org/obo/obi.owl"
+    - label: "View on Github"
+      url: "https://github.com/obi-ontology/obi"
 ---
 
 The Ontology for Biomedical Investigations (OBI) helps you communicate clearly about scientific investigations by defining more than 2500 terms for assays, devices, objectives, and more.
 
 It's easy to use with many other
-[Open Biomedical Ontologies](http://obofoundry.org),
+[Open Biomedical Ontologies](http://obofoundry.org){:target="_blank"},
 including the
-[Gene Ontology](http://geneontology.org/),
-[Protein Ontology](http://pir.georgetown.edu/pro/pro.shtml),
-[Plant Ontology](http://www.plantontology.org/),
-[ChEBI](http://www.ebi.ac.uk/chebi/),
-and [many more](http://obofoundry.org).
+[Gene Ontology](http://geneontology.org/){:target="_blank"},
+[Protein Ontology](http://pir.georgetown.edu/pro/pro.shtml){:target="_blank"},
+[Plant Ontology](http://www.plantontology.org/){:target="_blank"},
+[ChEBI](http://www.ebi.ac.uk/chebi/){:target="_blank"},
+and [many more](http://obofoundry.org){:target="_blank"}.
 
 
 ## What is an Ontology?
@@ -42,7 +42,7 @@ Please see our [term guidelines](/obi_term_guidelines/) for information on how t
 
 ## Report a Problem
 
-Please use our GitHub issue tracker to report a problem with OBI: <https://github.com/obi-ontology/obi/issues>{:target="_blank"}
+Please use our GitHub issue tracker to report a problem with OBI: <https://github.com/obi-ontology/obi/issues](https://github.com/obi-ontology/obi/issues){:target="_blank"}
 
 ## Cite OBI
 

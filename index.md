@@ -40,11 +40,11 @@ The [OBI Documentation](/docs/) pages include documentation on the use and devel
 
 ## Request a Term
 
-Please see our [term guidelines](/obi_term_guidelines/) for information on how to request a new term, or request changes to an existing term.
+Please see our [term guidelines](/obi-term-guidelines/) for information on how to request a new term, or request changes to an existing term.
 
 ## Report a Problem
 
-Please use our GitHub issue tracker to report a problem with OBI: <https://github.com/obi-ontology/obi/issues](https://github.com/obi-ontology/obi/issues){:target="_blank"}
+Please use our GitHub issue tracker to report a problem with OBI: [https://github.com/obi-ontology/obi/issues](https://github.com/obi-ontology/obi/issues){:target="_blank"}
 
 ## Cite OBI
 

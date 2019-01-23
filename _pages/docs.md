@@ -13,11 +13,10 @@ This elaborates on information presented in the core OBI paper:
 
 # Basic Documentation
 
-* **Core Class Definitions** (basic formulation of the types found in the ontology - start here to begin modeling your domain)
+* **[Core Class Definitions](/docs/core-classes/)** (basic formulation of the types found in the ontology - start here to begin modeling your domain)
 * **Extended Class Definitions** (working models for specific subdomains and specializations of OBI beyond the core classes) 
 * **Example Use Cases** (how we describe specific use cases with OBI) 
 * **Implementation and Development Notes** (how we develop, extend and implement the ontology)
 * **Community** (Description of the OBI development community. Who were are and what our goals are for this work)
-* **Publications and Presentations** (presentations of existing work and , *etc.*)
 
 All pages pertaining to these items are available from links in the sidebar (&#8594;), which means they're visible from every page in the wiki.

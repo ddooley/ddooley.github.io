@@ -21,22 +21,22 @@ docs:
     url: /docs/data-intro/
 
     children:
-    - title: Material Entities
-      url: /docs/material-entities/
-    - title: Information Content Entities
-      url /docs/ice/
-    - title: Process Modelling Basics
-      url /docs/process-modelling-basics/
-    - title: Value Specifications
-      url /docs/value-specifications/
-    - title: A combined view
-      url /docs/combined-view/
-    - title: Data Types
-      url: /docs/data-types/
-    - title: Value Specs vs Data Properties
-      url: /docs/vs-vs-dp/
-    - title: Time-stamped Data
-      url: /docs/time-stamped-datums/  
+     - title: Material Entities
+       url: /docs/material-entities/
+     - title: Information Content Entities
+       url /docs/ice/
+     - title: Process Modelling Basics
+       url /docs/process-modelling-basics/
+     - title: Value Specifications
+       url /docs/value-specifications/
+     - title: A combined view
+       url /docs/combined-view/
+     - title: Data Types
+       url: /docs/data-types/
+     - title: Value Specs vs Data Properties
+       url: /docs/vs-vs-dp/
+     - title: Time-stamped Data
+       url: /docs/time-stamped-datums/  
 
 
   # - title: "About"

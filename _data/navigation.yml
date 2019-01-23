@@ -11,9 +11,10 @@ docs:
   - title: Doc Home
     url: /docs/
 
-  - title: Core Model
-    url: /docs/core-model/
+  - title: OBI Core
     children:
+      - title: Core Model
+        url: /docs/core-model/
       - title: Core Classes
         url: /docs/core-classes/
 
@@ -29,7 +30,7 @@ docs:
         url: /docs/time-stamped-datums/  
 
   - title: Process modelling
-  
+
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"

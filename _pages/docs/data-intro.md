@@ -15,7 +15,7 @@ sidebar:
 
 In addition to reasoning prowess, using an OWL ontology to detail types of assay data - parameters, measurables, independent and dependent variables - will encourage standardization of their usage, enable experimental reproducibility, and facilitate data exchange and conversion.
 
-Note that the diagrams in this section are contained in a [figs/data_obi_draw.io.xml](/docs/figs/data_obi_draw.io.xml) file, in [draw.io](http://draw.io) diagram format for reuse in ontology design work.  *Most of the diagrams below skip relation cardinality details (e.g. "X 'is about' [some | all | max 3 | only] Y"), but these do exist in OBI to enforce more structure, and are detailed in OWL code examples.*
+Note that the diagrams in this section are contained in a [figs/data_obi_draw.io.xml](/docs/figs/data_obi_draw.io.xml) file, in [draw.io](http://draw.io) diagram format for reuse in ontology design work.  *Most of the diagrams below skip relation cardinality details (e.g. "X 'is about' [[some / all / max 3 / only]] Y"), but these do exist in OBI to enforce more structure, and are detailed in OWL code examples.*
 
 *Aligning with BFO, OBI divides references about study design and assay structure into roughly four domains - **[`material entities`](http://purl.obolibrary.org/obo/BFO_0000040)**, their observable **[`qualities`](http://purl.obolibrary.org/obo/BFO_0000019)**, **[`planned processes`](http://purl.obolibrary.org/obo/OBI_0000011)**, and **[`information artifacts`](http://purl.obolibrary.org/obo/IAO_0000030)**, which all show up in process and data modelling.*
 

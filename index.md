@@ -1,9 +1,11 @@
 ---
 layout: single
 title: Ontology for Biomedical Investigations
+sidebar:
+  
 excerpt: "Community Standard for Scientific Data Integration"
 header:
-  overlay_color: "#FFF"
+  overlay_color: "#0092ca"
   actions:
     - label: "Browse OBI"
       url: "http://www.ontobee.org/ontology/OBI"

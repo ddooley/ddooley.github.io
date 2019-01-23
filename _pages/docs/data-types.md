@@ -2,6 +2,7 @@
 layout: single
 title: Data Types
 permalink: /docs/data-types/
+toc: true
 sidebar:
   nav: "docs"
 ---

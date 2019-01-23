@@ -2,6 +2,7 @@
 layout: single
 title: Introduction to OBI data modelling
 permalink: /docs/data-intro/
+toc: true
 sidebar:
   nav: "docs"
 ---

@@ -132,7 +132,7 @@ Currently all numeric value specifications are handled under the [`scalar value 
 
 OBI currently does not provide functionality for dealing with numeric precision or error range. 
 
-#### Decimal
+### Decimal
 
 [//]: # (        Class 'decimal value specification'
         subClassOf 'has specified value' only xsd:decimal
@@ -149,7 +149,7 @@ Here the pH acidity scale is effectively characterized as a decimal between 0.0 
 
 Note that the Protege axiom editor can be very fussy about exactly how the >,>=,<,<= comparators are positioned with spaces with respect to brackets and numbers.
 
-#### Integer
+### Integer
 
 Some variables are inherently integers - countable things that can't meaningfully have fractions except as intermediate calculations (quantities of water can be described in decimal to handle portions like 1.5 cups, while basepairs are not meaningful as fractions. Use xsd:integer where rounding during comparison won't be an issue.
 
@@ -167,7 +167,7 @@ Some variables are inherently integers - countable things that can't meaningfull
 
 (OWL actually provides access to further subclasses of integer such as xsd:positiveInteger, but OBI does not have a matching granularity of value specification classes.)
 
-#### Float
+### Float
 
 [//]: # (    Class 'float value specification'
         subClassOf 'decimal value specification'
@@ -182,7 +182,7 @@ Some variables are inherently integers - countable things that can't meaningfull
         subClassOf 'has specified value' only xsd:float[ >=0.01f ,<= 2048.0f]
 
 
-### Units
+## Units
 OBI uses the [`has measurement unit label`](http://purl.obolibrary.org/obo/IAO_0000039) relation to pair numeric scalar parameters with related units.  The [Units of Measurement Ontology](https://github.com/bio-ontology-research-group/unit-ontology) (UO) is the default unit ontology the OBOFoundry community uses, although there are other options<sup>2,3</sup>. It is left to a unit ontology to express the base units of the International System of Units, as well as compound units that have numerators and denominators sufficient for a problem space.
 
 A value specification can select at a general level all the permissible units which underlying value specifications and their instances must conform to.
@@ -224,15 +224,15 @@ Often a need for date obfuscation arises when dealing with confidential data poi
 If a more complex model of date/time is required, the "Time Ontology in OWL"<sup>4,5</sup> may suffice. 
 
 
-# Missing values and other metadata
+## Missing values and other metadata
 
 Data sources likely have a variety of ways to mark missing values. A food database example: “When the content of a food for a component is not known, a hyphen stands in place of the number. It is important for users to take into account these missing values and not to consider them as zero”<sup>6</sup>.  Currently, a simple way to express this is to have an instance of a value specification, but no 'has specified value' data property for it.
 
 Other metadata may need to be marked e.g. how to deal with: “In some cases, a component is detected in the food matrix, but it cannot be quantified precisely. The analytical result can therefore be considered as ‘trace’.” Another case is where a data item exists but has been obfuscated for privacy reasons.  OBI does not currently have a metadata standard that addresses these cases.
 
-# "Other" values
+## "Other" values
 
-# Data Sets
+## Data Sets
 
 A collection of datums of a given data type is called a [`data set`](http://purl.obolibrary.org/obo/IAO_0000100). A numeric data set (like a numeric spreadsheet column) can have statistical calculations performed on it by using an RDF query language like [SPARQL](https://en.wikipedia.org/wiki/SPARQL).  The [`member of`](http://purl.obolibrary.org/obo/RO_0002350) relation can connect datum or value specification instances to such a data set.
 

@@ -1,6 +1,5 @@
 ---
 layout: single
-title: OBI | Home
 header: |
   <div class="jumbotron">
     <h1>Ontology for Biomedical Investigations</h1>
@@ -11,6 +10,7 @@ header: |
       <a class="btn btn-md btn-success" href="https://github.com/obi-ontology/obi" role="button">View on Github</a>
     </p>
   </div>
+  |
 ---
 
 The Ontology for Biomedical Investigations (OBI) helps you communicate clearly about scientific investigations by defining more than 2500 terms for assays, devices, objectives, and more.

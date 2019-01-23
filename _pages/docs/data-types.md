@@ -55,22 +55,7 @@ Note one quirk: In pattern matching, the "@" character must be escaped or else t
 
 A categorical value specification is a flat list or hierarchic tree structure containing a finite number of pre-determined choices. Here we provide for choices whose values are either xsd:string or xsd:anyURI references to ontology terms.
 
-### Categorical string choice
-
-If a string must conform to a smaller set of choices, and nothing more needs to be axiomatized about each choice, then this can be accomplished with a value specification that is both string and categorical.  The value specification has a 'has specified value' component which uses a regular expression to enumerate the permitted strings. Note that in this approach one cannot easily provide other information (label, description) about choice in a user interface.
-
-For example, an "E-coli K antigen value specification" can be represented as:
-
-    Class: 'E-coli K antigen value specification'
-        subClassOf 'categorical value specification'
-        subClassOf 'specifies value of' only 'K antigen'
-        subClassOf 'has specified value' only xsd:string[pattern "K(1|2a|2ac|3|4|5|6|7|8|9|10|11|12|13|14|15|16|18a|18ab|19|20|22|23|24|26|27|28|29|30|31|34|37|39|40|41|42|43|44|45|46|47|49|50|51|52|53|54|56|96|55|74|82|84|85ab|85ac|87|92|93|95|97|98|100|101|102|103|X104|X105|X106)"]]
-
-This allows a reasoner to raise the unsatisfiable alarm when an instance of `E-coli K antigen value specification`  `has specified value` 'K17a'.
-
-One can potentially leave the `has specified value` axiom out, in which case validation enforcement would need to occur outside the OWL reasoning context.
-
-### Categorical ontology term choice
+### Categorical ontology choice
 
 Categorical choice lists or trees of ontology terms (e.g. of organism taxonomy, of disease, etc.) essentially have an xsd:anyURI datatype since a selection is an ontology URI. The aim here is to point to existing ontology class or instance identifiers within one's application ontology and/or imported from 3rd party ontologies as selections for a categorical variable. However, some complications arise which the following example will explore.  We could try to capture a [`handedness`](http://purl.obolibrary.org/obo/PATO_0002201) quality with:
 
@@ -102,6 +87,22 @@ Now an instance of `handedness value specification` can have a **`specifies valu
 *Note that in the past OBI used/tried [`categorical measurement datum`](http://purl.obolibrary.org/obo/OBI_0000938) for enumerating categorical choices, with a [`has category label`](http://purl.obolibrary.org/obo/OBI_0000999) object property that linked to a set or class of permissible terms (as shown in OBI's existing `handedness value specification` example). This class and relation is being discouraged in favour of the categorical value specification approach.*
 
 [//]: # (Slightly different from a boolean value specification below, a binary value specification is a categorical value specification with only two choices.)
+
+### Categorical string choice
+
+If a string must conform to a smaller set of choices, and nothing more needs to be axiomatized about each choice, then this can be accomplished with a value specification that is both string and categorical.  The value specification has a 'has specified value' component which uses a regular expression to enumerate the permitted strings. Note that in this approach one cannot easily provide other information (label, description) about choice in a user interface.
+
+For example, an "E-coli K antigen value specification" can be represented as:
+
+    Class: 'E-coli K antigen value specification'
+        subClassOf 'categorical value specification'
+        subClassOf 'specifies value of' only 'K antigen'
+        subClassOf 'has specified value' only xsd:string[pattern "K(1|2a|2ac|3|4|5|6|7|8|9|10|11|12|13|14|15|16|18a|18ab|19|20|22|23|24|26|27|28|29|30|31|34|37|39|40|41|42|43|44|45|46|47|49|50|51|52|53|54|56|96|55|74|82|84|85ab|85ac|87|92|93|95|97|98|100|101|102|103|X104|X105|X106)"]]
+
+This allows a reasoner to raise the unsatisfiable alarm when an instance of `E-coli K antigen value specification`  `has specified value` 'K17a'.
+
+One can potentially leave the `has specified value` axiom out, in which case validation enforcement would need to occur outside the OWL reasoning context.
+
 
 ## Boolean
 

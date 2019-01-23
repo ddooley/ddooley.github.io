@@ -25,7 +25,7 @@ Note that the diagrams in this section are contained in a [figs/data_obi_draw.io
 
 <img align="right" src="/_pages/docs/figs/data_john_mass_entity_property.png">
 
-<img align="right" src="/data_john_mass_entity_property.png">
+<img align="right" src="data_john_mass_entity_property.png">
 
 *We use **entity property diagrams** to show material entities and selected object properties (that link them to qualities) and class-subclass relations, which together illustrate OBI core "terminological component" (Tbox) contents. In this example, a `material entity` [`has quality`](http://purl.obolibrary.org/obo/RO_0000086) some [`mass`](http://purl.obolibrary.org/obo/PATO_0000125). This axiom is not currently in OBI but is included to show the potential for relation inheritance.  Formally, `has quality` is a generic object property existing between a BFO independent continuent entity (the bearer) and a quality, which is a dependent continuent (i.e. something that depends on the existence of its continuent).  [`Homo sapiens`](http://purl.obolibrary.org/obo/NCBITaxon_9606) is shown as a descendent of `organism`, a subclass of `material entity`, so the descendants also inherit a mass quality that can be referenced.  (A dashed arrow between entities indicates that several intermediate taxon classes have been omitted)*
 

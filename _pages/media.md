@@ -4,3 +4,8 @@ title: Media
 permalink: /media/
 ---
 
+# Papers
+
+# Presentations
+
+# Posters

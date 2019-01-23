@@ -6,7 +6,7 @@ permalink: /obi-term-guidelines/
 
 OBI is a community effort, and we greatly appreciate submissions of new terms! Here are some tips to help you get started.
 
-##Existing Terms
+## Existing Terms
 
 Before you submit a new term, please search [`OntoBee`](http://www.ontobee.org/) or [`BioPortal`](https://bioportal.bioontology.org/) or [`OLS`](https://www.ebi.ac.uk/ols/index) for the term you want and its synonyms. OBI might already include the term you want under a different name.
 
@@ -21,7 +21,7 @@ When you’re ready, follow this link to create a new ticket:
 
 (A GitHub account is required.)
 
-##New Terms
+## New Terms
 
 If you don’t find the term you’re looking for, but it’s within OBI’s scope of biomedical investigations, please suggest that we add it to OBI as a new term. We’ll need the following information before we can add your term (more details below):
 
@@ -39,7 +39,7 @@ When you’ve collected as much of this information as possible, please follow t
 
 (A GitHub account is required.)
 
-##More Details
+## More Details
 
 OBI belongs to the [`OBO Foundry`](http://obofoundry.org/) and strives to follow the [`OBO Foundry Principles`](http://www.obofoundry.org/principles/fp-000-summary.html). We have rules for the [`minimal metadata`]() for every term, and we use the [`IAO Ontology Metadata`](https://code.google.com/archive/p/information-artifact-ontology/wikis/OntologyMetadata.wiki) annotations for them. Here are some more details about the information we require for each new term.
 

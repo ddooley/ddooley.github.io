@@ -64,9 +64,11 @@ reCaptcha:
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
+
+
 search                   : true # true, false (default)
 search_full_content      : true # true, false (default)
-search_provider          : # lunr (default), algolia, google
+search_provider          : lunr # lunr (default), algolia, google
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
@@ -75,6 +77,15 @@ algolia:
 google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
+
+# NEEDED? https://github.com/mmistakes/minimal-mistakes/issues/588
+lunr_search:
+  excludes: [rss.xml, atom.xml]
+  stopwords: "stopwords.txt"
+  min_length: 3
+  js_dir: "/assets/js/lunr"
+
+
 # SEO Related
 google_site_verification :
 bing_site_verification   :
@@ -235,6 +246,9 @@ plugins:
   - jemoji
   - jekyll-include-cache
   - jekyll-remote-theme
+# per https://github.com/mmistakes/minimal-mistakes/issues/588
+  - json
+  - jekyll-lunr-js-search
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -244,7 +258,8 @@ whitelist:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
-
+  - json
+  - jekyll-lunr-js-search
 
 # Archives
 #  Type

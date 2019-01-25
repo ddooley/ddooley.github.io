@@ -16,7 +16,7 @@ Courtot, M., Bug, W.J., Gibson, F., Lister, A.L., Malone, J., Schober, D., Brink
 <!-- # Presentations -->
 
 # Posters
-<a href="/assets/images/posters/2009_poster.png" target="_blank"><img src="/assets/images/posters/2009_poster.png" width="400px" align="right"/></a>
+<a href="/assets/images/posters/2009_poster.png" target="_blank"><img src="/assets/images/posters/2009_poster.png" width="300px" align="right"/></a>
 
 Peters, B. and OBI Consortium, 2009. **Ontology for biomedical investigations**.
 [http://precedings.nature.com/documents/3623/version/1](http://precedings.nature.com/documents/3623/version/1){:target="_blank"}

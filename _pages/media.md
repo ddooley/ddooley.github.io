@@ -1,10 +1,8 @@
 ---
 layout: single
-title: ""
+title: "OBI Papers"
 permalink: /media/
 ---
-
-# Papers
 
 Courtot, M., Bug, W.J., Gibson, F., Lister, A.L., Malone, J., Schober, D., Brinkman, R.R. and Ruttenberg, A., 2008, October. The OWL of Biomedical Investigations. In OWLED (Vol. 432).
 [http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.142.9206&rep=rep1&type=pdf](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.142.9206&rep=rep1&type=pdf){:target="_blank"}

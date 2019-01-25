@@ -29,7 +29,7 @@ and [many more](http://obofoundry.org){:target="_blank"}.
 
 ## What is an Ontology?
 
-An ontology is a system of carefully defined terminology, connected by logical relationships, and designed for both humans and computers to use. OBI is about scientific investigations, so OBI contains general terms such as 'assay' and specific terms such as 'genotyping by high throughput sequencing assay'. Every term has a unique identifier, standard metadata, and logical definitions that connect it to other terms in OBI and the wider OBO community.
+An ontology is a system of carefully defined terminology, connected by logical relationships, and designed for both humans and computers to use. OBI is about scientific investigations, so OBI contains general terms such as [`assay`](http://purl.obolibrary.org/obo/OBI_0000070){:target="_blank"} and specific terms such as `[genotyping by high throughput sequencing assay](http://purl.obolibrary.org/obo/OBI_0001247){:target="_blank"}`. Every term has a unique identifier, standard metadata, and logical definitions that connect it to other terms in OBI and the wider OBO community.
 
 By using OBI terms when you collect your data, you benefit from the careful definitions, and can use the logical network to enrich search and analysis. By using OBI terms when you share your data, you make it easy for others to understand your work, and integrate it with their own datasets that use OBI and OBO terminology.
 

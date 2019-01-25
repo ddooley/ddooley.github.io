@@ -15,7 +15,7 @@ In addition to reasoning prowess, using an OWL ontology to detail types of assay
 
 Note that the diagrams in this section are contained in a [/assets/files/data_obi_draw.io.xml](/assets/files/data_obi_draw.io.xml){:target="_blank"} file, in [draw.io](http://draw.io){:target="_blank"} diagram format for reuse in ontology design work.  Most of the diagrams below skip relation cardinality details (e.g. "X 'is about' {some / all / max 3 / only} Y"), but these do exist in OBI to enforce more structure, and are detailed in OWL code examples.
 
-Aligning with BFO, OBI divides references about study design and assay structure into roughly four domains - [**`material entities`**](http://purl.obolibrary.org/obo/BFO_0000040){:target="_blank"}, their observable **[`qualities`](http://purl.obolibrary.org/obo/BFO_0000019){:target="_blank"}**, **[`planned processes`](http://purl.obolibrary.org/obo/OBI_0000011){:target="_blank"}**, and **[`information artifacts`](http://purl.obolibrary.org/obo/IAO_0000030){:target="_blank"}**, which all show up in process and data modelling.
+Aligning with BFO, OBI divides references about study design and assay structure into roughly four domains - [`**material entities**`](http://purl.obolibrary.org/obo/BFO_0000040){:target="_blank"}, their observable **[`qualities`](http://purl.obolibrary.org/obo/BFO_0000019){:target="_blank"}**, **[`planned processes`](http://purl.obolibrary.org/obo/OBI_0000011){:target="_blank"}**, and **[`information artifacts`](http://purl.obolibrary.org/obo/IAO_0000030){:target="_blank"}**, which all show up in process and data modelling.
 
 ## Material entities and their properties
 

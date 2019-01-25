@@ -45,5 +45,5 @@ docs:
         url: /docs/data-categorical/
       - title: Boolean
         url: /docs/data-boolean/
-      - title: Time and Date
+      - title: Date, Time, Duration
         url: /docs/data-time/

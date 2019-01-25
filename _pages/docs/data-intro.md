@@ -83,12 +83,6 @@ All ICEs are allowed a **[`value specification`](http://purl.obolibrary.org/obo/
 
 <br clear="both">
 
-## Process modelling - a top-down approach
-
-**Hande's content**
-
-
-
 ##Data value specification
 
 *This brings us to the collection of data - where specific protocols or instruments are used, generating data on particular scales and scientific units.  One can have data about entities which bear various qualities, and their value specifications, without necessarily having connections to a model layer of processes and datums.  One can document tabular data column metadata independently of experimental protocol process descriptions that explain how the data was generated.  Here **data specification diagrams** are useful for showing a given observation's type of variable and permitted units. This diagram and modelling approach can exist independently of the process model described above, but is designed to fit seamlessly with it as well.*

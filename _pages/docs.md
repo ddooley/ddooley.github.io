@@ -5,6 +5,9 @@ permalink: /docs/
 sidebar:
   nav: "docs"
 ---
+
+[//]: # (Please put comments like this one into the text to communicate with other OBI-ers)
+
 This user manual is designed to explain the core functionality of OBI for newcomers, and to serve as a canonical reference for OBI developers. This is a work in progress, but here we detail and provide a roadmap for OBI building blocks. 
 
 # Basic Documentation

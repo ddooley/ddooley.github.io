@@ -7,8 +7,6 @@ sidebar:
   nav: "docs"
 ---
 
-[//]: # (Please put comments like this one into the text to communicate with other OBI-ers)
-
 One of OBI's missions, to model the logical structure of experimental assays, requires a close study of entity attributes, processes and their participants, and data being collected. Below we introduce the general framework for describing processes, datums used as process input or output, and data collection specifications. Some stakeholders are involved only in process modelling in order to document study design and/or protocol details as metadata; others are turning to OBI ontology to provide standardization of data collection and exchange; software developers will require knowledge in both these areas in order to provide the next generation of integration tools. We aim to provide analysis approaches and diagrams to satisfy these needs.
 
 In addition to reasoning prowess, using an OWL ontology to detail types of assay data - parameters, measurables, independent and dependent variables - will encourage standardization of their usage, enable experimental reproducibility, and facilitate data exchange and conversion.
@@ -29,13 +27,16 @@ An optional rose-tinted box may be provided to illustrate how to compose instanc
 
 ## Anonymous nodes
 
-Note for novices: An **[`anonymous or blank node`](https://en.wikipedia.org/wiki/Blank_node){:target="_blank"}** contains a data structure which has not itself been given a full URI resource identifier (for example a statement made within the context of another entity). These will occur in de-serialized triple store databases and ontologies for any bracketed conjunction or disjunction expression. So, to be precise, the diagram shows an anonymous node that is of type `Homo sapiens` which would also have an annotation or data property of name "John", and which has a `has quality` relation to another anonymous node of type `mass`.
+Note for novices: An **[`anonymous or blank node`](https://en.wikipedia.org/wiki/Blank_node){:target="_blank"}** contains a data structure which has not itself been given a full URI resource identifier (for example a statement made within the context of another entity). These will occur in de-serialized triple store databases and ontologies for any bracketed conjunction or disjunction expression. So, to be precise, the diagram above shows an anonymous node that is of type `Homo sapiens` which would also have an annotation or data property of name "John", and which has a `has quality` relation to another anonymous node of type `mass`.
+
+
+
 
 ## Information content entities
 
 All information items that are derived from material entities (i.e. statements that reference material qualities and are factual claims about an entity) fall under the domain of **[`information content entity`](http://purl.obolibrary.org/obo/IAO_0000030){:target="_blank"}** (ICE), very generally defined as a type of entity which bears information about something<sup>1</sup>.  Any ICE class may have **[`is about`](http://purl.obolibrary.org/obo/IAO_0000136){:target="_blank"}** object relations that connect it to other material entities or ICEs which define its _aboutness_.  Examples: an "[`age since planting measurement datum`](http://purl.obolibrary.org/obo/OBI_0001156){:target="_blank"} `is about` some [`Spermatophyta`](http://purl.obolibrary.org/obo/NCBITaxon_58024){:target="_blank"}" (among other things); a "[`minimal inhibitory concentration`](http://purl.obolibrary.org/obo/OBI_0001514){:target="_blank"} `is about` some [`dose response curve`](http://purl.obolibrary.org/obo/OBI_0001172){:target="_blank"}", another ICE.  Aboutness axioms should reinforce the content of term definitions.  
 
-[//]: # (The defining characteristic of an `Information Content Entity` is that it is 'about' something. Thus, the scope of the OBI representation of data is to capture the details and characteristics of the information, rather than the thing that it describes. This is a crucial scoping step in developing representations in OBI.)
+[//]: #(The defining characteristic of an `Information Content Entity` is that it is 'about' something. Thus, the scope of the OBI representation of data is to capture the details and characteristics of the information, rather than the thing that it describes. This is a crucial scoping step in developing representations in OBI.)
 
 <img align="right" src="/assets/images/docs/data_iao_branch.png">
 
@@ -84,30 +85,6 @@ Processes can have other participants besides inputs and outputs, such as operat
 Processes don't necessarily generate information products.  The OBI [`material processing`](http://purl.obolibrary.org/obo/OBI_0000094){:target="_blank"} class covers many kinds of process such as sample preparation, manufacturing, and staining. [`processed specimen`](http://purl.obolibrary.org/obo/OBI_0000953){:target="_blank"} is likely needed as part of experimental protocol modeling involving biosamples. It remains a material entity, rather than a `data item` that assays output.
 
 <br clear="both">
-
-## Data value specification
-
-*This brings us to the collection of data - where specific protocols or instruments are used, generating data on particular scales and scientific units.  One can have data about entities which bear various qualities, and their value specifications, without necessarily having connections to a model layer of processes and datums.  One can document tabular data column metadata independently of experimental protocol process descriptions that explain how the data was generated.  Here **data specification diagrams** are useful for showing a given observation's type of variable and permitted units. This diagram and modelling approach can exist independently of the process model described above, but is designed to fit seamlessly with it as well.*
-
-<img align="right" src="/assets/images/docs/data_john_mass_value_spec.png">
-
-To establish constraints on what a datum can have for a value, OBI introduces a **[`value specification`](http://purl.obolibrary.org/obo/OBI_0001933){:target="_blank"}** (VS) class which can express those constraints in axioms (for example pertinent numeric data type, units, or valid categorical choices). An instance of a value specification can have a **[`has specified value`](http://purl.obolibrary.org/obo/OBI_0002135){:target="_blank"}** data property that holds its literal value. A value specification details allowable values for a given purpose. 
-
-Explanations of the different types of categorical, numeric and datetime value specifications are contained in the [`Data Types`](data-types.md) documentation. Background information on how the value specification concept was developed is [here](https://github.com/obi-ontology/obi-legacy-svn/blob/master/trunk/src/examples/development/data-prototype.pdf){:target="_blank"}.  Other related OBI repository issues: [#870](https://github.com/obi-ontology/obi/issues/870){:target="_blank"}, [#945](https://github.com/obi-ontology/obi/issues/945){:target="_blank"} and [#833](https://github.com/obi-ontology/obi/issues/833){:target="_blank"}.
-
-A value specification's primary aboutness is expressed using the **[`specifies value of`](http://purl.obolibrary.org/obo/OBI_0001927){:target="_blank"}** object relation.  For example "[`mass value specification`](http://purl.obolibrary.org/obo/OBI_0001929){:target="_blank"} `specifies value of` some [`mass`](http://purl.obolibrary.org/obo/PATO_0000125){:target="_blank"}", as shown above. An instance of the VS `specifies value of` an instance of the mass quality which inheres in John. The VS instance has a kilogram unit, and a decimal value of 70.0 .
-
-The connection between a measurement datum (or any ICE term) and a value specification is accomplished with the **[`has value specification`](http://purl.obolibrary.org/obo/OBI_0001938){:target="_blank"}** object property. Thus an [`age measurement datum`](http://purl.obolibrary.org/obo/OBI_0001167){:target="_blank"} could be linked to a numeric value specification which details the unit - year, month, day etc. of the measure. It could alternately be provided as a categorical value for "mature", "immature", "neonatal", etc.  (As mentioned in the `Data Types` section, OBI does not currently have a way to describe ordinal values beyond listing them as categorical choices.)
-
-In the case where a value specification and/or measurement datum is about the conjunction of a few different things, the aboutness target can be a precomposed term or instance of those components, with one component, usually a quality, providing the primary type of the measure.  For example "eye color" is primarily about color - and so limited to ways that can be reported, but secondarily about the body part being observed, and finally - in the instance, references a particular organism being observed. An example generic value specification and measurement datum both pointing to John's eye color being brown (in this case "specifies value of" points directly to the value specification's essentially categorical value. Here the `color value specification` provides the range of choices permitted for the instance of color quality.
-
-<img src="/assets/images/docs/data_john_eye.png">
-
-***DRAFT NOTE: Is it best to say "eye part of some mamallia", or "eye located in mammalia" as a shortcut? Or do we say the complete UBERON ... "eye part of some visual system", "visual system part of some mammalia?***
-
-Currently most statements about which qualities inhere in which physical objects are left to client ontologies to define, but uncontroversial universals (such as "material entity has quality some mass") should eventually be established in core ontologies.)
-
-Note that different assays may output the same measurement datum and value specification combination.  For example an [`age since planting measurement datum`](http://purl.obolibrary.org/obo/OBI_0001156){:target="_blank"} and integer year value specification could be output from assays that calculate or estimate by input tree ring count, carbon 14 analysis, planting date, height of species etc.  It is up to an ontology implementer to define a more specific process as a sub-class of an existing general process if needed; if it falls within the scope of OBI, it may be a candidate for inclusion.
 
 ## A Combined View
 

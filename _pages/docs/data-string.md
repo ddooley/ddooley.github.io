@@ -26,7 +26,6 @@ For example, one could construct the following representation to store and valid
         subClassOf 'specifies value of' some ('postal code' and 'is about' some (site and 'located in' some 'United States of America')
         subClassOf 'has specified value' only xsd:string[pattern "[0-9]{5}"]
 
-[diagram]
 
 String length constraints can be set via "length", "minLength" and "maxLength" parameters, e.g. "xsd:string[length "5"^^xsd:integer].  A "pattern" parameter supports [regular expression](https://www.regular-expressions.info/xml.html){:target="_blank"} syntax to some extent, allowing "[0-9] [a-z] [A-Z] . ? * + {m,n}" components.  Thus we can express fairly well-validated  [email addresses](http://purl.obolibrary.org/obo/IAO_0000429){:target="_blank"}:
 

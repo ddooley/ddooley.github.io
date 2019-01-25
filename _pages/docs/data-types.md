@@ -22,7 +22,7 @@ Data sources likely have a variety of ways to mark missing values. A food databa
 
 ## Other metadata
 
-Other metadata may need to be marked e.g. how to deal with: “In some cases, a component is detected in the food matrix, but it cannot be quantified precisely. The analytical result can therefore be considered as ‘trace’.” Another case is where a data item exists but has been obfuscated for privacy reasons.  OBI does not currently have a metadata standard that addresses these cases.
+Other metadata may need to be marked e.g. how to deal with: “In some cases, a component is detected in the food matrix, but it cannot be quantified precisely. The analytical result can therefore be considered as ‘trace’” (see [here](<sup>6</sup>https://ciqual.anses.fr/cms/sites/default/files/inline-files/TableCiqual2017_XML_docENG.pdf){:target="_blank"}). Another case is where a data item exists but has been obfuscated for privacy reasons.  OBI does not currently have a metadata standard that addresses these cases.
 
 ## "Other" values
 
@@ -30,12 +30,3 @@ Other metadata may need to be marked e.g. how to deal with: “In some cases, a 
 
 A collection of datums of a given data type is called a [`data set`](http://purl.obolibrary.org/obo/IAO_0000100){:target="_blank"}. A numeric data set (like a numeric spreadsheet column) can have statistical calculations performed on it by using an RDF query language like [SPARQL](https://en.wikipedia.org/wiki/SPARQL).  The [`member of`](http://purl.obolibrary.org/obo/RO_0002350){:target="_blank"} relation can connect datum or value specification instances to such a data set.
 
-***
-References: 
-
-* https://github.com/obi-ontology/obi-legacy-svn/blob/master/trunk/src/examples/development/data-prototype.pdf
-* https://mitpress.mit.edu/books/building-ontologies-basic-formal-ontology
-
-***
-
-<sup>6</sup>https://ciqual.anses.fr/cms/sites/default/files/inline-files/TableCiqual2017_XML_docENG.pdf

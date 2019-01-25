@@ -28,6 +28,8 @@ docs:
     children:
       - title: Introduction
         url: /docs/data-intro/
+      - title: Value Specifications
+        url: /docs/data-vs/
       - title: Value Specs vs Data Properties
         url: /docs/vs-vs-dp/
       - title: Time-stamped Data

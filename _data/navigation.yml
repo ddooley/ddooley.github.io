@@ -28,6 +28,15 @@ docs:
         url: /docs/vs-vs-dp/
       - title: Data Types
         url: /docs/data-types/
+        children:
+          - title: Numeric
+            url: /docs/data-numeric/
+          - title: String
+            url: /docs/data-string/
+          - title: Categorical
+            url: /docs/data-categorical/
+          - title: Boolean
+            url: /docs/data-boolean/
       - title: Time-stamped Data
         url: /docs/time-stamped-datums/  
 

@@ -32,6 +32,21 @@ div#main a:visited, div.masthead a:visited {color:royalblue !important}
     font-size: 0.9rem !important;
 }
 
+@media (min-width: 64em)
+.search-content .search-input {
+    font-size: 1.2rem;
+}
+.search-content .search-input {
+    border:1px solid silver;
+    max-width:300px;
+    padding:3px;
+}
+div#results {
+	border-top:3 px solid #393e46;
+	min-height:300px;
+	background-color:white;
+}
+
 /* $link-color: navy-blue; */
 
 

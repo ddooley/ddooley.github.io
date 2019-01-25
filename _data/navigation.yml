@@ -37,6 +37,8 @@ docs:
             url: /docs/data-categorical/
           - title: Boolean
             url: /docs/data-boolean/
+          - title: Time and Date
+            url: /docs/data-time/
       - title: Time-stamped Data
         url: /docs/time-stamped-datums/  
 

@@ -57,3 +57,6 @@ This allows a reasoner to raise the unsatisfiable alarm when an instance of `E-c
 
 One can potentially leave the `has specified value` axiom out, in which case validation enforcement would need to occur outside the OWL reasoning context.
 
+## Ordinal
+
+OBI does not currently have a recommendation about how to define an ordered categorical variable. A ranking data property for each choice could be used; or potentially previous/next relations could be established between choices.

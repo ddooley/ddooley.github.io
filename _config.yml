@@ -68,22 +68,15 @@ atom_feed:
 
 search                   : true # true, false (default)
 search_full_content      : true # true, false (default)
-search_provider          : lunr # lunr (default), algolia, google
+search_provider          : google # lunr (default), algolia, google
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
   search_only_api_key    : # YOUR_SEARCH_ONLY_API_KEY
   powered_by             : # true (default), false
 google:
-  search_engine_id       : # YOUR_SEARCH_ENGINE_ID
+  search_engine_id       : 014082899090092270754:blxrigkvsuw # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
-
-# NEEDED? https://github.com/mmistakes/minimal-mistakes/issues/588
-lunr_search:
-  excludes: [rss.xml, atom.xml]
-  stopwords: "stopwords.txt"
-  min_length: 3
-  js_dir: "/assets/js/lunr"
 
 
 # SEO Related
@@ -246,9 +239,6 @@ plugins:
   - jemoji
   - jekyll-include-cache
   - jekyll-remote-theme
-# per https://github.com/mmistakes/minimal-mistakes/issues/588
-  - json
-  - jekyll-lunr-js-search
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -258,8 +248,6 @@ whitelist:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
-  - json
-  - jekyll-lunr-js-search
 
 # Archives
 #  Type

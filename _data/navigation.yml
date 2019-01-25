@@ -29,19 +29,19 @@ docs:
       - title: Time-stamped Data
         url: /docs/time-stamped-datums/ 
 
-    - title: Data Types
-      url: /docs/data-types/
-      children:
-        - title: Numeric
-          url: /docs/data-numeric/
-        - title: String
-          url: /docs/data-string/
-        - title: Categorical
-          url: /docs/data-categorical/
-        - title: Boolean
-          url: /docs/data-boolean/
-        - title: Time and Date
-          url: /docs/data-time/
+  - title: Data Types
+    url: /docs/data-types/
+    children:
+      - title: Numeric
+        url: /docs/data-numeric/
+      - title: String
+        url: /docs/data-string/
+      - title: Categorical
+        url: /docs/data-categorical/
+      - title: Boolean
+        url: /docs/data-boolean/
+      - title: Time and Date
+        url: /docs/data-time/
           
   - title: Process modelling
 

@@ -20,6 +20,10 @@ docs:
       - title: Core Classes
         url: /docs/core-classes/
 
+  - title: Process modelling
+    children:
+      - title: ...
+
   - title: Data modelling
     children:
       - title: Introduction
@@ -30,8 +34,9 @@ docs:
         url: /docs/time-stamped-datums/ 
 
   - title: Data Types
-    url: /docs/data-types/
     children:
+      - title: Introduction
+        url: /docs/data-types/
       - title: Numeric
         url: /docs/data-numeric/
       - title: String
@@ -42,14 +47,3 @@ docs:
         url: /docs/data-boolean/
       - title: Time and Date
         url: /docs/data-time/
-          
-  - title: Process modelling
-
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/

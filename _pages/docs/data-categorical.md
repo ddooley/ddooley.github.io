@@ -11,13 +11,7 @@ A categorical value specification is a flat list or hierarchic tree structure co
 
 ### Categorical ontology choice
 
-Categorical choice lists or trees of ontology terms (e.g. of organism taxonomy, of disease, etc.) essentially have an xsd:anyURI datatype since a selection is an ontology URI. The aim here is to point to existing ontology class or instance identifiers within one's application ontology and/or imported from 3rd party ontologies as selections for a categorical variable. However, some complications arise which the following example will explore.  We could try to capture a [`handedness`](http://purl.obolibrary.org/obo/PATO_0002201){:target="_blank"} quality with:
-
-    Class: 'handedness value specification'
-        subClassOf 'categorical value specification'
-        subClassOf 'has specified value' only handedness 
-
-However, this is not permitted in OWL since **`has specified value`** data property can only have a literal on the right side. The target could be expressed simply as "`has specified value` only xsd:anyURI", thus allowing values like xsd:anyURI [right-handedness](http://purl.obolibrary.org/obo/PATO_0002203){:target="_blank"} but this then requires some validation mechanism external to an OWL reasoner for limiting categorical values. The Class doesn't indicate what the choices are.
+Categorical choice lists or trees of ontology terms (e.g. of organism taxonomy, of disease, etc.) are often used in datums and experimental metadata. The aim here is to point to existing ontology class or instance identifiers within existing ontologies as selections for a categorical variable. 
 
 In a different approach, an OBI example using categorical value specification focuses on describing a tumor grading standard [`histologic grade according to AJCC 7th edition`](http://purl.obolibrary.org/obo/OBI_0002205){:target="_blank"}.  Here the value specification class has individuals which are each interpreted as grades, and which could potentially be augmented with data properties that detail their assessment differentiae.  This approach is suited to cases where selections are not already established (and would not be in the future) as ontology classes situated within their own hierarchic context. 
 
@@ -39,6 +33,17 @@ Now an instance of `handedness value specification` can have a **`specifies valu
 [//]: # (Note that as future versions of a standard occur, it may be feasible to attach individuals of past standards to them if no semantics have changed, thus simplifying data analysis.)
 
 *Note that in the past OBI used/tried [`categorical measurement datum`](http://purl.obolibrary.org/obo/OBI_0000938){:target="_blank"} for enumerating categorical choices, with a [`has category label`](http://purl.obolibrary.org/obo/OBI_0000999){:target="_blank"} object property that linked to a set or class of permissible terms (as shown in OBI's existing `handedness value specification` example). This class and relation is being discouraged in favour of the categorical value specification approach.*
+
+## Unworkable , REVISE
+
+However, some complications arise which the following example will explore.  We could try to capture a [`handedness`](http://purl.obolibrary.org/obo/PATO_0002201){:target="_blank"} quality with:
+
+    Class: 'handedness value specification'
+        subClassOf 'categorical value specification'
+        subClassOf 'has specified value' only handedness 
+
+However, this is not permitted in OWL since **`has specified value`** data property can only have a literal on the right side. The target could be expressed simply as "`has specified value` only xsd:anyURI", thus allowing values like xsd:anyURI [right-handedness](http://purl.obolibrary.org/obo/PATO_0002203){:target="_blank"} but this then requires some validation mechanism external to an OWL reasoner for limiting categorical values. The Class doesn't indicate what the choices are.
+
 
 [//]: # (Slightly different from a boolean value specification below, a binary value specification is a categorical value specification with only two choices.)
 

@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "air" # "default","air", "aqua", "contrast", "dark", 
 locale                   : "en-US"
 title                    : "Ontology for Biomedical Investigations"
 title_separator          : "-"
-name                     : "Webmaster"
+name                     : "OBI Consortium"
 description              : "The Ontology for Biomedical Investigations (OBI) helps you communicate clearly about scientific investigations by defining more than 2500 terms for assays, devices, objectives, and more."
 url                      : https://obi-ontology.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"

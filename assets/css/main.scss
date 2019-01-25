@@ -47,9 +47,13 @@ div#main a:visited, div.masthead a:visited {color:royalblue !important}
 }
 div#results {
 	border-top:3 px solid #393e46 !important;
-	min-height:300px !important;
+	/*min-height:300px !important;*/
 }
 
+.gsc-results-wrapper-overlay {
+	top: inherit;
+	left: inherit;
+}
 /* $link-color: navy-blue; */
 
 

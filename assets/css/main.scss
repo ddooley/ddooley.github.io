@@ -36,6 +36,12 @@ div#main a:visited, div.masthead a:visited {color:royalblue !important}
 	background-color:white !important;
 }
 
+.search-content form {
+	margin:0;
+	background:0;
+	background-color:inherit;
+}
+
 .search-content .search-input {
     font-size: 1.2rem !important;
 }

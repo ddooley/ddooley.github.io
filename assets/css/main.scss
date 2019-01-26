@@ -57,6 +57,7 @@ div.masthead a.site-title {
     padding:0 10px;
 }
 
+.toc__menu a {font-size:0.8rem}
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials

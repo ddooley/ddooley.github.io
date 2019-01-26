@@ -21,16 +21,19 @@ Under `material entity` we find OBI's **[`organism`](http://purl.obolibrary.org/
 
 <img align="right" src="/assets/images/docs/data_john_mass_entity_property.png">
 
-We use **entity property diagrams** to show material entities and selected object properties (that link them to qualities) and class-subclass relations, which together illustrate OBI core "terminological component" (Tbox) contents. In this example, a `material entity` [`has quality`](http://purl.obolibrary.org/obo/RO_0000086){:target="_blank"} some [`mass`](http://purl.obolibrary.org/obo/PATO_0000125){:target="_blank"}. This axiom is not currently in OBI but is included to show the potential for relation inheritance.  Formally, `has quality` is a generic object property existing between a BFO independent continuent entity (the bearer) and a quality, which is a dependent continuent (i.e. something that depends on the existence of its continuent).  [`Homo sapiens`](http://purl.obolibrary.org/obo/NCBITaxon_9606){:target="_blank"} is shown as a descendent of `organism`, a subclass of `material entity`, so the descendants also inherit a mass quality that can be referenced.  (A dashed arrow between entities indicates that several intermediate taxon classes have been omitted).
+We use **entity property diagrams** to show material entities and selected object properties (that link them to qualities) and class-subclass relations, which together illustrate OBI core "terminological component" (Tbox) contents. In this example, a `material entity` [`has quality`](http://purl.obolibrary.org/obo/RO_0000086){:target="_blank"} some [`mass`](http://purl.obolibrary.org/obo/PATO_0000125){:target="_blank"}. This axiom is not currently in OBI but is included to show the potential for relation inheritance.  Formally, `has quality` is a generic object property existing between a BFO independent continuent entity (the bearer) and a quality, which is a dependent continuent (i.e. something that depends on the existence of its continuent).  [`Homo sapiens`](http://purl.obolibrary.org/obo/NCBITaxon_9606){:target="_blank"} is shown as a descendent of `organism`, a subclass of `material entity`, so the descendants also inherit a mass quality that can be referenced.  (A dashed arrow between entities indicates that several intermediate classes have been omitted).
 
 An optional rose-tinted box may be provided to illustrate how to compose instances of classes and relations - this is "assertion component" (Abox) content. Abox content can form the bulk of a triple-store graph database, with the reasoning axioms of related ontologies added separately when validation of data structures and models is desired. In this example it is stated that "John" is an instance of Homo sapiens, and bears an instance of mass (or mass quality) that can then be referenced by other expressions.
 
 ## Anonymous nodes
 
-Note for novices: An **[`anonymous or blank node`](https://en.wikipedia.org/wiki/Blank_node){:target="_blank"}** contains a data structure which has not itself been given a full URI resource identifier (for example a statement made within the context of another entity). These will occur in de-serialized triple store databases and ontologies for any bracketed conjunction or disjunction expression. So, to be precise, the diagram above shows an anonymous node that is of type `Homo sapiens` which would also have an annotation or data property of name "John", and which has a `has quality` relation to another anonymous node of type `mass`.
+**[`Anonymous or blank nodes`](https://en.wikipedia.org/wiki/Blank_node){:target="_blank"}** play key roles in ontolgies and triple store databases for storing data and for holding logical pattern matching structures. An anonymous node contains a data structure which has not itself been given a full URI resource identifier. The diagram above shows an anonymous node (always with a dashed perimiter) that is of type `Homo sapiens` which would also have an annotation or data property of name "John", and which has a `has quality` relation to another anonymous node of type `mass`. The bulk of instance data is made with them. Internally, in a triple store database, an anonymous node has an identifier that relations can reference, but this is not a permanent URI like the ones issued to ontology terms.
 
+Anonymous nodes will occur in de-serialized triple store databases and ontologies for any bracketed conjunction or disjunction expression, for example the "(A and B)" expression in an "X subClassOf (A and B)" axiom. 
 
+The other essential use of an anonymous node is to reference a class of thing without having to assign a new ontology term to it - this is called an anonymous class. For example, OBI defines various `[value specifications](){:target="_blank"}` including `[mass value specification](){:target="_blank"}` but it doesn't have one for color.  For now one can logically achieve exactly the same thing by using the expression "(`value specification` and `specifies value of` some `color`)" instead. On its own, that expression will match the same set of things wherever it is used.  If it is frequently needed, that may be a sufficient reason for adding a `color value specification` term to OBI, and making it equivalent to that expression. 
 
+Anonymous node expressions are used to avoid combination bombs of terms.  For example, tuberculosis can occur in many parts of the body - pulmonary, knee, a particular bone, one of 500+ lymph nodes - but to create a term for TB x body part x location would lead to an overwhelming number of terms as far as a human is concerned (e.g. mediastinal lymph node tuberculosis), and we haven't even turned to cancer.  Can your biomedical investigation accomplish what it needs to by using anonymous class expressions that can match patterns being sought? 
 
 ## Information content entities
 
@@ -48,53 +51,13 @@ The `information content entity` **[`data item`](http://purl.obolibrary.org/obo/
 
 All ICEs are allowed a **[`value specification`](http://purl.obolibrary.org/obo/OBI_0001933){:target="_blank"}** that records some pertinent categorical or numeric value about an entity; more on this in the data collection section.
 
-## Process modelling basics
-
-Generally a **[`process`](http://purl.obolibrary.org/obo/BFO_0000015){:target="_blank"}** can have other processes as parts, and can have instances with start and end times associated with them.  A **[`planned process`](http://purl.obolibrary.org/obo/OBI_0000011){:target="_blank"}** is carried out by agent(s) who are guided by some kind of **[`plan specification`](http://purl.obolibrary.org/obo/IAO_0000104){:target="_blank"}**, an ICE which has **[`objective`](http://purl.obolibrary.org/obo/IAO_0000005){:target="_blank"}** and **[`action`](http://purl.obolibrary.org/obo/IAO_0000007){:target="_blank"}** components. A **[`study design`](http://purl.obolibrary.org/obo/OBI_0500000){:target="_blank"}** and its **[`protocol`](http://purl.obolibrary.org/obo/OBI_0000272){:target="_blank"}** part(s) are subclasses of `plan specification`. This is documented in the [`Study Design`]() page.
-
-<img align="right" src="/assets/images/docs/data_assay_2.png">
-
-A **process / datum model diagram** shows how material entities or data items can be an input or output of some process. This diagram often includes parts of entity property diagrams in order to reference components as inputs or in aboutness clauses.
-
-The **[`assay`](http://purl.obolibrary.org/obo/OBI_0000070){:target="_blank"}** process diagram to right details axioms that enable types of assay to inherit requirements: [paraphrasing] that an assay input is a material entity playing an evaluant role, and that an assay outputs one or more data items.
-
-<br clear="both">
-
-
-<img align="right" src="/assets/images/docs/data_john_mass_process.png">
-
-The next example shows a **[`mass measurement assay`](http://purl.obolibrary.org/obo/OBI_0000445){:target="_blank"}** which takes in some material and outputs a **[`mass measurement datum`](http://purl.obolibrary.org/obo/IAO_0000414){:target="_blank"}**.  The output datum is stated to be a measure of (only) mass quality. The **[`is quality measurement of`](http://purl.obolibrary.org/obo/IAO_0000221){:target="_blank"}** object property is actually a sub-property of `is about` which is used when the target of aboutness is a quality.
-
-The Abox shows John as an input (standing on a scale, say), and documents that a `mass measurement datum` has been taken by the `mass measurement assay`. A process modeller can work at this more abstract level, avoiding references to specific protocols or instruments involving, say, units of measure. Alternately, by merging process modelling with specific value specifications (described below), we can describe particular equipment used in an experimental protocol or execution - say a brand and model of weight scale that is only capable of measuring in grams. (That level of detail promotes an ontology-driven plug-and-play future of equipment selection and protocol design.)
-
-### Processes with inputs playing roles
-
-**Mark's doctor/patient interaction event example here....**
-
-Processes can have other participants besides inputs and outputs, such as operators and material consumables.
-
-
-
-
-
-
-### Material processing
-
-<img align="right" src="/assets/images/docs/data_processed_material.png">
-
-Processes don't necessarily generate information products.  The OBI [`material processing`](http://purl.obolibrary.org/obo/OBI_0000094){:target="_blank"} class covers many kinds of process such as sample preparation, manufacturing, and staining. [`processed specimen`](http://purl.obolibrary.org/obo/OBI_0000953){:target="_blank"} is likely needed as part of experimental protocol modeling involving biosamples. It remains a material entity, rather than a `data item` that assays output.
-
-<br clear="both">
-
 ## A Combined View
 
-A diagram that combines material entity, quality, process, data collection standards, and derived information, allows us to see the big picture - the data structure architecture that enables constructive reasoning. By tracing classes further up the inheritance hierarchy, we can see the impact on instance data.
+The following documentation sections will focus on the various parts needed to detail processes and their input and output data.  The diagram below shows both the way we express "John's mass is 70kg" using triples, and the material entity, process, datum, quality and value specification ontology components that must be referenced to do so.  It allows us to see the big picture - by tracing classes further up the inheritance hierarchy, we can see the impact on instance data.
 
 <img align="right" src="/assets/images/docs/data_john_mass.png">
 
 ([full-sized image](/assets/images/docs/data_john_mass.png){:target="_blank"})
-
-Next section: [`Value specifications vs data properties`](/docs/vss-vs-dp/)
 
 ***
 <sup>1</sup>The ability of an ICE to bear information depends on the coding scheme and medium it inheres in, hence it is a generically dependent continuant.

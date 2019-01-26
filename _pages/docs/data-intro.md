@@ -9,13 +9,16 @@ sidebar:
 
 One of OBI's missions, to model the logical structure of experimental assays, requires a close study of entity attributes, processes and their participants, and data being collected. Below we introduce the general framework for describing processes, datums used as process input or output, and data collection specifications. Some stakeholders are involved only in process modelling in order to document study design and/or protocol details as metadata; others are turning to OBI ontology to provide standardization of data collection and exchange; software developers will require knowledge in both these areas in order to provide the next generation of integration tools. We aim to provide analysis approaches and diagrams to satisfy these needs.
 
-In addition to reasoning prowess, using an OWL ontology to detail types of assay data - parameters, measurables, independent and dependent variables - will encourage standardization of their usage, enable experimental reproducibility, and facilitate data exchange and conversion.
-
-Note that the diagrams in this section are contained in a [/assets/files/data_obi_draw.io.xml](/assets/files/data_obi_draw.io.xml){:target="_blank"} file, in [draw.io](http://draw.io){:target="_blank"} diagram format for reuse in ontology design work.  Most of the diagrams below skip relation cardinality details (e.g. "X 'is about' {some / all / max 3 / only} Y"), but these do exist in OBI to enforce more structure, and are detailed in OWL code examples.
-
 Aligning with BFO, OBI divides references about study design and assay structure into roughly four domains - **[`material entities`](http://purl.obolibrary.org/obo/BFO_0000040){:target="_blank"}**, their observable **[`qualities`](http://purl.obolibrary.org/obo/BFO_0000019){:target="_blank"}**, **[`planned processes`](http://purl.obolibrary.org/obo/OBI_0000011){:target="_blank"}**, and **[`information artifacts`](http://purl.obolibrary.org/obo/IAO_0000030){:target="_blank"}**, which all show up in process and data modelling.
 
-## Material entities and their properties
+The following documentation sections will focus on various parts needed to detail processes and their input and output data.  The diagram below shows how OBI expresses the statement "John's mass is 70kg" using triples, and the related material entity, process, datum, quality and value specification ontology components hovering in the background.  It shows the big picture - by tracing classes further up the inheritance hierarchy, we can see the impact on instance data. Details on each of these sections follow.
+
+<img align="right" src="/assets/images/docs/data_john_mass.png">
+
+([full-sized image](/assets/images/docs/data_john_mass.png){:target="_blank"})
+
+
+## Material entities and their properties/qualities
 
 Under `material entity` we find OBI's **[`organism`](http://purl.obolibrary.org/obo/OBI_0100026){:target="_blank"}** - the usual focus of biomedical investigations. Organism related terms - whether in OBI or in other ontologies that cover taxonomic, anatomic, developmental, pathological, environmental etc. aspects - will likely occur in study design objectives, protocols and experimental observations.
 
@@ -50,14 +53,6 @@ The `information content entity` **[`data item`](http://purl.obolibrary.org/obo/
 * A **[`predicted data item`](http://purl.obolibrary.org/obo/OBI_0302867){:target="_blank"}** class that applies to output of a [`prediction`](http://purl.obolibrary.org/obo/OBI_0302910){:target="_blank"} process.
 
 All ICEs are allowed a **[`value specification`](http://purl.obolibrary.org/obo/OBI_0001933){:target="_blank"}** that records some pertinent categorical or numeric value about an entity; more on this in the data collection section.
-
-## A Combined View
-
-The following documentation sections will focus on the various parts needed to detail processes and their input and output data.  The diagram below shows both the way we express "John's mass is 70kg" using triples, and the material entity, process, datum, quality and value specification ontology components that must be referenced to do so.  It allows us to see the big picture - by tracing classes further up the inheritance hierarchy, we can see the impact on instance data.
-
-<img align="right" src="/assets/images/docs/data_john_mass.png">
-
-([full-sized image](/assets/images/docs/data_john_mass.png){:target="_blank"})
 
 ***
 <sup>1</sup>The ability of an ICE to bear information depends on the coding scheme and medium it inheres in, hence it is a generically dependent continuant.

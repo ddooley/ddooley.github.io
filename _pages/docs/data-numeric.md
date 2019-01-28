@@ -78,7 +78,7 @@ This MIC dilution (different from diffusion above) can be measured with a floati
         subClassOf 'scalar value specification'
         subClassOf 'has measurement unit label' only ('milligram per liter' or 'microgram per milliliter')
         subClassOf 'specifies value of' only 'MIC value'
-        subClassOf 'has specified value' only xsd:float[ >=0.01f ,<= 2048.0f]
+        subClassOf 'has specified value' only xsd:float[ >=0.015f ,<= 2048.0f]
 
 
 ## Units

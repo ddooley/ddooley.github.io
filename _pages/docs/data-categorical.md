@@ -13,21 +13,23 @@ A categorical value specification is a flat list or hierarchic tree structure co
 
 Categorical choice lists or trees of ontology terms (e.g. of organism taxonomy, of disease, etc.) are often used in datums and experimental metadata. The aim here is to point to existing ontology class or instance identifiers within existing ontologies as selections for a categorical variable. 
 
-The 'has quality' relation can capture this directly by pointing straight to the phenotypic quality, for example "male" is a subclass of "phenotypic sex", and one can express "An anonymous node (representing John) has quality 'male'".
-
 <img align="right" src="/assets/images/docs/data_john_sex_property.png">
+
+The 'has quality' relation can capture this directly by pointing straight to the phenotypic quality, for example "male" is a subclass of "phenotypic sex", and one can express "An anonymous node (representing John) has quality 'male'".
 
 One can detail which assay was used to make this assessment:
 
-<img align="right" src="/assets/images/docs/data_john_sex_process.png">
+<img src="/assets/images/docs/data_john_sex_process.png">
 
 If we involve a categorical value specification, we can point to the possible choices (which will vary depending on experimental protocol):
 
 <img align="right" src="/assets/images/docs/data_john_sex_vs.png">
 
+<br clear="both">
+
 The complete contextual view:
 
-<img align="right" src="/assets/images/docs/data_john_sex_context.png">
+<img src="/assets/images/docs/data_john_sex_context.png">
 
 ## Other approaches
 
@@ -35,10 +37,14 @@ You may see other ontologies might promote the use of a specially defined **obje
 
 <img align="right" src="/assets/images/docs/data_john_sex_op.png">
 
-And others may allow a string value (or coded number) via a specially defined **data** property:
+Here "has phenotypic sex" would be an object property existing between a BFO independent continuent entity (the bearer) and a specifically dependent continuent (in this case, a quality) that is about an organism's sexuality. The quality is represented as a categorical value.
+
+And other ontologies may allow a string value (or coded number) via a specially defined **data** property. Here a general data property containing a regular expression constrains possible values of a categorical variable.
 
 <img align="right" src="/assets/images/docs/data_john_sex_dp.png">
+Here "has phenotypic sex" is a data property existing between a BFO independent continuent entity (a physical organism) and some kind of string literal representing its sexuality. For analysis to succeed, the literals must be normalized to desired categorical values of sexuality, especially where merging with other graphs is likely.
 
+<br clear="both">
 
 In a different approach, an OBI example using categorical value specification focuses on describing a tumor grading standard [`histologic grade according to AJCC 7th edition`](http://purl.obolibrary.org/obo/OBI_0002205){:target="_blank"}.  Here the value specification class has individuals which are each interpreted as grades, and which could potentially be augmented with data properties that detail their assessment differentiae.  This approach is suited to cases where selections are not already established (and would not be in the future) as ontology classes situated within their own hierarchic context. 
 

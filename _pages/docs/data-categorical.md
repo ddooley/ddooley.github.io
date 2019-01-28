@@ -7,11 +7,38 @@ sidebar:
   nav: "docs"
 ---
 
-A categorical value specification is a flat list or hierarchic tree structure containing a finite number of pre-determined choices. Here we provide for choices whose values are either xsd:string or xsd:anyURI references to ontology terms.
+A categorical value specification is a flat list or hierarchic tree structure containing a finite number of pre-determined choices. Here we provide for choices whose values are either a controlled list of xsd:string strings, or xsd:anyURI references to ontology terms.
 
 ### Categorical ontology choice
 
 Categorical choice lists or trees of ontology terms (e.g. of organism taxonomy, of disease, etc.) are often used in datums and experimental metadata. The aim here is to point to existing ontology class or instance identifiers within existing ontologies as selections for a categorical variable. 
+
+The 'has quality' relation can capture this directly by pointing straight to the phenotypic quality, for example "male" is a subclass of "phenotypic sex", and one can express "An anonymous node (representing John) has quality 'male'".
+
+<img align="right" src="/assets/images/docs/data_john_sex_property.png">
+
+One can detail which assay was used to make this assessment:
+
+<img align="right" src="/assets/images/docs/data_john_sex_process.png">
+
+If we involve a categorical value specification, we can point to the possible choices (which will vary depending on experimental protocol):
+
+<img align="right" src="/assets/images/docs/data_john_sex_vs.png">
+
+The complete contextual view:
+
+<img align="right" src="/assets/images/docs/data_john_sex_context.png">
+
+## Other approaches
+
+You may see other ontologies might promote the use of a specially defined **object** property:
+
+<img align="right" src="/assets/images/docs/data_john_sex_op.png">
+
+And others may allow a string value (or coded number) via a specially defined **data** property:
+
+<img align="right" src="/assets/images/docs/data_john_sex_dp.png">
+
 
 In a different approach, an OBI example using categorical value specification focuses on describing a tumor grading standard [`histologic grade according to AJCC 7th edition`](http://purl.obolibrary.org/obo/OBI_0002205){:target="_blank"}.  Here the value specification class has individuals which are each interpreted as grades, and which could potentially be augmented with data properties that detail their assessment differentiae.  This approach is suited to cases where selections are not already established (and would not be in the future) as ontology classes situated within their own hierarchic context. 
 
@@ -31,8 +58,6 @@ Now an instance of `handedness value specification` can have a **`specifies valu
 [//]: # (A simplified model could shift the burden of choice enumeration directly to value specification. )
 
 [//]: # (Note that as future versions of a standard occur, it may be feasible to attach individuals of past standards to them if no semantics have changed, thus simplifying data analysis.)
-
-*Note that in the past OBI used/tried [`categorical measurement datum`](http://purl.obolibrary.org/obo/OBI_0000938){:target="_blank"} for enumerating categorical choices, with a [`has category label`](http://purl.obolibrary.org/obo/OBI_0000999){:target="_blank"} object property that linked to a set or class of permissible terms (as shown in OBI's existing `handedness value specification` example). This class and relation is being discouraged in favour of the categorical value specification approach.*
 
 ## Unworkable , REVISE
 
@@ -61,6 +86,9 @@ For example, an "E-coli K antigen value specification" can be represented as:
 This allows a reasoner to raise the unsatisfiable alarm when an instance of `E-coli K antigen value specification`  `has specified value` 'K17a'.
 
 One can potentially leave the `has specified value` axiom out, in which case validation enforcement would need to occur outside the OWL reasoning context.
+
+Note that in the past OBI used/tried [`categorical measurement datum`](http://purl.obolibrary.org/obo/OBI_0000938){:target="_blank"} for enumerating categorical choices, with a [`has category label`](http://purl.obolibrary.org/obo/OBI_0000999){:target="_blank"} object property that linked to a set or class of permissible terms (as shown in OBI's existing `handedness value specification` example). This class and relation is being discouraged in favour of the categorical value specification approach.
+
 
 ## Ordinal
 

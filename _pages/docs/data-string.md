@@ -7,9 +7,9 @@ sidebar:
   nav: "docs"
 ---
 
-An OWL data property can hold a string as a plain literal with an optional language tag (see [here](https://www.w3.org/2007/OWL/wiki/PlainLiteral){:target="_blank"} ). This enables constraints on string length and its contents (by way of regular expressions).  
+"Free text" string data are often not amenable to data analysis by OWL reasoning unless the values happen to be categorical (see categorical data section).  Textual identifiers that act as keys to unify records can be useful - these might include health care identifiers, postal codes, or the scientific names of plants and animals. The following detail mainly pertains to validating strings that operate as keys having a partiuclar format which should encourage data standardization. 
 
-For example, one could construct the following representation to store and validate international postal codes generally, and the US Zip Code subclass (a string of 5 digits).
+An OWL data property can hold a string as a plain literal with an optional language tag (see [here](https://www.w3.org/2007/OWL/wiki/PlainLiteral){:target="_blank"} ). This also allows constraints on string length and its contents (by way of regular expressions).  For example, one can construct the following representation to store and validate international postal codes generally, and the US Zip Code subclass (a string of 5 digits).
 
 <!--
 [//]: # (        Class: 'string value specification'        subClassOf 'has specified value' only xsd:string)

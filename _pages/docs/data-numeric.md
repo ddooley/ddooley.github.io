@@ -9,9 +9,9 @@ sidebar:
 
 Currently all numeric value specifications are handled under the [`scalar value specification`](http://purl.obolibrary.org/obo/OBI_0001931){:target="_blank"}{:target="_blank"} term, which implies that each must have a unit as well. 
 
- OWL introduced the owl:real data type as the most generic numeric type, and owl:rational as its subbordinate. Under owl:rational is xml:decimal, the general basis of more specific integer and float datatypes; numeric conversion appears to be smooth between these types. Any number type can be paired with a unit as described below. 
+OWL introduced the owl:real data type as the most generic numeric type, and owl:rational as its subbordinate. Under owl:rational is xml:decimal, the general basis of more specific integer and float datatypes; numeric conversion appears to be smooth between these types. Any number type can be paired with a unit as described below. 
 
-OBI currently does not provide functionality for dealing with numeric precision or error range. 
+OBI currently does not provide functionality for specifying numeric precision or error range. 
 
 ### Decimal
 
@@ -22,19 +22,25 @@ OBI currently does not provide functionality for dealing with numeric precision 
 [//]: # (        subClassOf 'decimal value specification')
 -->
 
-Here the pH acidity scale is effectively characterized as a decimal between 0.0 and 14.0:
+Here an example class you could compose (it isn't in OBI) for collecting a pH acidity measurement, using the Unit Ontology's  [`pH`](http://purl.obolibrary.org/obo/UO_0000196) unit, and GenEpiO's [`pH measurement`](http://purl.obolibrary.org/obo/GENEPIO_0001736). 
 
     Class 'ph value specification'
         subClassOf 'scalar value specification'
         subClassOf 'has measurement unit label' only 'pH' 
         subClassOf 'specifies value of' only 'pH measurement'
+        subClassOf 'has specified value' only xsd:decimal
+
+As it stands however, this accepts pH values greater than 14, which are usually experimentally out of bounds. To ensure pH acidity scale is limited to a decimal between 0.0 and 14.0, substitute this `has specified value` axiom into the definition above:
+
         subClassOf 'has specified value' only xsd:decimal[ >=0, <=14 ]))
 
-Note that the Protege axiom editor can be very fussy about exactly how the >,>=,<,<= comparators are positioned with spaces with respect to brackets and numbers.
+This places upper and lower limits on the decimal, and will trigger an unsatisfiability error when a reasoner encounters instance triples that violate the range. This level of validation may not be necessary for your modelling purposes, but it can be considered a way to promote standardization in data sharing when it accompanies datasets.
+
+Note that the Protege axiom editor can be very fussy about exactly how the constraint comparators (>,>=,<,<=) are positioned with spaces with respect to brackets and numbers.
 
 ### Integer
 
-Some variables are inherently integers - countable things that can't meaningfully have fractions except as intermediate calculations (quantities of water can be described in decimal to handle portions like 1.5 cups, while basepairs are not meaningful as fractions. Use xsd:integer where rounding during comparison won't be an issue.
+Some variables are inherently integers - countable things that can't meaningfully have fractions except as intermediate calculations (quantities of water can be described in decimal to handle portions like 1.5 cups, while basepairs are not meaningful as fractions. Use xsd:integer where rounding during comparison won't be an issue. Here we define a minimum inhibitory concentration measurement (MIC) to measure the performance of an antimicrobial agent against the growth of a bacterium.
 
 <!-- 
 [//]: # (    Class 'integer value specification'
@@ -48,9 +54,13 @@ Some variables are inherently integers - countable things that can't meaningfull
         subClassOf 'scalar value specification'
         subClassOf 'has measurement unit label' only 'millimeter' 
         subClassOf 'specifies value of' only 'MIC value'
+        subClassOf 'has specified value' only xsd:integer
+
+Again, if you want to ensure a numeric range that validates data, substitue this line into the above:
+
         subClassOf 'has specified value' only xsd:integer[ >5 ,< 100]
 
-(OWL actually provides access to further subclasses of integer such as xsd:positiveInteger, but OBI does not have a matching granularity of value specification classes.)
+(OWL actually provides access to further subclasses of integer such as xsd:positiveInteger.)
 
 ### Float
 
@@ -61,6 +71,8 @@ Some variables are inherently integers - countable things that can't meaningfull
 )
 [//]: # (        subClassOf 'float value specification')
 -->
+
+This MIC dilution (different from diffusion above) can be measured with a floating point number which should always be >= .015 mg/L and <= 2048.0 .
 
     Class 'MIC dilution measurement specification'
         subClassOf 'scalar value specification'

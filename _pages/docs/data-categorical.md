@@ -17,13 +17,15 @@ Categorical choice lists or trees of ontology terms (e.g. of organism taxonomy, 
 
 The 'has quality' relation can capture this directly by pointing straight to the phenotypic quality, for example "male" is a subclass of "phenotypic sex", and one can express "An anonymous node (representing John) has quality 'male'".
 
+<br clear="both">
+
 One can detail which assay was used to make this assessment:
 
 <img src="/assets/images/docs/data_john_sex_process.png">
 
-If we involve a categorical value specification, we can point to the possible choices (which will vary depending on experimental protocol):
-
 <img align="right" src="/assets/images/docs/data_john_sex_vs.png">
+
+If we involve a categorical value specification, we can point to the possible choices (which will vary depending on experimental protocol):
 
 <br clear="both">
 
@@ -96,6 +98,6 @@ One can potentially leave the `has specified value` axiom out, in which case val
 Note that in the past OBI used/tried [`categorical measurement datum`](http://purl.obolibrary.org/obo/OBI_0000938){:target="_blank"} for enumerating categorical choices, with a [`has category label`](http://purl.obolibrary.org/obo/OBI_0000999){:target="_blank"} object property that linked to a set or class of permissible terms (as shown in OBI's existing `handedness value specification` example). This class and relation is being discouraged in favour of the categorical value specification approach.
 
 
-## Ordinal
+### Ordinal
 
 OBI does not currently have a recommendation about how to define an ordered categorical variable. A ranking data property for each choice could be used; or potentially previous/next relations could be established between choices.

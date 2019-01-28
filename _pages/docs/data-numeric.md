@@ -88,3 +88,6 @@ OBI uses the [`has measurement unit label`](http://purl.obolibrary.org/obo/IAO_0
 A value specification can select at a general level all the permissible units which underlying value specifications and their instances must conform to.
 
 Units extend to countable things like nucleotide 'basepairs' and potentially even 'oranges' or 'fruit' etc. In this respect they indicate the aboutness of the value specification.
+
+A particular datum may be allowed a choice of unit, for example age may be measured in years, months, days, or hours.  Value specifications can support a choice of units (as can be seen in the `[duration](/docs/data-time/#duration)` example, but OWL does not have a unit-quantity conversion mechanism - that normalization must be done directly on a triple store or at point of data entry.
+

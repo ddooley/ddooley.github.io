@@ -28,6 +28,14 @@ We use **entity property diagrams** to show material entities and selected objec
 
 An optional rose-tinted box may be provided to illustrate how to compose instances of classes and relations - this is "assertion component" (Abox) content. Abox content can form the bulk of a triple-store graph database, with the reasoning axioms of related ontologies added separately when validation of data structures and models is desired. In this example it is stated that "John" is an instance of Homo sapiens, and bears an instance of mass (or mass quality) that can then be referenced by other expressions.
 
+# ISSUE: How to define Quality?
+
+*A hard-line view is that a quality is only a directly measureable thing - something one measures instantaniously or over a short period of time.  An object's color, weight etc. This rules out age - because age is inevitably a calculation (a translation) of some other quality observation, or involves time, something not directly observable. It also rules out BMI, a calculation based on two qualities.*
+
+*A looser position is that a quality can be a product of qualities: So body mass index (BMI) is a quality because it is a function of only mass and height.*
+
+*Or we could let time in the door, allowing age to be a quality, a measure of interval, whose semantic bookends are not themselves qualities.*
+
 ## Anonymous nodes
 
 **[`Anonymous or blank nodes`](https://en.wikipedia.org/wiki/Blank_node){:target="_blank"}** play key roles in ontolgies and triple store databases for storing data and for holding logical pattern matching structures. An anonymous node contains a data structure which has not itself been given a full URI resource identifier. The diagram above shows an anonymous node (always with a dashed perimiter) that is of type `Homo sapiens` which would also have an annotation or data property of name "John", and which has a `has quality` relation to another anonymous node of type `mass`. The bulk of instance data is made with them. Internally, in a triple store database, an anonymous node has an identifier that relations can reference, but this is not a permanent URI like the ones issued to ontology terms.

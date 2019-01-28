@@ -34,7 +34,7 @@ As it stands however, this accepts pH values greater than 14, which are usually 
 
         subClassOf 'has specified value' only xsd:decimal[ >=0, <=14 ]))
 
-This places upper and lower limits on the decimal, and will trigger an unsatisfiability error when a reasoner encounters instance triples that violate the range. This level of validation may not be necessary for your modelling purposes, but it can be considered a way to promote standardization in data sharing when it accompanies datasets.
+This places upper and lower limits on the decimal - called facet restrictions (see [here](https://www.w3.org/TR/owl2-quick-reference/#Facets) and [here](https://www.w3.org/TR/owl2-syntax/#Datatype_Maps) - and will trigger an unsatisfiability error when a reasoner encounters instance triples that violate the range. This level of validation may not be necessary for your modelling purposes, but it can be considered a way to promote standardization in data sharing when it accompanies datasets.
 
 Note that the Protege axiom editor can be very fussy about exactly how the constraint comparators (>,>=,<,<=) are positioned with spaces with respect to brackets and numbers.
 

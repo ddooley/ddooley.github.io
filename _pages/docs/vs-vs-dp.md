@@ -5,16 +5,24 @@ permalink: /docs/vs-vs-dp/
 sidebar:
   nav: "docs"
 ---
+Using value specifications to record the values of entity qualities and other measurables reduces the need for a plethora of data properties. Rather than establish a `has age` data property, we express a value specification about age.  Both hold a value, but the latter allows us to focus on defining the semantics of the quality 'age' and its subclasses - `age since planting` etc. 
+
+A data property is analogous to a kind of compressed and semantically opaque value specification because a data property's semantic detail is limited to a few attributes (functional, domain, and range constraints). We offer some reasons why we promote value specifications over data properties:
 
 <img align="right" src="/assets/images/docs/data_john_data_properties.png">
 
-Using value specifications to record entity qualities and other measurables reduces the need for a plethora of data properties. Rather than establish a `has age` data property, we express a value specification about age.  Both hold a value, but the latter allows us to focus on defining the semantics of the quality 'age' and its subclasses - `age since planting` etc. In this view a data property is analogous to a kind of compressed and semantically opaque value specification because a data property's semantic detail is limited to a few attributes (functional, domain, and range constraints). Examples of why they are limiting is described below.
+- Data property values don't support units directly. In the example diagram of John's data properties to right, is the `has weight` decimal value given in kilos or grams? Is height in meters or centimetres? Either assumptions are made about units associated with a data property, or a second set of data properties must be created to capture unit info.  Value specifications allow units to be expressed explicitly.
 
-Data property values don't support units directly. In the example diagram of John's data properties to right, is the `has weight` decimal value given in kilos or grams? Is height in meters or centimetres? Either assumptions are made about units associated with a data property, or a second set of data properties must be created to capture unit info.  Value specifications allow units to be expressed explicitly.
+- A data property doesn't support a relevant time of measurement value.  For example, when was John's `has height` observed, and was it the same time as `has weight`, such that an accurate BMI can be calculated?  Admittedly, time differentiated data is rather complex to model in OWL. A pragmatic approach, if workable, is to only expose to an OWL reasoner data that doesn't need to be differentiated by time. In the BMI example, we could assume height and weight data properties are adequately close in time that any derivative calculations are appropriate. OBI does offer annother approach detailed in the `Time-stamped datums` section.
 
-A data property doesn't support a relevant time of measurement value.  For example in the diagram, when was John's `has height` observed, and was it the same time as `has weight`, such that an accurate BMI can be calculated?  Admittedly, time differentiated data is rather complex to model in OWL. A pragmatic approach, if workable, is to only load data into an OWL reasoner platform that doesn't need to be differentiated by time. In the BMI example, we could assume height and weight data properties are adequately close in time that any derivative calculations are appropriate. OBI does offer annother approach detailed in the `Time-stamped datums` section.
+- A data property cannot directly specify the range of ontology term choices for a categorical value since they are classes or individuals, and data property ranges can only be drawn from xml/rdf data types. "John `has handedness` `http://purl.obolibrary.org/obo/PATO_0002201
+^^xsd:anyURI`" but the URI could have any value. we can't express in OWL that the URI falls within the class of PATO `handedness`.
 
-For these reasons, OBI has a handful of data properties (e.g. `has specified value`), and a larger and growing set of measurement / setting / prediction datums and the material entity qualities that they are about, complements of PATO and other ontologies.
+- A string field like "name" may not be involved in one's process modelling per se.  However, there is a data harmonization use case that motivates adding extra detail to such a field by way of a value specification. If we can specify that a string field is about a first name, a last name, maiden name, full name, SIN number, postal code, etc. this then provides more information to guide the federated querying of graphs.
+
+For these reasons, OBI has a handful of data properties (including `has specified value`), and a larger and growing set of measurement / setting / prediction datums and the material entity qualities that they are about, complements of PATO and other ontologies.
+
+Below, categorical value specifications are referenced, units are provided, and qualities of parts of organisms are unambiguously described without resorting to data properties.
 
 <img align="right" src="/assets/images/docs/data_john_properties_as_vs.png">
 
@@ -22,12 +30,6 @@ For these reasons, OBI has a handful of data properties (e.g. `has specified val
 
 *This diagram doesn't show instance level data. should it?*
 
-*Some fields such as "name" may not be involved in any process modelling, and so may not need to appear in OWL modelling/inference per se. However, a cohesive platform for querying data could extend 'value specification' to them. The advantage is that we can then know when merging two graphs, whether the name elements are intended to match if the aboutness statements of their value specifications match.  This is a data harmonization use-case.*
-
 Shall we allow including ICE values directly, avoiding 'value specification' and just using a new 'has value' data property to connect an ICE to a value? For example a "person 'bearer of' some name"; "anon instance of person has value John".
-
-Can we allow identifier string values in value specification? See: [issue 985](https://github.com/obi-ontology/obi/issues/985){:target="_blank"}
-
-Next section: [`Data types`](/docs/data-types.md)
 
 

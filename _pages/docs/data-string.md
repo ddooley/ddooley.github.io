@@ -7,9 +7,15 @@ sidebar:
   nav: "docs"
 ---
 
-"Free text" string data are often not amenable to data analysis by OWL reasoning unless the values happen to be categorical (see categorical data section).  Textual identifiers that act as keys to unify records can be useful - these might include health care identifiers, postal codes, or the scientific names of plants and animals. The following detail mainly pertains to validating strings that operate as keys having a partiuclar format which should encourage data standardization. 
+"Free text" string data are often not amenable to data analysis by OWL reasoning unless the values happen to be categorical (see categorical data section).  Textual identifiers that act as keys to unify records can be useful - these might include alphanumeric health care identifiers, postal codes, or the scientific taxonomic names of plants and animals. The following detail mainly pertains to validating strings that operate as keys having a particular format which should encourage data standardization. 
 
-An OWL data property can hold a string as a plain literal with an optional language tag (see [here](https://www.w3.org/2007/OWL/wiki/PlainLiteral){:target="_blank"} ). This also allows constraints on string length and its contents (by way of regular expressions).  For example, one can construct the following representation to store and validate international postal codes generally, and the US Zip Code subclass (a string of 5 digits).
+
+*Can we allow identifier string values in value specification? See: [issue 985](https://github.com/obi-ontology/obi/issues/985){:target="_blank"}*
+
+
+An OWL data property can hold a string as a plain literal with an optional language tag (see [here](https://www.w3.org/2007/OWL/wiki/PlainLiteral){:target="_blank"} ). String length constraints can also be set via "length", "minLength" and "maxLength" parameters, e.g. "xsd:string[length "5"^^xsd:integer]. A "pattern" parameter is available which supports [regular expression](https://www.regular-expressions.info/xml.html){:target="_blank"} syntax to some extent, allowing "[0-9] [a-z] [A-Z] . ? * + {m,n}" components.
+
+For example, one can construct the following representation to store and validate international postal codes generally, and the US Zip Code subclass (a string of 5 digits). 
 
 <!--
 [//]: # (        Class: 'string value specification'        subClassOf 'has specified value' only xsd:string)
@@ -26,8 +32,7 @@ An OWL data property can hold a string as a plain literal with an optional langu
         subClassOf 'specifies value of' some ('postal code' and 'is about' some (site and 'located in' some 'United States of America')
         subClassOf 'has specified value' only xsd:string[pattern "[0-9]{5}"]
 
-
-String length constraints can be set via "length", "minLength" and "maxLength" parameters, e.g. "xsd:string[length "5"^^xsd:integer].  A "pattern" parameter supports [regular expression](https://www.regular-expressions.info/xml.html){:target="_blank"} syntax to some extent, allowing "[0-9] [a-z] [A-Z] . ? * + {m,n}" components.  Thus we can express fairly well-validated  [email addresses](http://purl.obolibrary.org/obo/IAO_0000429){:target="_blank"}:
+Fairly well-validated [`email addresses`](http://purl.obolibrary.org/obo/IAO_0000429){:target="_blank"} can be expressed using:
 
 <!--
 [//]: # (        subClassOf 'string value specification')

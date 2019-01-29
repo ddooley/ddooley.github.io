@@ -30,6 +30,15 @@ An optional rose-tinted box may be provided to illustrate how to compose instanc
 
 # ISSUE: How to define Quality?
 
+BFO: a quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized.
+
+~ specifically dependent continuant that is ALWAYS realized.
+
+PATO: A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities
+
+e.g. if a bearer has a surface, and there is another entity "light" around, then the bearer can exhibit the quality "color"?
+
+
 *A hard-line view is that a quality is only a directly measureable thing - something one measures instantaniously or over a short period of time.  An object's color, weight etc. This rules out age - because age is inevitably a calculation (a translation) of some other quality observation, or involves time, something not directly observable. It also rules out BMI, a calculation based on two qualities.*
 
 *A looser position is that a quality can be a product of qualities: So body mass index (BMI) is a quality because it is a function of only mass and height.*

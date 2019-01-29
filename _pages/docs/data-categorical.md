@@ -15,7 +15,7 @@ Categorical choice lists or trees of ontology terms (e.g. of organism taxonomy, 
 
 <img align="right" src="/assets/images/docs/data_john_sex_property.png">
 
-The 'has quality' relation can capture this directly by pointing straight to the phenotypic quality, for example "male" is a subclass of "phenotypic sex", and one can express "An anonymous node (representing John) has quality 'male'".
+The 'has quality' relation can capture this directly by pointing straight to the phenotypic quality, for example "male" is a subclass of "phenotypic sex", and one can express "An anonymous node of type Homo sapiens (representing John) 'has quality' another anonymous node of type 'male'".
 
 <br clear="both">
 

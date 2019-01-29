@@ -34,6 +34,8 @@ docs:
         url: /docs/data-vs/
       - title: Value Specs vs Data Properties
         url: /docs/vs-vs-dp/
+      - title: Body Mass Index Example
+        url: /docs/data-bmi/
       - title: Time-stamped Data
         url: /docs/time-stamped-datums/ 
 

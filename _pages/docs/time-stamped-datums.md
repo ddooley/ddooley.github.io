@@ -6,7 +6,7 @@ sidebar:
   nav: "docs"
 ---
 
-OBI's preferred datum, quality, and value specification approach can be enhanced with time data points in a few ways.   
+Process models and data items can be enhanced with time information in a few ways.   
 
 - Assays and other processes can be marked with start and/or stop times, and therefore any specified output would have those time points to mark its relevance [**using which relations????**]. 
 

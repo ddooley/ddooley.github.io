@@ -28,7 +28,7 @@ docs:
     children:
       - title: Introduction
         url: /docs/data-intro/
-      - title: Process Modelling
+      - title: Process Basics
         url: /docs/process-intro/
       - title: Value Specifications
         url: /docs/data-vs/

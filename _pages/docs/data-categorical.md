@@ -79,9 +79,9 @@ Other ontologies might promote the use of their own **object properties**, which
 
 <img align="right" src="/assets/images/docs/data_john_sex_op.png">
 
-Here "has phenotypic sex" would be an object property existing between a BFO independent continuent entity (the bearer) and a specifically dependent continuent (in this case, a quality) that is about an organism's sexuality. The quality is represented as a categorical value.
+Here `has phenotypic sex` would be an object property - a subclass of `has quality` - existing between a BFO independent continuent entity (the bearer) and a specifically dependent continuent that is about an organism's sexuality. The quality is represented as a categorical value. The range of `has phenotypic sex` can be constrained to PATO `phenotypic sex`.
 
-And other ontologies may allow a string value (or coded number) via a specially defined **data** property. Here a general data property containing a regular expression constrains possible values of a categorical variable.
+Other ontologies may allow a string value (or number code) via a specially defined **data property**. One could add a regular expression to validate a string to match possible values of a categorical variable.
 
 <img align="right" src="/assets/images/docs/data_john_sex_dp.png">
-Here "has phenotypic sex" is a data property existing between a BFO independent continuent entity (a physical organism) and a string literal code representing its sexuality. For analysis to succeed, the literals must be normalized to desired categorical values of sexuality, especially where merging with other graphs is likely.
+Here "has phenotypic sex" is a data property existing between a BFO independent continuent entity (a physical organism) and a string literal code representing its sexuality. For analysis to succeed, the literals must be normalized to desired categorical values of sexuality, especially where merging with other graphs is desired.

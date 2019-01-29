@@ -81,7 +81,8 @@ Other ontologies might promote the use of their own **object properties**, which
 
 Here `has phenotypic sex` would be an object property - a subclass of `has quality` - existing between a BFO independent continuent entity (the bearer) and a specifically dependent continuent that is about an organism's sexuality. The quality is represented as a categorical value. The range of `has phenotypic sex` can be constrained to PATO `phenotypic sex`.
 
-Other ontologies may allow a string value (or number code) via a specially defined **data property**. One could add a regular expression to validate a string to match possible values of a categorical variable.
+Other ontologies may allow a string value (or number code) via a specially defined **data property**, a variant on `has specified value`. One could add a regular expression to validate a string to match possible values of a categorical variable as in above H antigen example.
 
 <img align="right" src="/assets/images/docs/data_john_sex_dp.png">
-Here "has phenotypic sex" is a data property existing between a BFO independent continuent entity (a physical organism) and a string literal code representing its sexuality. For analysis to succeed, the literals must be normalized to desired categorical values of sexuality, especially where merging with other graphs is desired.
+
+Here "has phenotypic sex" is a data property existing between a BFO independent continuent entity (a physical organism) and a string literal code representing its sexuality. For any kind of axioms to work reliably with these values, the literals must be normalized to categorical values of sexuality. Since the 

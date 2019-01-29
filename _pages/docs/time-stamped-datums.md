@@ -12,7 +12,7 @@ Process models and data items can be enhanced with time information in a few way
 
 - Any datum's existing value specification(s) can be accompanied by a time value specification, effectively making it a 2-dimensional or n-dimensional observation. In other words, value specifications, as long as they are unambiguously about (`specifies value of`) different things, are additive. 
 
-Here is a diagram showing a generic "time stamped measurement datum" that is about some quality.
+Here is a diagram showing a generic "time stamped measurement datum" that is about some time and quality.
 
 <img src="/assets/images/docs/data_timestamp_datum_2.png">
 

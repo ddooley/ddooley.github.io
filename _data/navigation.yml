@@ -28,8 +28,12 @@ docs:
     children:
       - title: Introduction
         url: /docs/data-intro/
+      - title: Information Content Entities
+        url: /docs/data-ice/
       - title: Process Basics
         url: /docs/process-intro/
+      - title: Precomposed vs. Postcomposed terms
+        url: /docs/data-precomposed/
       - title: Value Specifications
         url: /docs/data-vs/
       - title: Value Specs vs Data Properties
@@ -55,3 +59,5 @@ docs:
         url: /docs/data-boolean/
       - title: Date, Time, Duration
         url: /docs/data-time/
+      - title: Identifiers
+        url: /docs/identifiers/

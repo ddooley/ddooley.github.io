@@ -7,7 +7,12 @@ sidebar:
 ---
 Using value specifications to record the values of entity qualities and other measurables reduces the need for a plethora of data properties. Rather than establish a `has age` data property, we express a value specification about age.  Both hold a value, but the latter allows us to focus on defining the semantics of the quality 'age' and its subclasses - `age since conception`, `age since birth` etc. 
 
-A data property is analogous to a kind of compressed and semantically opaque value specification because a data property's semantic detail is limited to a few attributes (functional, domain, and range constraints). Here are some reasons why we promote value specifications over data properties:
+A data property is analogous to a kind of compressed and semantically opaque value specification because a data property's semantic detail is limited to a few attributes (functional, domain, and range constraints).  
+
+# NOT YET TRUE!!!!!!! (SEE BOTTOM EDITOR NOTE):
+*OBI does use a generic `has value`* data property that connects an instance of a quality or an information content entity to a literal value. This is a simple way to record a value that doesn't need anything more than one of the stock xml literal datatypes - xsd:decimal, xsd:string, xsd:anyURI, etc. in your process or data model.  Attach the quality or ICE to the entity it pertains to via. 'bearer of' object property. This may provide enough information to enable data exchange.*
+
+Here are cases where we promote value specifications over data properties:
 
 <img align="right" src="/assets/images/docs/data_john_data_properties.png">
 
@@ -17,7 +22,9 @@ A data property is analogous to a kind of compressed and semantically opaque val
 
 - A data property cannot directly specify the range of ontology term choices (which are classes or individuals) for a categorical value since data property ranges can only be drawn from xml/rdf data types. "anon:John `has handedness` "http://purl.obolibrary.org/obo/PATO_0002201^^xsd:anyURI"" but the URI could point to anything on the internet. We can't express in OWL that the 'has handedness' data property URI range must fall within the class of PATO `handedness`.
 
-- A string field like "name" may not be involved in one's process modelling per se.  However, there is a data harmonization use case that motivates adding extra detail to such a field by way of a value specification. If we can specify that a string field is about a first name or a last name, maiden name, full name, SIN number, postal code, etc. this then provides the core 'aboutness' information that guides the merging and federated querying of triple store graphs. 
+- A string field like "name" may not be involved in one's process modelling per se.  However, there is a data harmonization use case that motivates adding extra detail to such a field by way of a value specification. If we can specify that a string field is about a first name or a last name, maiden name, full name, SIN number, postal code, etc. this then provides the core 'aboutness' information that guides the merging and federated querying of triple store graphs.
+
+- If one does 
 
 For these reasons, OBI has a handful of data properties (including `has specified value`), and a larger and growing set of measurement / setting / prediction datums and the material entity qualities that they are about, complements of PATO and other ontologies.
 

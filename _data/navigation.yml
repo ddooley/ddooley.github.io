@@ -38,6 +38,8 @@ docs:
         url: /docs/data-bmi/
       - title: Time-stamped Data
         url: /docs/time-stamped-datums/ 
+      - title: Data sets
+        url: /docs/data-sets/
 
   - title: Data Types
     children:

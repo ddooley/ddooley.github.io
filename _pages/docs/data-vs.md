@@ -35,9 +35,10 @@ Data sources may mark missing values in a variety of ways - by a hyphen instead 
 
 - A numeric, string, or boolean value specification may simply lack a `has specified value` relation pointing to some value.
 
-- An entity's `has quality` relation can point to a more general class; if that class is the same as what a `value specification` `specifies value of` points to, then no information is carried, i.e. no choice has been made.
+- An entity's `has quality` relation can point to a more general class. If that class is the same as what the connected `value specification` `specifies value of` points to, then no choice has been made, and no information is carried.
 
 ## Other metadata
 
 Other metadata may need to be marked e.g. how to deal with: “In some cases, a component is detected in the food matrix, but it cannot be quantified precisely. The analytical result can therefore be considered as ‘trace’” (see [here](<sup>6</sup>https://ciqual.anses.fr/cms/sites/default/files/inline-files/TableCiqual2017_XML_docENG.pdf){:target="_blank"}). Another case is where a data item exists but has been obfuscated for privacy reasons.  OBI does not currently have a metadata standard that addresses these cases.
 
+*In the future numeric value specifications may also include precision and error attributes as well.*

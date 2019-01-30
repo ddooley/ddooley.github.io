@@ -9,7 +9,7 @@ sidebar:
 
 # Value Specifications
 
-This brings us to the collection of data - where specific protocols or instruments are used, generating data on particular scales and scientific units.  One can have data about entities which bear various qualities, and their value specifications, without necessarily having connections to a model layer of processes and datums.  One can document tabular data column metadata independently of experimental protocol process descriptions that explain how the data was generated.  Here **data specification diagrams** are useful for showing a given observation's type of variable and permitted units. This diagram and modelling approach can exist independently of process modelling, but is designed to fit seamlessly with it as well.
+This brings us to the collection of data - where specific protocols or instruments are used, generating data on particular scales and scientific units.  One can have data about entities which bear various qualities, and their value specifications, without necessarily having connections to a model layer of processes and datums.  One can document tabular data column metadata independently of experimental protocol process descriptions that explain how the data was generated.  Here **value specification diagrams** are useful for showing a given observation's type of variable and permitted units. This diagram and modelling approach can exist independently of process modelling, but is designed to fit seamlessly with it as well.
 
 <img align="right" src="/assets/images/docs/data_john_mass_value_spec.png">
 
@@ -28,3 +28,16 @@ In the case where a value specification and/or measurement datum is about the co
 This is our first example of measuring a property of a part of something. Above, an instance of Uberon eye is part of an instance of Homo sapiens, a parthood simplification for what some might need to model in a more complicated way.  For example, ophthalmologists need to distinguish left and right eyes, and allow each to have different iris colors (it happens!), and to describe the color of sclera or conjunctiva (e.g. for red eye or pink eye).  Uberon supports this with `left eye` and `right eye` terms as subclasses of `eye`, and says "`eye` `part of` some `visual system`" but it stops short of establishing a parthood chain between `eye` and `mammalia`.  In the future such standardizing axioms may be introduced which client ontologies and triple store databases can employ to ensure data structure compatibility.  Regardless, it is usually ok to use a simple `part of` relation to abbreviate a more intricate parthood chain if it fits your needed granularity of description.
 
 Note that different assays may output the same measurement datum and value specification combination.  For example an [`age since planting measurement datum`](http://purl.obolibrary.org/obo/OBI_0001156){:target="_blank"} and integer year value specification could be output from assays that calculate or estimate by input tree ring count, carbon 14 analysis, planting date, height of species etc.  It is up to an ontology implementer to define a more specific process as a sub-class of an existing general process if needed; if it falls within the scope of OBI, it may be a candidate for inclusion.
+
+## Missing values
+
+Data sources may mark missing values in a variety of ways - by a hyphen instead of a number or date for example.  Subject-verb-object triples don't really allow this as the object's datatype is fixed.  However, by using value specifications, we can indicate missing values.  
+
+- A numeric, string, or boolean value specification may simply lack a `has specified value` relation pointing to some value.
+
+- An entity's `has quality` relation can point to a more general class; if that class is the same as what a `value specification` `specifies value of` points to, then no information is carried, i.e. no choice has been made.
+
+## Other metadata
+
+Other metadata may need to be marked e.g. how to deal with: “In some cases, a component is detected in the food matrix, but it cannot be quantified precisely. The analytical result can therefore be considered as ‘trace’” (see [here](<sup>6</sup>https://ciqual.anses.fr/cms/sites/default/files/inline-files/TableCiqual2017_XML_docENG.pdf){:target="_blank"}). Another case is where a data item exists but has been obfuscated for privacy reasons.  OBI does not currently have a metadata standard that addresses these cases.
+

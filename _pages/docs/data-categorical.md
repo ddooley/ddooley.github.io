@@ -7,11 +7,11 @@ sidebar:
   nav: "docs"
 ---
 
-A categorical value specification is a flat list or hierarchic tree structure containing a finite number of pre-determined choices. It may describe anything from countries of the world to levels of an experimental variable.  Here we provide for choices whose values are either ontology terms, or a controlled set of literal xsd:string strings.
+A categorical value is a selection from a flat list or hierarchic tree structure containing a finite number of pre-determined choices ranging from organisms in a taxonomy, diseases, countries of the world or levels of an experimental variable.  Here we provide for choices whose values are either ontology terms, or a controlled set of literal xsd:string strings.
 
 ### Categorical ontology choice
 
-Categorical choice lists or trees of ontology terms (e.g. of organism taxonomy, of disease, etc.) are often used in datums and experimental metadata. The aim here is to point to existing ontology class or instance identifiers within existing ontologies as selections for a categorical variable. 
+The aim here is to provide a way to point to an ontology class or instance identifiers within existing ontologies as selections for a categorical variable.
 
 <img align="right" src="/assets/images/docs/data_john_sex_property.png">
 
@@ -25,7 +25,7 @@ One can detail which assay was used to make this assessment:
 
 <img align="right" src="/assets/images/docs/data_john_sex_vs.png">
 
-If we involve a categorical value specification, we can point to the possible choices (which will vary depending on experimental protocol):
+A categorical value specification can point to the possible choices (which will vary depending on experimental protocol):
 
 <br clear="both">
 
@@ -45,7 +45,7 @@ A left/right/ambidextrous handedness example shows some complications one can ru
 
 Following this pattern, an instance of `handedness value specification` can have a **`specifies value of`** axiom pointing to a `handedness` class instance. This involves some extra setup because each `handedness` instance selection can't be referenced directly as a class - it needs to be "**punned**". In other words an individual needs to be created to mirror each categorical choice, so for example classes for left handedness, right handedness, ambidextrous handedness all need mirrored individuals - and in this case these are not native to the PATO ontology that the classes originate from. (Punning is accomplished manually in Protege by copying an existing class URI into the "Create a new Named individual" form, with the "new entity options ..." set to expect a user supplied name.  This preserves the same identifier for both class and individual). 
 
-**As well Protege, when opening a file and encountering an object property with an instance reference at one end and a class reference at the other, will automatically create an instance for the class, and give it the same ontology URI identifier. This eliminates reasoning errors that would otherwise arise.**   A TRUE CHARACTERIZATION ???
+**As well Protege, when opening a file and encountering an object property with an instance reference at one end and a class reference at the other, will automatically create an instance for the class, and give it the same ontology URI identifier. This eliminates reasoning errors that would otherwise arise, but also means you may end up with namedIndividual instances you didn't manually create.**   A TRUE CHARACTERIZATION ???
 
 The target could be expressed simply as "`has specified value` only xsd:anyURI", thus allowing values like xsd:anyURI [right-handedness](http://purl.obolibrary.org/obo/PATO_0002203){:target="_blank"} but this then requires some validation mechanism external to an OWL reasoner for limiting categorical values.
 
@@ -71,7 +71,10 @@ Note that in the past OBI used/tried [`categorical measurement datum`](http://pu
 ### Ordinal Variables
 
 OBI does not currently have a recommendation about how to define an ordered categorical variable. A ranking data property for each choice could be used; or potentially previous/next relations could be established between choices.
+x
+## "Other" values
 
+???
 
 ## Other approaches
 
@@ -85,4 +88,4 @@ Other ontologies may allow a string value (or number code) via a specially defin
 
 <img align="right" src="/assets/images/docs/data_john_sex_dp.png">
 
-Here "has phenotypic sex" is a data property existing between a BFO independent continuent entity (a physical organism) and a string literal code representing its sexuality. For any kind of axioms to work reliably with these values, the literals must be normalized to categorical values of sexuality. Since the 
+Here "has phenotypic sex" is a data property existing between a BFO independent continuent entity (a physical organism) and a string literal code representing its sexuality. For any kind of axioms to work reliably with these values, the literals must be normalized to categorical values of sexuality.

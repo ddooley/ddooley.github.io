@@ -38,9 +38,7 @@ Here are cases where we promote value specifications over data properties:
 
 - A string field like "name" may not be involved in one's process modelling.  However, there is a data harmonization use case that motivates adding extra detail to such a field by way of a value specification. If we can specify that a string field is about a first name or a last name, maiden name, full name, SIN number, postal code, etc. this then provides the core 'aboutness' information that guides the merging and federated querying of triple store graphs.
 
-For these reasons, OBI has a handful of data properties (including `has value` and `has specified value`), and a set of measurement / setting / prediction datums and the material entity qualities that they are about, drawn from PATO and other ontologies. 
-
-Below, categorical value specifications are referenced, units are provided, and qualities of parts of organisms are unambiguously described without resorting to data properties.
+For these reasons, OBI has a handful of data properties (including `has value` and `has specified value`), and a set of measurement / setting / prediction datums and the material entity qualities that they are about, drawn from PATO and other ontologies. Below, value specifications are used to supply catagorical values, units are provided, and qualities of parts of organisms are unambiguously described.
 
 <img align="right" src="/assets/images/docs/data_lee_properties_as_vs.png">
 

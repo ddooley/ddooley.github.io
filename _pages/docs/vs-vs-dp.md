@@ -22,7 +22,7 @@ A data property is analogous to a kind of compressed and semantically opaque val
 - 'denotes' if the ICE is a type of identifier, such as a [`centrally registered identifier symbol`](http://purl.obolibrary.org/obo/IAO_0000577) like a [`specimen identifier`](http://purl.obolibrary.org/obo/OBI_0001616)
 - 'located in' if the literal value X is a geospatial reference. ????
 
-This may provide enough information to enable comparison (when units are not involved), and to facilitate data exchange.*
+This may be sufficient for comparison (when units are not involved), and the object relation facilitates data exchange.*
 
 **ISSUE**: *qualities can't "have values" directly - is that what I heard Chris Stoeckert say? Only ICE's can?  So we have to put a 'datum' in there if a quality is being associated to an entity instance, and the 'has value' operates off of the datum? I am trying to think of a quality that isn't measured categorically or on a scale.*
 

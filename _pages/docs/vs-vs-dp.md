@@ -19,8 +19,8 @@ A data property is analogous to a kind of compressed and semantically opaque val
 *OBI provides a generic `has value`* data property that connects an instance of an information content entity to a literal value. This is a simple way to record a value that doesn't need anything more than one of the stock xml literal datatypes - xsd:decimal, xsd:string, xsd:anyURI, etc. in a process or data model.  Attach the quality or ICE to the entity it pertains to via a suitable object property:
 
 - 'inheres in' object property if ...???
-- 'denotes' if the ICE is a type of identifier, such as a [`centrally registered identifier symbol`](http://purl.obolibrary.org/obo/IAO_0000577) like a [`specimen identifier`](http://purl.obolibrary.org/obo/OBI_0001616)
-- 'located in' if the literal value X is locating the given entity by a geospatial reference. ????
+- 'denotes' if the ICE is a type of identifier, such as a [`centrally registered identifier symbol`](http://purl.obolibrary.org/obo/IAO_0000577) like a [`specimen identifier`](http://purl.obolibrary.org/obo/OBI_0001616) or a NCIT ['identifier'](http://purl.obolibrary.org/obo/NCIT_C25364) for example.
+- 'location of' if the literal value X is locating the given entity by a geospatial reference. ????
 
 This may be sufficient for comparison (when units are not involved), and the object relation provides the 'aboutness' to facilitate data exchange.*
 

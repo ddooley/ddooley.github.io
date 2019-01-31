@@ -12,9 +12,10 @@ This user manual is designed to explain the core functionality of OBI for newcom
 
 # Basic Documentation
 
-* **[Core Class Definitions](/docs/core-classes/)** (basic formulation of the types found in the ontology - start here to learn components of a biomedical investigation)
-* **[Data Modelling](/docs/data-intro/)** (explains how material entity qualities are modeled as process inputs and outputs, and how to define value specifications associated with them for data collection and analysis.)
-* **[Process Modelling](/docs/process-intro/)** (explains how to carry out a strategy of top-down modelling)
+* **[Core Class Definitions](/docs/core-classes/)**: basic formulation of the types found in the ontology - start here to learn components of a biomedical investigation
+* **[Data Modelling](/docs/data-intro/)**: explains how material entity qualities are modeled as process inputs and outputs, and how to define value specifications associated with them for data collection and analysis.)
+* **[Process Modelling](/docs/process-intro/)**: explains how to carry out a strategy of top-down modelling)
+* **[Robot Driven Templates](/docs/robot-intro)**: Chunks of OBI are composed using ROBOT by reading spreadsheets of term definitions.
 
 <!-- 
 * **Extended Class Definitions** (working models for specific subdomains and specializations of OBI beyond the core classes) 

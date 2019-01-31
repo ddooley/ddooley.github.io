@@ -20,6 +20,9 @@ docs:
       - title: Core Classes
         url: /docs/core-classes/
 
+  - title: Robot Templates
+    url: /docs/robot-intro/
+
   - title: Process modelling
     children:
       - title: ...

@@ -9,12 +9,22 @@ Using value specifications to record the values of entity qualities and other me
 
 A data property is analogous to a kind of compressed and semantically opaque value specification because a data property's semantic detail is limited to a few attributes (functional, domain, and range constraints).  
 
-## NOT YET TRUE !!!:
+## NOT YET TRUE !!!: 
+
+### *Shall we allow including ICE values directly, avoiding 'value specification' and just using **a new 'has value' data property** to connect an ICE to a value?*
 
 <img src="/assets/images/docs/data_lee_has_value.png">
-*Shall we allow including ICE values directly, avoiding 'value specification' and just using **a new 'has value' data property** to connect an ICE to a value?*
+<br clear="both">
 
-*OBI provides a generic `has value`* data property that connects an instance of a quality or an information content entity to a literal value. This is a simple way to record a value that doesn't need anything more than one of the stock xml literal datatypes - xsd:decimal, xsd:string, xsd:anyURI, etc. in a process or data model.  Attach the quality or ICE to the entity it pertains to via. 'bearer of' object property. This may provide enough information to enable comparison when units are not involved, and to facilitate data exchange.*
+*OBI provides a generic `has value`* data property that connects an instance of an information content entity to a literal value. This is a simple way to record a value that doesn't need anything more than one of the stock xml literal datatypes - xsd:decimal, xsd:string, xsd:anyURI, etc. in a process or data model.  Attach the quality or ICE to the entity it pertains to via:
+
+- 'inheres in' object property if ...???
+- 'denotes' if the ICE is a type of identifier, like an email address ???
+- 'located in' if the literal value X is a geospatial reference.
+
+This may provide enough information to enable comparison (when units are not involved), and to facilitate data exchange.*
+
+**ISSUE**: *qualities can't "have values" directly - is that what I heard Chris Stoeckert say? Only ICE's can?  So we have to put a 'datum' in there if a quality is being associated to an entity instance, and the 'has value' operates off of the datum? I am trying to think of a quality that isn't measured categorically or on a scale.*
 
 Here are cases where we promote value specifications over data properties:
 

@@ -20,3 +20,14 @@ Courtot, M., Bug, W.J., Gibson, F., Lister, A.L., Malone, J., Schober, D., Brink
 
 Peters, B. and OBI Consortium, 2009. **Ontology for biomedical investigations**.
 [http://precedings.nature.com/documents/3623/version/1](http://precedings.nature.com/documents/3623/version/1){:target="_blank"}
+
+<br clear="both">
+
+<a href="/assets/images/posters/turbo_poster.png" target="_blank"><img src="/assets/images/posters/turbo_poster.png" width="300px" align="right"/></a>
+
+TURBO: Transforming and Unifying Research with Biomedical Ontologies
+Mark A Miller, MS<sup>1</sup>, Hayden Freedman, BA<sup>1</sup>, Heather Williams, MS<sup>1</sup>, David Birtwell, MS<sup>1</sup>, Chris Stoeckert, PhD<sup>1</sup>,<sup>2</sup>
+<sup>1</sup>Institute for Biomedical Informatics, <sup>2</sup> Department of Genetics, Perelman School of Medicine, University of Pennsylvania
+
+[https://github.com/PennTURBO/Turbo-Documentation/blob/master/IBI_CIC_TURBO_MAM_20190102.pdf](https://github.com/PennTURBO/Turbo-Documentation/blob/master/IBI_CIC_TURBO_MAM_20190102.pdf){:target="_blank"}
+

@@ -13,9 +13,9 @@ Aligning with BFO, OBI divides references about study design and assay structure
 
 The following documentation sections will focus on various parts needed to detail processes and their input and output data.  The diagram below shows how OBI expresses the statement "John's mass is 70kg" using triples, and the related material entity, process, datum, quality and value specification ontology components hovering in the background.  It shows the big picture - by tracing classes further up the inheritance hierarchy, we can see the impact on instance data. Details on each of these sections follow.
 
-<img align="right" src="/assets/images/docs/data_john_mass.png">
+<img align="right" src="/assets/images/docs/data_john_mass_context.png">
 
-([full-sized image](/assets/images/docs/data_john_mass.png){:target="_blank"})
+([full-sized image](/assets/images/docs/data_john_mass_context.png){:target="_blank"})
 
 
 ## Material entities and their properties/qualities

@@ -15,8 +15,8 @@ docs:
 
   - title: OBI Core
     children:
-      - title: Core Model
-        url: /docs/core-model/
+#      - title: Core Model
+#        url: /docs/core-model/
       - title: Core Classes
         url: /docs/core-classes/
 

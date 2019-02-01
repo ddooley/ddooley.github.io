@@ -7,25 +7,6 @@ sidebar:
 ---
 Using value specifications to record the values of entity qualities and other measurables reduces the need for a plethora of data properties. Rather than establish a `has age` data property, we express a value specification about age.  Both hold a value, but the latter allows us to focus on defining the semantics of the quality [`age`](http://purl.obolibrary.org/obo/PATO_0000011) and its subclasses and datums - [`age since fertilization measurement datum`](http://purl.obolibrary.org/obo/OBI_0001168), [`age since birth measurement datum`](http://purl.obolibrary.org/obo/OBI_0001169) etc. 
 
-A data property is analogous to a kind of compressed and semantically opaque value specification because a data property's semantic detail is limited to a few attributes (functional, domain, and range constraints).  
-
-## NOT YET TRUE !!!: 
-
-### *Shall we allow including ICE values directly, avoiding 'value specification' and just using **a new 'has value' data property** to connect an ICE to a value?*
-
-<img src="/assets/images/docs/data_lee_has_value.png">
-<br clear="both">
-
-*OBI provides a generic `has value`* data property that connects an instance of an information content entity to a literal value. This is a simple way to record a value that doesn't need anything more than one of the stock xml literal datatypes - xsd:decimal, xsd:string, xsd:anyURI, etc. in a process or data model.  Attach the quality or ICE to the entity it pertains to via a suitable object property:
-
-- 'inheres in' object property if ...???
-- 'denotes' if the ICE is a type of identifier, such as a [`centrally registered identifier symbol`](http://purl.obolibrary.org/obo/IAO_0000577) like a [`specimen identifier`](http://purl.obolibrary.org/obo/OBI_0001616) or a NCIT ['identifier'](http://purl.obolibrary.org/obo/NCIT_C25364) for example.
-- 'location of' if the literal value X is locating the given entity by a geospatial reference. ????
-
-This may be sufficient for comparison (when units are not involved), and the object relation provides the 'aboutness' to facilitate data exchange.*
-
-**ISSUE**: Can instances of a quality "have values" directly? When do we involve a 'datum' in there if a quality is being associated to an entity instance, and the 'has value' operates off of the datum? I am trying to think of a quality that isn't measured categorically or on a scale.*
-
 Here are cases where we promote value specifications over data properties:
 
 <img align="right" src="/assets/images/docs/data_lee_data_properties.png">
@@ -41,6 +22,8 @@ Here are cases where we promote value specifications over data properties:
 For these reasons, OBI has a handful of data properties (including `has value` and `has specified value`), and a set of measurement / setting / prediction datums and the material entity qualities that they are about, drawn from PATO and other ontologies. Below, value specifications are used to supply catagorical values, units are provided, and qualities of parts of organisms are unambiguously described.
 
 <img align="right" src="/assets/images/docs/data_lee_properties_as_vs.png">
+
+<br clear="both">
 
 ***EDITOR NOTE***
 

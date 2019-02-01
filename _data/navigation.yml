@@ -37,10 +37,10 @@ docs:
         url: /docs/process-intro/
       - title: Precomposed terms
         url: /docs/data-precomposed/
+      - title: Data Properties
+        url: /docs/data-properties/
       - title: Value Specifications
         url: /docs/data-vs/
-      - title: Value Specs vs Data Properties
-        url: /docs/vs-vs-dp/
       - title: Body Mass Index Example
         url: /docs/data-bmi/
       - title: Time-stamped Data

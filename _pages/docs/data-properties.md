@@ -6,9 +6,25 @@ sidebar:
   nav: "docs"
 ---
 
-### The "has value" implementation is NOT YET TRUE !!!: Shall we allow including ICE values directly, avoiding 'value specification' and just using **a new 'has value' data property** to connect an ICE to a value?*
+### Questions: Allow "has specified value" to have domain of any ICE?  Or introduce "has value" implementation?
 
-OBI uses data properties in a very limited way, via `has value`, `has measurement value`, and `has specified value`, and `has specified numeric value`, with the latter two described in the `value specification section`.  Although a common approach with other ontologies, a data property connected directly to an entity has little semantic detail - limited to a few attributes (functional, domain, and range constraints) and one of the stock xml literal datatypes - xsd:decimal, xsd:string, xsd:anyURI, etc. (and possibly some OWL facet constraints on those). The rest of its "meaning" is carried only in its label.  So how does OBI get any semantic mileage out of just these four data properties?  OBI's approach is to focus on expressing each entity attribute (a quality or ICE) by using fairly generic object properties that explain their `aboutness`, and connecting those attributes in turn to literal values.  
+An ontology data property is a relation from an entity instance straight to some literal datatype - xsd:decimal, xsd:string, xsd:anyURI, etc. - that is a measure/estimate of what that data property is about. Below, a data property tells us that Lee's age is 12.
+
+<img src="/assets/images/docs/data_lee_data_property_age.png">
+
+The label of the data property tells humans in hopefully plain language what the value is about, but a computer would have a bad time guessing what the relation was equivalent to in some other graph. 
+
+
+the data property domain, or codomain may have restrictions as well that provide additional semantics.  
+
+Data properties are frequently used when only the capabilities of xsd:PlainLiteral data types are needed. 
+
+OBI uses data properties in a very limited way, via `has value`, `has measurement value`, and `has specified value`, and `has specified numeric value`, with the latter two described in the `value specification section`.  To explain why, we'll look at how to use object and data properties to represent data.
+
+
+Although a common approach with other ontologies, a data property connected directly to an entity has little semantic detail - limited to a few attributes (functional, domain, and range constraints) and one of the stock xml literal datatypes - xsd:decimal, xsd:string, xsd:anyURI, etc. (and possibly some OWL facet constraints on those). The rest of its "meaning" is carried only in its label.  
+
+So how does OBI get any semantic mileage out of just these four data properties?  OBI's approach is to focus on expressing each entity attribute (a quality or ICE) by using fairly generic object properties that explain their `aboutness`, and connecting those attributes in turn to literal values.  Rather than establish a `has age` data property, we express that [`age`](http://purl.obolibrary.org/obo/PATO_0000011) is a quality of our entity, and then focus on defining the semantics it and its subclasses and datums - [`age since fertilization measurement datum`](http://purl.obolibrary.org/obo/OBI_0001168), [`age since birth measurement datum`](http://purl.obolibrary.org/obo/OBI_0001169) etc. 
 
 In this way a plethora of named data properties and object properties is avoided, as shown below for street address, email address, and social security number attributes.  We did not need to invent 'has email address', has 'social security number', etc. data properties or object properties. We drew instead from OBI's `has value` data property and generic RO relations.  This reduces the amount of language needed to describe entities, at the cost of a bit more structure. *Most importantly it enables entities to be the focus of semantic elaboration (axioms) rather than being surrounded by opaque relations.* The `aboutness` details have the extra benefit of facilitating appropriate data exchange between ontology-driven systems.  By specifying that a string field is about a first name or a last name, maiden name, full name, SIN number, postal code, etc. this then provides the core 'aboutness' information that guides the merging and federated querying of triple store graphs.
 
@@ -23,7 +39,7 @@ Suitable object properties:
 
 ## Limitations
 
-There are however value details that a `has value` data property can't do by itself as the following examples illustrate.
+There are however value details that a `has ... value` data property can't do by itself as the following examples illustrate, and that are resolved by the introduction of a `value specification` entity (described in the next section.)
 
 <img align="right" src="/assets/images/docs/data_lee_data_properties.png">
 
@@ -32,3 +48,5 @@ There are however value details that a `has value` data property can't do by its
 - A data property doesn't support a relevant time of measurement value.  For example, when was Lee's `has height` observed, and was it the same time as `has weight`, such that an accurate BMI can be calculated?  Admittedly, time differentiated data is rather complex to model in OWL. A pragmatic approach, if workable, is to only expose to an OWL reasoner data that doesn't need to be differentiated by time. In the BMI example, we could assume height and weight data properties are adequately close in time that derivative calculations are ok. OBI does offer annother approach detailed in the `Time-stamped data` section to describe n-dimensional points that include time.
 
 - A data property cannot directly specify the range of ontology term choices (which are classes or individuals) for a categorical value since data property ranges can only be drawn from xml/rdf data types. "anon:Lee `has handedness` "http://purl.obolibrary.org/obo/PATO_0002201^^xsd:anyURI"" but the URI could point to anything on the internet. We can't express in OWL that the 'has handedness' data property URI range must fall within the class of PATO `handedness`.
+
+To answer the above needs, OBI introduced an additional `value specification` entity, as detailed in the next section.

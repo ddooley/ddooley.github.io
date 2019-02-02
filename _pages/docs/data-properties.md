@@ -8,15 +8,17 @@ sidebar:
 
 ### Questions: Allow "has specified value" to have domain of any ICE?  Or introduce "has value" implementation?
 
+This brings us to the collection of data - where specific protocols or instruments are used, generating data on particular scales and scientific units.  
+
 <img align="right" src="/assets/images/docs/data_lee_data_property_age.png">
 
-An ontology data property is a relation from an entity instance straight to some literal datatype (xsd:decimal, xsd:string, xsd:anyURI, etc.) that is a measure/estimate of what that data property is about. In other ontologies one might find the `has age` data property (which doesn't exist in OBI) used to express that Lee's age is 12, as shown to the right.
+An ontology data property is a relation from an entity instance straight to some literal datatype (xsd:decimal, xsd:string, xsd:anyURI, etc.) that is a measure/estimate of what that data property is about. In an ontology one might find a `has age` data property (which doesn't exist in OBI) used to express that Lee's age is 12, as shown to the right.
 
 <br clear="both">
 
 <img align="right" src="/assets/images/docs/data_lee_data_property_ages.png">
 
-The label of the data property tells humans in hopefully plain language what the value is about, but a computer will have a bad time guessing what the relation is equivalent to in other graphs that have differently named or identified relations, which spells trouble for data sharing unless the roster of data properties is already agreed upon.  As shown, the problem is magnified if other age quantities are involved.
+The label of the data property tells humans in hopefully plain language what the value is about, but a computer will have a bad time guessing what the relation is equivalent to in other graphs that have differently named or identified relations, which spells trouble for data sharing unless the roster of data properties is a common standard.  As shown, the problem is magnified if other age quantities are involved.
 
 <br clear="both">
 
@@ -28,6 +30,12 @@ In fact there are many kinds of [`ages`](http://purl.obolibrary.org/obo/OBI_0001
 
 OBI uses data properties in a very limited way, via `has measurement value`,  `has specified value`, and `has specified numeric value`, and relying on the subject of the relation to provide the `aboutness` semantics.  This approach reduces the amount of language needed to describe entities, at the cost of a bit more structure. *Most importantly it enables entities to be the focus of semantic elaboration (axioms) rather than being surrounded by opaque relations.* The `aboutness` details have the extra benefit of facilitating appropriate data exchange between ontology-driven systems.  By specifying that a string field is about a first name or a last name, maiden name, full name, SIN number, postal code, etc. this then provides the core 'aboutness' information that guides the merging and federated querying of triple store graphs.
 
+Suitable object properties:
+
+- `inheres in` or `bearer of` object property if ...???
+- `denotes` if the ICE is a type of identifier, such as a [`centrally registered identifier symbol`](http://purl.obolibrary.org/obo/IAO_0000577) like a [`specimen identifier`](http://purl.obolibrary.org/obo/OBI_0001616) or a NCIT [`identifier`](http://purl.obolibrary.org/obo/NCIT_C25364) for example.
+- 'location of' if the literal value X is locating the given entity by a geospatial reference. ????
+- 
 Now, back to the age example, it looks like we could supply various age measurements like this:
 
 <img src="/assets/images/docs/data_lee_object_property_ages.png">
@@ -35,14 +43,6 @@ Now, back to the age example, it looks like we could supply various age measurem
 Rather than establish a `has age` data property, OBI expresses that [`age`](http://purl.obolibrary.org/obo/PATO_0000011) is a quality of our entity, and then focus on defining the semantics of it and its subclasses.
 
 But is Lee a 12 year old youth, or a 12 month old toddler?  We need the unit of measure, in minutes, days, months, or years.  Data properties can't support units directly, so a second data property is required to eliminate ambiguity.
-
-<br clear="both">
-
-Suitable object properties:
-
-- 'inheres in' object property if ...???
-- 'denotes' if the ICE is a type of identifier, such as a [`centrally registered identifier symbol`](http://purl.obolibrary.org/obo/IAO_0000577) like a [`specimen identifier`](http://purl.obolibrary.org/obo/OBI_0001616) or a NCIT [`identifier`](http://purl.obolibrary.org/obo/NCIT_C25364) for example.
-- 'location of' if the literal value X is locating the given entity by a geospatial reference. ????
 
 ## Limitations
 

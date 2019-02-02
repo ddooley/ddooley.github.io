@@ -9,11 +9,12 @@ sidebar:
 
 # Value Specifications
 
-This brings us to the collection of data - where specific protocols or instruments are used, generating data on particular scales and scientific units.  One can have data about entities which bear various qualities, and their value specifications, without necessarily having connections to a model layer of processes and datums.  One can document tabular data column metadata independently of experimental protocol process descriptions that explain how the data was generated.  Here **value specification diagrams** are useful for showing a given observation's type of variable and permitted units. This diagram and modelling approach can exist independently of process modelling, but is designed to fit seamlessly with it as well.
 
 <img align="right" src="/assets/images/docs/data_john_mass_value_spec.png">
 
 To establish constraints on what a datum can have for a value, OBI introduces a **[`value specification`](http://purl.obolibrary.org/obo/OBI_0001933){:target="_blank"}** (VS) class which can express those constraints in axioms (for example pertinent numeric data type, units, or valid categorical choices). An instance of a value specification can have a **[`has specified value`](http://purl.obolibrary.org/obo/OBI_0002135){:target="_blank"}** data property that holds its literal value. A value specification details allowable values for a given purpose. 
+
+Here **value specification diagrams** are useful for showing a given observation's type of variable and permitted units. This diagram and modelling approach can fit seamlessly with process modelling, but it can be stand-alone as well.  As shown, one can have data about entities which bear various qualities, and their value specifications, without necessarily having connections to a model layer of processes and datums. Tabular data column metadata can be detailed independently of experimental protocol process descriptions that explain how the data was generated.  
 
 Explanations of the different types of categorical, numeric and datetime value specifications are contained in the [`Data Types`](data-types.md) documentation. Background information on how the value specification concept was developed is [here](https://github.com/obi-ontology/obi-legacy-svn/blob/master/trunk/src/examples/development/data-prototype.pdf){:target="_blank"}.  Other related OBI repository issues: [#870](https://github.com/obi-ontology/obi/issues/870){:target="_blank"}, [#945](https://github.com/obi-ontology/obi/issues/945){:target="_blank"} and [#833](https://github.com/obi-ontology/obi/issues/833){:target="_blank"}.
 

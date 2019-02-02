@@ -8,9 +8,9 @@ sidebar:
 
 ### Questions: Allow "has specified value" to have domain of any ICE?  Or introduce "has value" implementation?
 
-An ontology data property is a relation from an entity instance straight to some literal datatype (xsd:decimal, xsd:string, xsd:anyURI, etc.) that is a measure/estimate of what that data property is about. Below, a data property tells us that Lee's age is 12.
+<img align="right" src="/assets/images/docs/data_lee_data_property_age.png">
 
-<img src="/assets/images/docs/data_lee_data_property_age.png">
+An ontology data property is a relation from an entity instance straight to some literal datatype (xsd:decimal, xsd:string, xsd:anyURI, etc.) that is a measure/estimate of what that data property is about. Below, the `has age` data property (which doesn't exist in OBI) tells us that Lee's age is 12.
 
 The label of the data property tells humans in hopefully plain language what the value is about, but a computer will have a bad time guessing what the relation is equivalent to in other graphs that have differently named or identified relations, which spells trouble for data sharing unless the roster of data properties is already agreed upon.  The problem is magnified if other age quantities are involved.
 

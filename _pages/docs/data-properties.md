@@ -10,7 +10,7 @@ sidebar:
 
 <img align="right" src="/assets/images/docs/data_lee_data_property_age.png">
 
-An ontology data property is a relation from an entity instance straight to some literal datatype (xsd:decimal, xsd:string, xsd:anyURI, etc.) that is a measure/estimate of what that data property is about. To right, the `has age` data property (which doesn't exist in OBI) tells us that Lee's age is 12.
+An ontology data property is a relation from an entity instance straight to some literal datatype (xsd:decimal, xsd:string, xsd:anyURI, etc.) that is a measure/estimate of what that data property is about. In other ontologies one might find the `has age` data property (which doesn't exist in OBI) used to express that Lee's age is 12, as shown to the right.
 
 <br clear="both">
 
@@ -22,26 +22,19 @@ The label of the data property tells humans in hopefully plain language what the
 
 <img align="right" src="/assets/images/docs/data_age_measurement_datums.png">
 
-In fact there are many kinds of [`ages`](http://purl.obolibrary.org/obo/OBI_0001167) in the biomedical realm; a number from OBI are listed here. We're either faced with creating a litany of data properties, or of trying another approach to supply measurements and their semantics. OBI has chosen a data modelling vocabulary that focuses on describing a core entity's role, quality, information content and other descriptive components rather than directly connecting semantically opaque data properties. Below is an example focusing on providing values for information content entities (typical patient information like email address, street address, and social security number) connected to an entity instance.
+In fact there are many kinds of [`ages`](http://purl.obolibrary.org/obo/OBI_0001167) in the biomedical realm; a number from OBI are listed here. We're either faced with creating a litany of data properties, or of trying another approach to supply measurements and their semantics. OBI has chosen a data modelling vocabulary that focuses on describing a core entity's role, quality, information content and other descriptive components rather than directly connecting semantically opaque data properties. Below is an example focusing on providing values for information content entities (typical personal information like email address, street address, and social security number) connected to a person instance.
 
 <img src="/assets/images/docs/data_lee_has_specified_value.png">
+
+OBI uses data properties in a very limited way, via `has measurement value`,  `has specified value`, and `has specified numeric value`, and relying on the subject of the relation to provide the `aboutness` semantics.  This approach reduces the amount of language needed to describe entities, at the cost of a bit more structure. *Most importantly it enables entities to be the focus of semantic elaboration (axioms) rather than being surrounded by opaque relations.* The `aboutness` details have the extra benefit of facilitating appropriate data exchange between ontology-driven systems.  By specifying that a string field is about a first name or a last name, maiden name, full name, SIN number, postal code, etc. this then provides the core 'aboutness' information that guides the merging and federated querying of triple store graphs.
 
 Now, back to our age example, it looks like we could supply various age measurements like this:
 
 <img src="/assets/images/docs/data_lee_object_property_ages.png">
 
-But what is missing?  Is Lee a youth, 12 years old, or a toddler, 12 months old?  We need the unit of measure, in minutes, days, months, or years.  Data properties can't support units directly, so we need a second data property for this.
+Rather than establish a `has age` data property, OBI expresses that [`age`](http://purl.obolibrary.org/obo/PATO_0000011) is a quality of our entity, and then focus on defining the semantics it and its subclasses and datums - [`age since fertilization measurement datum`](http://purl.obolibrary.org/obo/OBI_0001168), [`age since birth measurement datum`](http://purl.obolibrary.org/obo/OBI_0001169) etc.
 
-Data properties are frequently used when only the capabilities of xsd:PlainLiteral data types are needed. 
-
-OBI uses data properties in a very limited way, via `has value`, `has measurement value`, and `has specified value`, and `has specified numeric value`, with the latter two described in the `value specification section`.  To explain why, we'll look at how to use object and data properties to represent data.
-
-
-Although a common approach with other ontologies, a data property connected directly to an entity has little semantic detail - limited to a few attributes (functional, domain, and range constraints) and one of the stock xml literal datatypes - xsd:decimal, xsd:string, xsd:anyURI, etc. (and possibly some OWL facet constraints on those). The rest of its "meaning" is carried only in its label.  
-
-So how does OBI get any semantic mileage out of just these four data properties?  OBI's approach is to focus on expressing each entity attribute (a quality or ICE) by using fairly generic object properties that explain their `aboutness`, and connecting those attributes in turn to literal values.  Rather than establish a `has age` data property, we express that [`age`](http://purl.obolibrary.org/obo/PATO_0000011) is a quality of our entity, and then focus on defining the semantics it and its subclasses and datums - [`age since fertilization measurement datum`](http://purl.obolibrary.org/obo/OBI_0001168), [`age since birth measurement datum`](http://purl.obolibrary.org/obo/OBI_0001169) etc. 
-
-In this way a plethora of named data properties and object properties is avoided, as shown below for street address, email address, and social security number attributes.  We did not need to invent 'has email address', has 'social security number', etc. data properties or object properties. We drew instead from OBI's `has value` data property and generic RO relations.  This reduces the amount of language needed to describe entities, at the cost of a bit more structure. *Most importantly it enables entities to be the focus of semantic elaboration (axioms) rather than being surrounded by opaque relations.* The `aboutness` details have the extra benefit of facilitating appropriate data exchange between ontology-driven systems.  By specifying that a string field is about a first name or a last name, maiden name, full name, SIN number, postal code, etc. this then provides the core 'aboutness' information that guides the merging and federated querying of triple store graphs.
+But what is missing?  Is Lee a 12 year old youth, or a 12 month old toddler?  We need the unit of measure, in minutes, days, months, or years.  Data properties can't support units directly, so a second data property is required.
 
 <br clear="both">
 

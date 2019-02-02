@@ -10,9 +10,9 @@ sidebar:
 # Value Specifications
 
 
-<img align="right" src="/assets/images/docs/data_john_mass_value_spec.png">
-
 To establish constraints on what a datum can have for a value, OBI introduces a **[`value specification`](http://purl.obolibrary.org/obo/OBI_0001933){:target="_blank"}** (VS) class which can express those constraints in axioms (for example pertinent numeric data type, units, or valid categorical choices). An instance of a value specification can have a **[`has specified value`](http://purl.obolibrary.org/obo/OBI_0002135){:target="_blank"}** data property that holds its literal value. A value specification details allowable values for a given purpose. 
+
+<img align="right" src="/assets/images/docs/data_john_mass_value_spec.png">
 
 Here **value specification diagrams** are useful for showing a given observation's type of variable and permitted units. This diagram and modelling approach can fit seamlessly with process modelling, but it can be stand-alone as well.  As shown, one can have data about entities which bear various qualities, and their value specifications, without necessarily having connections to a model layer of processes and datums. Tabular data column metadata can be detailed independently of experimental protocol process descriptions that explain how the data was generated.  
 
@@ -40,6 +40,6 @@ Data sources may mark missing values in a variety of ways - by a hyphen instead 
 
 ## Other metadata
 
-Other metadata may need to be marked e.g. how to deal with: “In some cases, a component is detected in the food matrix, but it cannot be quantified precisely. The analytical result can therefore be considered as ‘trace’” (see [here](<sup>6</sup>https://ciqual.anses.fr/cms/sites/default/files/inline-files/TableCiqual2017_XML_docENG.pdf){:target="_blank"}). Another case is where a data item exists but has been obfuscated for privacy reasons.  OBI does not currently have a metadata standard that addresses these cases.
+Other metadata may need to be marked e.g. how to deal with: “In some cases, a component is detected in the food matrix, but it cannot be quantified precisely. The analytical result can therefore be considered as ‘trace’” (see [here](https://ciqual.anses.fr/cms/sites/default/files/inline-files/TableCiqual2017_XML_docENG.pdf){:target="_blank"}). Another case is where a data item exists but has been obfuscated for privacy reasons.  OBI does not currently have a metadata standard that addresses these cases.
 
 *In the future numeric value specifications may also include precision and error attributes as well.*

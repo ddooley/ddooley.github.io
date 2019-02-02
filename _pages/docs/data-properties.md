@@ -16,7 +16,10 @@ The label of the data property tells humans in hopefully plain language what the
 
 <img src="/assets/images/docs/data_lee_data_property_ages.png">
 
-And in fact there are many kinds of age to measure. We're either faced with creating a litany of data properties, or of trying another approach to differentiate the measurements and their semantics. OBI has chosen to emphasize a data modelling vocabulary that focuses on describing a core entity's role, quality, information content and other descriptive components rather than connecting more semantically opaque data properties directly to it. 
+
+<img align="right" src="/assets/images/docs/data_age_measurement_datums.png">
+
+In fact there are many kinds of [`ages`](http://purl.obolibrary.org/obo/OBI_0001167) in the biomedical realm, as exemplified to right. We're either faced with creating a litany of data properties, or of trying another approach to differentiate the measurements and their semantics. OBI has chosen a data modelling vocabulary that focuses on describing a core entity's role, quality, information content and other descriptive components rather than having more semantically opaque data properties connected to it.
 
 <img src="/assets/images/docs/data_lee_object_property_ages.png">
 

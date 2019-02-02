@@ -26,7 +26,7 @@ This user manual is designed to explain the core functionality of OBI for newcom
 
 More background and detail on OBI vocabulary and functionality is available in papers listed on the [Media](/media/) page.
 
-Most documentation diagrams are contained in a [/assets/files/data_obi_draw.io.xml](/assets/files/data_obi_draw.io.xml){:target="_blank"} file, in [draw.io](http://draw.io){:target="_blank"} diagram format for reuse in ontology design work.  The diagrams usually skip relation cardinality details (e.g. "X 'is about' {some / all / max 3 / only} Y"), but these do exist in OBI to enforce more structure, and are detailed in OWL code examples.
+Most documentation diagrams are contained in a [/assets/files/data_obi_draw.io.xml](/assets/files/data_obi_draw3.io.xml){:target="_blank"} file, in [draw.io](http://draw.io){:target="_blank"} diagram format for reuse in ontology design work.  The diagrams usually skip relation cardinality details (e.g. "X 'is about' {some / all / max 3 / only} Y"), but these do exist in OBI to enforce more structure, and are detailed in OWL code examples.
 
 In the documentation, the first usage of an ontology term like `[patient role](http://purl.obolibrary.org/obo/OBI_0000093)` is hyperlinked to its PURL (permanent URL) web addresses for easy reference, usually on the Ontobee lookup servce where its position in the class hierarchy is shown, as well as equivalency and other subclass axioms, synonyms, definition, etc.
 

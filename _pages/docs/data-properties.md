@@ -8,14 +8,17 @@ sidebar:
 
 ### Questions: Allow "has specified value" to have domain of any ICE?  Or introduce "has value" implementation?
 
-An ontology data property is a relation from an entity instance straight to some literal datatype - xsd:decimal, xsd:string, xsd:anyURI, etc. - that is a measure/estimate of what that data property is about. Below, a data property tells us that Lee's age is 12.
+An ontology data property is a relation from an entity instance straight to some literal datatype (xsd:decimal, xsd:string, xsd:anyURI, etc.) that is a measure/estimate of what that data property is about. Below, a data property tells us that Lee's age is 12.
 
 <img src="/assets/images/docs/data_lee_data_property_age.png">
 
-The label of the data property tells humans in hopefully plain language what the value is about, but a computer would have a bad time guessing what the relation was equivalent to in some other graph. 
+The label of the data property tells humans in hopefully plain language what the value is about, but a computer will have a bad time guessing what the relation is equivalent to in other graphs that have differently named or identified relations, which spells trouble for data sharing unless the roster of data properties is already agreed upon.  The problem is magnified if other age quantities are involved.
 
+<img src="/assets/images/docs/data_lee_data_property_ages.png">
 
-the data property domain, or codomain may have restrictions as well that provide additional semantics.  
+And in fact there are many kinds of age to measure. We're either faced with creating a litany of data properties, or of trying another approach to differentiate the measurements and their semantics. OBI has chosen to emphasize a data modelling vocabulary that focuses on describing a core entity's role, quality, information content and other descriptive components rather than connecting more semantically opaque data properties directly to it. 
+
+<img src="/assets/images/docs/data_lee_object_property_ages.png">
 
 Data properties are frequently used when only the capabilities of xsd:PlainLiteral data types are needed. 
 

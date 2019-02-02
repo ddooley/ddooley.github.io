@@ -35,22 +35,16 @@ Suitable object properties:
 - `inheres in` or `bearer of` object property if ...???
 - `denotes` if the ICE is a type of identifier, such as a [`centrally registered identifier symbol`](http://purl.obolibrary.org/obo/IAO_0000577) like a [`specimen identifier`](http://purl.obolibrary.org/obo/OBI_0001616) or a NCIT [`identifier`](http://purl.obolibrary.org/obo/NCIT_C25364) for example.
 - 'location of' if the literal value X is locating the given entity by a geospatial reference. ????
-- 
+
 Now, back to the age example, it looks like we could supply various age measurements like this:
 
 <img src="/assets/images/docs/data_lee_object_property_ages.png">
 
-Rather than establish a `has age` data property, OBI expresses that [`age`](http://purl.obolibrary.org/obo/PATO_0000011) is a quality of our entity, and then focus on defining the semantics of it and its subclasses.
-
-But is Lee a 12 year old youth, or a 12 month old toddler?  We need the unit of measure, in minutes, days, months, or years.  Data properties can't support units directly, so a second data property is required to eliminate ambiguity.
-
-## Limitations
-
-There are value details that a `has ... value` data property can't do by itself as the following examples illustrate, and that are resolved by the introduction of a `value specification` entity (described in the next section.)
+Rather than establish a `has age` data property, OBI expresses that [`age`](http://purl.obolibrary.org/obo/PATO_0000011) is a quality of our entity, and then focus on defining the semantics of it and its subclasses.  However, there are some limitations of the `has ... value` data property that this diagram and the one below expose.
 
 <img align="right" src="/assets/images/docs/data_lee_data_properties.png">
 
-- Data property values don't support units directly. In the example diagram of Lee's data properties to right, is the `has weight` decimal value given in kilos or grams? Is height in meters or centimetres? Either assumptions are made about units associated with a data property, or a second set of data properties must be created to capture unit info.  Value specifications allow units to be expressed explicitly.
+- Data properties can't support units directly, so a second data property is required to eliminate ambiguity.  Is Lee a 12 year old youth, or a 12 month old toddler?  We need the **unit of measure**, in minutes, days, months, or years.   In the example diagram of Lee's data properties to right, is the `has weight` decimal value given in kilos or grams? Is height in meters or centimetres? Without an explicit unit, assumptions are made about units associated with a data property.
 
 - A data property doesn't support a relevant time of measurement value.  For example, when was Lee's `has height` observed, and was it the same time as `has weight`, such that an accurate BMI can be calculated?  Admittedly, time differentiated data is rather complex to model in OWL. A pragmatic approach, if workable, is to only expose to an OWL reasoner data that doesn't need to be differentiated by time. In the BMI example, we could assume height and weight data properties are adequately close in time that derivative calculations are ok. OBI does offer annother approach detailed in the `Time-stamped data` section to describe n-dimensional points that include time.
 

@@ -19,7 +19,9 @@ The label of the data property tells humans in hopefully plain language what the
 
 <img align="right" src="/assets/images/docs/data_age_measurement_datums.png">
 
-In fact there are many kinds of [`ages`](http://purl.obolibrary.org/obo/OBI_0001167) in the biomedical realm, as exemplified to right. We're either faced with creating a litany of data properties, or of trying another approach to differentiate the measurements and their semantics. OBI has chosen a data modelling vocabulary that focuses on describing a core entity's role, quality, information content and other descriptive components rather than having more semantically opaque data properties connected to it.
+In fact there are many kinds of [`ages`](http://purl.obolibrary.org/obo/OBI_0001167) in the biomedical realm, as exemplified to right. We're either faced with creating a litany of data properties, or of trying another approach to differentiate the measurements and their semantics. OBI has chosen a data modelling vocabulary that focuses on describing a core entity's role, quality, information content and other descriptive components rather than having more semantically opaque data properties connected to it. Here is an example focusing on providing values for information content entities connected to an entity instance.
+
+<img src="/assets/images/docs/data_lee_has_specified_value.png">
 
 <img src="/assets/images/docs/data_lee_object_property_ages.png">
 
@@ -34,7 +36,6 @@ So how does OBI get any semantic mileage out of just these four data properties?
 
 In this way a plethora of named data properties and object properties is avoided, as shown below for street address, email address, and social security number attributes.  We did not need to invent 'has email address', has 'social security number', etc. data properties or object properties. We drew instead from OBI's `has value` data property and generic RO relations.  This reduces the amount of language needed to describe entities, at the cost of a bit more structure. *Most importantly it enables entities to be the focus of semantic elaboration (axioms) rather than being surrounded by opaque relations.* The `aboutness` details have the extra benefit of facilitating appropriate data exchange between ontology-driven systems.  By specifying that a string field is about a first name or a last name, maiden name, full name, SIN number, postal code, etc. this then provides the core 'aboutness' information that guides the merging and federated querying of triple store graphs.
 
-<img src="/assets/images/docs/data_lee_has_value.png">
 <br clear="both">
 
 Suitable object properties:

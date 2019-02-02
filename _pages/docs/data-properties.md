@@ -28,13 +28,13 @@ In fact there are many kinds of [`ages`](http://purl.obolibrary.org/obo/OBI_0001
 
 OBI uses data properties in a very limited way, via `has measurement value`,  `has specified value`, and `has specified numeric value`, and relying on the subject of the relation to provide the `aboutness` semantics.  This approach reduces the amount of language needed to describe entities, at the cost of a bit more structure. *Most importantly it enables entities to be the focus of semantic elaboration (axioms) rather than being surrounded by opaque relations.* The `aboutness` details have the extra benefit of facilitating appropriate data exchange between ontology-driven systems.  By specifying that a string field is about a first name or a last name, maiden name, full name, SIN number, postal code, etc. this then provides the core 'aboutness' information that guides the merging and federated querying of triple store graphs.
 
-Now, back to our age example, it looks like we could supply various age measurements like this:
+Now, back to the age example, it looks like we could supply various age measurements like this:
 
 <img src="/assets/images/docs/data_lee_object_property_ages.png">
 
-Rather than establish a `has age` data property, OBI expresses that [`age`](http://purl.obolibrary.org/obo/PATO_0000011) is a quality of our entity, and then focus on defining the semantics it and its subclasses and datums - [`age since fertilization measurement datum`](http://purl.obolibrary.org/obo/OBI_0001168), [`age since birth measurement datum`](http://purl.obolibrary.org/obo/OBI_0001169) etc.
+Rather than establish a `has age` data property, OBI expresses that [`age`](http://purl.obolibrary.org/obo/PATO_0000011) is a quality of our entity, and then focus on defining the semantics of it and its subclasses.
 
-But what is missing?  Is Lee a 12 year old youth, or a 12 month old toddler?  We need the unit of measure, in minutes, days, months, or years.  Data properties can't support units directly, so a second data property is required.
+But is Lee a 12 year old youth, or a 12 month old toddler?  We need the unit of measure, in minutes, days, months, or years.  Data properties can't support units directly, so a second data property is required to eliminate ambiguity.
 
 <br clear="both">
 
@@ -46,7 +46,7 @@ Suitable object properties:
 
 ## Limitations
 
-There are however value details that a `has ... value` data property can't do by itself as the following examples illustrate, and that are resolved by the introduction of a `value specification` entity (described in the next section.)
+There are value details that a `has ... value` data property can't do by itself as the following examples illustrate, and that are resolved by the introduction of a `value specification` entity (described in the next section.)
 
 <img align="right" src="/assets/images/docs/data_lee_data_properties.png">
 

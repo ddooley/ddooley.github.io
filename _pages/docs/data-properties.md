@@ -12,7 +12,7 @@ This brings us to the collection of data - where specific protocols or instrumen
 
 <img align="right" src="/assets/images/docs/data_lee_data_property_age.png">
 
-An ontology data property is a relation from an entity instance straight to some literal datatype (xsd:decimal, xsd:string, xsd:anyURI, etc.) that is a measure/estimate of what that data property is about. In an ontology one might find a `has age` data property (which doesn't exist in OBI) used to express that Lee's age is 12, as shown to the right.
+An ontology data property is a relation from an entity instance straight to some literal datatype (xsd:decimal, xsd:string, xsd:anyURI, etc.) that is a measure/estimate of what that data property is about. In an ontology one might find a `has age` data property used to express that Lee's age is 12, as shown to the right. OBI doesn't promote this approach, as explained below. 
 
 <br clear="both">
 
@@ -33,7 +33,7 @@ OBI uses data properties in a very limited way, via `has measurement value`,  `h
 Suitable object properties:
 
 - `inheres in` or `bearer of` object property if ...???
-- `denotes` if the ICE is a type of identifier, such as a [`centrally registered identifier symbol`](http://purl.obolibrary.org/obo/IAO_0000577) like a [`specimen identifier`](http://purl.obolibrary.org/obo/OBI_0001616) or a NCIT [`identifier`](http://purl.obolibrary.org/obo/NCIT_C25364) for example.
+- `denotes` if the ICE is a type of **identifier**, such as a [`centrally registered identifier symbol`](http://purl.obolibrary.org/obo/IAO_0000577) like a [`specimen identifier`](http://purl.obolibrary.org/obo/OBI_0001616) or a NCIT [`identifier`](http://purl.obolibrary.org/obo/NCIT_C25364) for example.
 - 'location of' if the literal value X is locating the given entity by a geospatial reference. ????
 
 Now, back to the age example, it looks like we could supply various age measurements like this:

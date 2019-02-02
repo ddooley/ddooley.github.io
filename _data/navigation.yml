@@ -62,5 +62,3 @@ docs:
         url: /docs/data-boolean/
       - title: Date, Time, Duration
         url: /docs/data-time/
-      - title: Identifiers
-        url: /docs/identifiers/

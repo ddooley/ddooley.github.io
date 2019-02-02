@@ -28,6 +28,12 @@ This is our first example of measuring a property of a part of something. Above,
 
 Note that different assays may output the same measurement datum and value specification combination.  For example an [`age since planting measurement datum`](http://purl.obolibrary.org/obo/OBI_0001156){:target="_blank"} and integer year value specification could be output from assays that calculate or estimate by input tree ring count, carbon 14 analysis, planting date, height of species etc.  It is up to an ontology implementer to define a more specific process as a sub-class of an existing general process if needed; if it falls within the scope of OBI, it may be a candidate for inclusion.
 
+Below, value specifications are used to supply catagorical values, units are provided, and qualities of parts of organisms are unambiguously described.
+
+<img align="right" src="/assets/images/docs/data_lee_properties_as_vs.png">
+
+<br clear="both">
+ 
 ## Missing values
 
 Data sources may mark missing values in a variety of ways - by a hyphen instead of a number or date for example.  Subject-verb-object triples don't really allow this as the object's datatype is fixed.  However, by using value specifications, we can indicate missing values.  

@@ -10,11 +10,19 @@ sidebar:
 # Value Specifications
 
 
-To establish constraints on what a datum can have for a value, OBI introduces a **[`value specification`](http://purl.obolibrary.org/obo/OBI_0001933){:target="_blank"}** (VS) class which can express those constraints in axioms (for example pertinent numeric data type, units, or valid categorical choices). An instance of a value specification can have a **[`has specified value`](http://purl.obolibrary.org/obo/OBI_0002135){:target="_blank"}** data property that holds its literal value. A value specification details allowable values for a given purpose.  Explanations of the different types of categorical, numeric and datetime value specifications are contained in the [`Data Types`](data-types.md) documentation. Background information on how the value specification concept was developed is [here](https://github.com/obi-ontology/obi-legacy-svn/blob/master/trunk/src/examples/development/data-prototype.pdf){:target="_blank"}.  Other related OBI repository issues: [#870](https://github.com/obi-ontology/obi/issues/870){:target="_blank"}, [#945](https://github.com/obi-ontology/obi/issues/945){:target="_blank"} and [#833](https://github.com/obi-ontology/obi/issues/833){:target="_blank"}.
+The inability of [`data properties`](/docs/data_properties/) to provide units, valid categorical choices or timestamped datums has led OBI to introduce a **[`value specification`](http://purl.obolibrary.org/obo/OBI_0001933){:target="_blank"}** (VS) class which explicitly [`specifies value of`](http://purl.obolibrary.org/obo/OBI_0001927) a quality, datum, or postcomposed expression it is about.  An entity instance, can have a quality instance whose value is detailed by a `value specification`. 
+
+- A `scalar value specification` includes a `has specified value` as described in the `data properties` section, and a `has measurement unit label` to define associated units.
+ 
+- A `string value specification` includes a `has specified value` as described in the `data properties` section.
+- 
+- A `categorical value specification` includes a `specifies value of` 
+
+For all but categorical values, a value specification provides **[`has specified value`](http://purl.obolibrary.org/obo/OBI_0002135){:target="_blank"}** data property that holds its literal value.  Explanations of the different types of categorical, numeric and datetime value specifications are contained in the [`Data Types`](data-types.md) documentation. Background information on how the value specification concept was developed is [here](https://github.com/obi-ontology/obi-legacy-svn/blob/master/trunk/src/examples/development/data-prototype.pdf){:target="_blank"}.  Other related OBI repository issues: [#870](https://github.com/obi-ontology/obi/issues/870){:target="_blank"}, [#945](https://github.com/obi-ontology/obi/issues/945){:target="_blank"} and [#833](https://github.com/obi-ontology/obi/issues/833){:target="_blank"}.
 
 <img align="right" src="/assets/images/docs/data_john_mass_value_spec.png">
 
-Here **value specification diagrams** are useful for showing a given observation's type of variable and permitted units. This diagram and modelling approach can fit seamlessly with process modelling, but it can be stand-alone as well.  As shown, one can have data about entities which bear various qualities, and their value specifications, without necessarily having connections to a model layer of processes and datums. Tabular data column metadata can be detailed independently of experimental protocol process descriptions that explain how the data was generated.  
+A **value specification diagram** can have data about entities which bear various qualities, and their value specifications, without necessarily having connections to a model layer of processes and datums, so these components canfit seamlessly with process modelling, but can be stand-alone as well.  Tabular data column metadata can be detailed independently of experimental protocol process descriptions that explain how the data was generated.  
 
 A value specification's primary aboutness is expressed using the **[`specifies value of`](http://purl.obolibrary.org/obo/OBI_0001927){:target="_blank"}** object relation.  For example "[`mass value specification`](http://purl.obolibrary.org/obo/OBI_0001929){:target="_blank"} `specifies value of` some [`mass`](http://purl.obolibrary.org/obo/PATO_0000125){:target="_blank"}", as shown above. An instance of the VS `specifies value of` an instance of the mass quality which inheres in John. The VS instance has a kilogram unit, and a decimal value of 70.0 .
 
@@ -33,17 +41,9 @@ Below, value specifications are used to supply catagorical values, units are pro
 <img align="right" src="/assets/images/docs/data_lee_properties_as_vs.png">
 
 <br clear="both">
- 
-## Missing values
-
-Data sources may mark missing values in a variety of ways - by a hyphen instead of a number or date for example.  Subject-verb-object triples don't really allow this as the object's datatype is fixed.  However, by using value specifications, we can indicate missing values.  
-
-- A numeric, string, or boolean value specification may simply lack a `has specified value` relation pointing to some value.
-
-- An entity's `has quality` relation can point to a more general class. If that class is the same as what the connected `value specification` `specifies value of` points to, then no choice has been made, and no information is carried.
 
 ## Other metadata
 
 Other metadata may need to be marked e.g. how to deal with: “In some cases, a component is detected in the food matrix, but it cannot be quantified precisely. The analytical result can therefore be considered as ‘trace’” (see [here](https://ciqual.anses.fr/cms/sites/default/files/inline-files/TableCiqual2017_XML_docENG.pdf){:target="_blank"}). Another case is where a data item exists but has been obfuscated for privacy reasons.  OBI does not currently have a metadata standard that addresses these cases.
 
-*In the future numeric value specifications may also include precision and error attributes as well.*
+*In the future numeric value specifications may also include precision and error attributes.*

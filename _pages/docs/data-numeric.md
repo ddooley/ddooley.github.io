@@ -34,7 +34,7 @@ As it stands however, this accepts pH values greater than 14, which are usually 
 
         subClassOf 'has specified value' only xsd:decimal[ >=0, <=14 ]))
 
-This places upper and lower limits on the decimal - called facet restrictions (see [here](https://www.w3.org/TR/owl2-quick-reference/#Facets) and [here](https://www.w3.org/TR/owl2-syntax/#Datatype_Maps) - and will trigger an unsatisfiability error when a reasoner encounters instance triples that violate the range. This level of validation may not be necessary for your modelling purposes, but it can be considered a way to promote standardization in data sharing when it accompanies datasets.
+This places upper and lower limits on the decimal - called facet restrictions (see [here](https://www.w3.org/TR/owl2-quick-reference/#Facets) and [here](https://www.w3.org/TR/owl2-syntax/#Datatype_Maps) - and will trigger an unsatisfiability error when a reasoner encounters instance triples that violate the range. This level of validation may not be necessary for your modelling purposes, but it can help to standardize data sharing.
 
 Note that the Protege axiom editor can be very fussy about exactly how the constraint comparators (>,>=,<,<=) are positioned with spaces with respect to brackets and numbers.
 
@@ -60,7 +60,7 @@ Again, if you want to ensure a numeric range that validates data, substitue this
 
         subClassOf 'has specified value' only xsd:integer[ >5 ,< 100]
 
-(OWL actually provides access to further subclasses of integer such as xsd:positiveInteger.)
+OWL also allows access to subclasses of integer such as xsd:positiveInteger.
 
 ### Float
 
@@ -83,11 +83,11 @@ This MIC dilution (different from diffusion above) can be measured with a floati
 
 ## Units
 
-OBI uses the [`has measurement unit label`](http://purl.obolibrary.org/obo/IAO_0000039){:target="_blank"} relation to pair numeric scalar parameters with related units.  The [Units of Measurement Ontology](https://github.com/bio-ontology-research-group/unit-ontology){:target="_blank"} (UO) is the default unit ontology the OBOFoundry community uses, although there are other options (e.g. [QUDT](http://qudt.org/){:target="_blank"}, [OM](https://github.com/HajoRijgersberg/OM)){:target="_blank"}. It is left to a unit ontology to express the base units of the International System of Units, as well as compound units that have numerators and denominators sufficient for a problem space.
+OBI uses the [`has measurement unit label`](http://purl.obolibrary.org/obo/IAO_0000039){:target="_blank"} relation to pair numeric scalar parameters with related units.  The [Units of Measurement Ontology](https://github.com/bio-ontology-research-group/unit-ontology){:target="_blank"} (UO) is the default unit ontology the OBOFoundry community uses, although there are other options (e.g. [QUDT](http://qudt.org/){:target="_blank"}, [OM](https://github.com/HajoRijgersberg/OM){:target="_blank"}). It is left to a unit ontology to express the base units of the International System of Units, as well as compound units that have numerators and denominators sufficient for a problem space.
 
 A value specification can select at a general level all the permissible units which underlying value specifications and their instances must conform to.
 
 Units extend to countable things like nucleotide 'basepairs' and potentially even 'oranges' or 'fruit' etc. In this respect they indicate the aboutness of the value specification.
 
-A particular datum may be allowed a choice of unit, for example age may be measured in years, months, days, or hours.  Value specifications can support a choice of units (as can be seen in the `[duration](/docs/data-time/#duration)` example, but OWL does not have a unit-quantity conversion mechanism - that normalization must be done directly on a triple store or at point of data entry.
+A particular datum may be allowed a choice of unit, for example age may be measured in years, months, days, or hours.  Value specifications can support a choice of units (as can be seen in the [`duration`](/docs/data-time/#duration) example, but OWL does not have a unit-quantity conversion mechanism - that normalization must be done directly on a triple store or at point of data entry.
 

@@ -28,7 +28,7 @@ In fact there are many kinds of [`ages`](http://purl.obolibrary.org/obo/OBI_0001
 
 <img src="/assets/images/docs/data_lee_has_specified_value.png">
 
-OBI uses data properties in a very limited way, via `has measurement value`,  `has specified value`, and `has specified numeric value`, and relying on the subject of the relation to provide the `aboutness` semantics.  This approach reduces the amount of language needed to describe entities, at the cost of a bit more structure. *Most importantly it enables entities to be the focus of semantic elaboration (axioms) rather than being surrounded by opaque relations.* The `aboutness` details have the extra benefit of facilitating appropriate data exchange between ontology-driven systems.  By specifying that a string field is about a first name or a last name, maiden name, full name, SIN number, postal code, etc. this then provides the core 'aboutness' information that guides the merging and federated querying of triple store graphs.
+OBI uses data properties in a limited way, via `has measurement value`,  `has specified value`, and `has specified numeric value`, and relies on the subject of the relation to provide `aboutness` semantics.  This approach reduces the amount of language needed to describe entities, at the cost of a bit more structure. *Most importantly it enables entities to be the focus of semantic elaboration (axioms) rather than being surrounded by opaque relations.* The `aboutness` details have the extra benefit of facilitating appropriate data exchange between ontology-driven systems.  By specifying that a string field is about a first name or a last name, maiden name, full name, SIN number, postal code, etc. this then provides the core 'aboutness' information that guides the merging and federated querying of triple store graphs.
 
 Suitable object properties:
 
@@ -40,7 +40,7 @@ Now, back to the age example, it looks like we could supply various age measurem
 
 <img src="/assets/images/docs/data_lee_object_property_ages.png">
 
-Rather than establish a `has age` data property, OBI expresses that [`age`](http://purl.obolibrary.org/obo/PATO_0000011) is a quality of our entity, and then focus on defining the semantics of it and its subclasses.  However, there are some limitations of the `has ... value` data property that this diagram and the one below expose.
+Rather than establish a `has age` data property, OBI expresses that [`age`](http://purl.obolibrary.org/obo/PATO_0000011) is a quality of our entity, and then focuses on defining the semantics of it and its subclasses.  However, there are some limitations of the `has ... value` data property that this diagram and the one below expose.
 
 <img align="right" src="/assets/images/docs/data_lee_data_properties.png">
 

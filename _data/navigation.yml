@@ -10,7 +10,7 @@ main:
     url: /media/
 
 docs:
-  - title: Doc Home
+  - title: Documentation
     url: /docs/
 
   - title: OBI Core

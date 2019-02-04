@@ -7,9 +7,7 @@ sidebar:
   nav: "docs"
 ---
 
-
 ## ISSUE: *Can we allow identifier string values in value specification? See: [issue 985](https://github.com/obi-ontology/obi/issues/985){:target="_blank"}*
-
 
 "Free text" string data are often not amenable to data analysis by OWL reasoning unless the values happen to be categorical (see [`categorical`](/docs/data-categorical/){:target="_blank"} data section).  This includes strings like "20g" which haven't been parsed into their numeric and unit components. These can be recorded in an annotation for a given entity ICE component; OBI is currently discussing adding a `has representation` annotation to serve this purpose (see issue [`#985`](https://github.com/obi-ontology/obi/issues/985){:target="_blank"}).
 

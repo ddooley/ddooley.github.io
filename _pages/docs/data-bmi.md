@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title: Body Mass Index Example
 permalink: /docs/data-bmi/
 toc: false

@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title: Core Model
 permalink: /docs/core-model/
 sidebar:

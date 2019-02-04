@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title: Data Types
 permalink: /docs/data-types/
 sidebar:

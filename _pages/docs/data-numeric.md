@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title: Numeric Datums
 permalink: /docs/data-numeric/
 toc: true

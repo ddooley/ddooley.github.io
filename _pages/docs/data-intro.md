@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title: Introduction to OBI data modelling
 permalink: /docs/data-intro/
 toc: true

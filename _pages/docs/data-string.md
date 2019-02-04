@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title: String Datums
 permalink: /docs/data-string/
 toc: true

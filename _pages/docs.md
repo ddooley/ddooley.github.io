@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title: OBI Documentation
 permalink: /docs/
 sidebar:

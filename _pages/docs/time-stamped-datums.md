@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title: Time-stamped Datums
 permalink: /docs/time-stamped-datums/
 sidebar:

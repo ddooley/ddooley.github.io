@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title: Information content entities
 permalink: /docs/data-ice/
 toc: false

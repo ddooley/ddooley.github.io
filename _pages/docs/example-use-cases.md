@@ -1,3 +1,11 @@
+---
+layout: single
+title: Example Use Cases
+permalink: /docs/robot-intro/
+sidebar:
+  nav: "docs"
+---
+
 Here we present a fully documented worked example from two subdomains. 
 
 # Molecular Interaction Experiments

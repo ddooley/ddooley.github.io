@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title: ""
 permalink: /docs/data-vs/
 #toc: true

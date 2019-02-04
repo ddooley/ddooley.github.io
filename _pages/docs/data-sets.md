@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title: Data Sets
 permalink: /docs/data-sets/
 sidebar:

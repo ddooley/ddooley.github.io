@@ -1,4 +1,10 @@
-#OBI Term Guidelines
+---
+layout: default
+title: OBI Term Guidelines
+permalink: /docs/obi-term-guidelines/
+sidebar:
+  nav: "docs"
+---
 
 OBI is a community effort, and we greatly appreciate submissions of new terms! Here are some tips to help you get started.
 

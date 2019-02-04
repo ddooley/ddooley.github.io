@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title: Pre-composed and Post-composed terms
 permalink: /docs/data-precomposed/
 sidebar:

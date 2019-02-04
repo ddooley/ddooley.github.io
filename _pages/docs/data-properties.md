@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title: Data Properties
 permalink: /docs/data-properties/
 sidebar:

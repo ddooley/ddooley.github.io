@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title: Categorical Datum
 permalink: /docs/data-categorical/
 toc: true

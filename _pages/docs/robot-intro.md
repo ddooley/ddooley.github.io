@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title: Robot Templates
 permalink: /docs/robot-intro/
 sidebar:

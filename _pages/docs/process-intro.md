@@ -21,10 +21,9 @@ The **[`assay`](http://purl.obolibrary.org/obo/OBI_0000070){:target="_blank"}** 
 
 <br clear="both">
 
+The next example shows a **[`mass measurement assay`](http://purl.obolibrary.org/obo/OBI_0000445){:target="_blank"}** which takes in some material and outputs a **[`mass measurement datum`](http://purl.obolibrary.org/obo/IAO_0000414){:target="_blank"}**.  The output datum is stated to be a measure of (only) mass quality. The **[`is quality measurement of`](http://purl.obolibrary.org/obo/IAO_0000221){:target="_blank"}** object property is actually a sub-property of `is about` which is used when the target of aboutness is a quality.
 
 <img src="/assets/images/docs/data_john_mass_process.png">
-
-The next example shows a **[`mass measurement assay`](http://purl.obolibrary.org/obo/OBI_0000445){:target="_blank"}** which takes in some material and outputs a **[`mass measurement datum`](http://purl.obolibrary.org/obo/IAO_0000414){:target="_blank"}**.  The output datum is stated to be a measure of (only) mass quality. The **[`is quality measurement of`](http://purl.obolibrary.org/obo/IAO_0000221){:target="_blank"}** object property is actually a sub-property of `is about` which is used when the target of aboutness is a quality.
 
 The Abox shows John as an input (standing on a scale, say), and documents that a `mass measurement datum` has been taken by the `mass measurement assay`. A process modeller can work at this more abstract level, avoiding references to specific protocols or instruments involving, say, units of measure. Alternately, by merging process modelling with specific value specifications (described below), we can describe particular equipment used in an experimental protocol or execution - say a brand and model of weight scale that is only capable of measuring in grams. (That level of detail promotes an ontology-driven plug-and-play future of equipment selection and protocol design.)
 

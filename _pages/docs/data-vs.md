@@ -18,15 +18,17 @@ The inability of [`data properties`](/docs/data_properties/) to provide units, v
 
 - A `scalar value specification` includes a `has specified value` as described in the `data properties` section, and a `has measurement unit label` to define permitted unit classes.    
 
-- A `categorical value specification` includes a `specifies value of` object property pointing to a root term in an ontology branch of terms which should be considered choices of the categorical value.  If the branch root is a quality, the `specifies quality measurement of` object relation holds.
+- A `categorical value specification` includes a `specifies value of` object property pointing to a root term in an ontology branch of terms which should be considered choices of the categorical value.
+
+- Datetime and duration value specifications enable a date, time or duration, and associated units, to be described e.g. "5 days", or "week of 2018/01/01".
 
 Explanations of the different types of categorical, numeric and datetime value specifications are contained in the [`Data Types`](data-types.md) documentation. Background information on how the value specification concept was developed is [here](https://github.com/obi-ontology/obi-legacy-svn/blob/master/trunk/src/examples/development/data-prototype.pdf){:target="_blank"}.  Other related OBI repository issues: [#870](https://github.com/obi-ontology/obi/issues/870){:target="_blank"}, [#945](https://github.com/obi-ontology/obi/issues/945){:target="_blank"} and [#833](https://github.com/obi-ontology/obi/issues/833){:target="_blank"}.
 
 <img align="right" src="/assets/images/docs/data_john_mass_value_spec.png">
 
-A **value specification diagram** can have data about entities which bear various qualities, and their value specifications, without necessarily having connections to a model layer of processes and datums, so these components canfit seamlessly with process modelling, but can be stand-alone as well.  Tabular data column metadata can be detailed independently of experimental protocol process descriptions that explain how the data was generated.  
+A **value specification diagram** can have data about entities which bear various qualities, and their value specifications, without necessarily having connections to a model layer of processes and datums, so these components can fit seamlessly with process modelling, but can be stand-alone as well.  Tabular data column metadata can be detailed independently of experimental protocol process descriptions that explain how the data was generated.  
 
-A value specification's primary aboutness is expressed using the **[`specifies value of`](http://purl.obolibrary.org/obo/OBI_0001927){:target="_blank"}** object relation.  For example "[`mass value specification`](http://purl.obolibrary.org/obo/OBI_0001929){:target="_blank"} `specifies value of` some [`mass`](http://purl.obolibrary.org/obo/PATO_0000125){:target="_blank"}", as shown above. An instance of the VS `specifies value of` an instance of the mass quality which inheres in John. The VS instance has a kilogram unit, and a decimal value of 70.0 .
+The diagram shows a "[`mass value specification`](http://purl.obolibrary.org/obo/OBI_0001929){:target="_blank"} `specifies value of` some [`mass`](http://purl.obolibrary.org/obo/PATO_0000125){:target="_blank"}", as shown above. An instance of the VS `specifies value of` an instance of the mass quality which inheres in John. The VS instance has a kilogram unit, and a decimal value of 70.0 .
 
 The connection between a measurement datum (or any ICE term) and a value specification is accomplished with the **[`has value specification`](http://purl.obolibrary.org/obo/OBI_0001938){:target="_blank"}** object property. Thus an [`age measurement datum`](http://purl.obolibrary.org/obo/OBI_0001167){:target="_blank"} could be linked to a numeric value specification which details the unit - year, month, day etc. of the measure. It could alternately be provided as a [`categorical value`](/docs/data-categorical/) for "mature", "immature", "neonatal", etc.
 

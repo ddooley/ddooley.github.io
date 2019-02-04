@@ -22,7 +22,7 @@ The **[`assay`](http://purl.obolibrary.org/obo/OBI_0000070){:target="_blank"}** 
 <br clear="both">
 
 
-<img align="right" src="/assets/images/docs/data_john_mass_process.png">
+<img src="/assets/images/docs/data_john_mass_process.png">
 
 The next example shows a **[`mass measurement assay`](http://purl.obolibrary.org/obo/OBI_0000445){:target="_blank"}** which takes in some material and outputs a **[`mass measurement datum`](http://purl.obolibrary.org/obo/IAO_0000414){:target="_blank"}**.  The output datum is stated to be a measure of (only) mass quality. The **[`is quality measurement of`](http://purl.obolibrary.org/obo/IAO_0000221){:target="_blank"}** object property is actually a sub-property of `is about` which is used when the target of aboutness is a quality.
 

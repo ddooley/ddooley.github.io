@@ -12,13 +12,15 @@ sidebar:
 
 The inability of [`data properties`](/docs/data_properties/) to provide units, valid categorical choices or timestamped datums has led OBI to introduce a **[`value specification`](http://purl.obolibrary.org/obo/OBI_0001933){:target="_blank"}** (VS) class which more explicitly [`specifies value of`](http://purl.obolibrary.org/obo/OBI_0001927) a quality, datum, or postcomposed expression that it is about.  There are a few different kinds of `value specification` for capturing needed details of numeric, string and categorical variables, organized in OBI by their value datatypes:
 
-- A `string value specification` includes a `has specified value` as described in the `data properties` section.
+<img align="right" src="/assets/images/docs/data_value_specs.png">
+
+- A `string value specification` includes a **[`has specified value`](http://purl.obolibrary.org/obo/OBI_0002135){:target="_blank"}** as described in the `data properties` section.
 
 - A `scalar value specification` includes a `has specified value` as described in the `data properties` section, and a `has measurement unit label` to define permitted unit classes.    
 
 - A `categorical value specification` includes a `specifies value of` object property pointing to a root term in an ontology branch of terms which should be considered choices of the categorical value.  If the branch root is a quality, the `specifies quality measurement of` object relation holds.
 
-For all but categorical values, a value specification provides **[`has specified value`](http://purl.obolibrary.org/obo/OBI_0002135){:target="_blank"}** data property that holds its literal value.  Explanations of the different types of categorical, numeric and datetime value specifications are contained in the [`Data Types`](data-types.md) documentation. Background information on how the value specification concept was developed is [here](https://github.com/obi-ontology/obi-legacy-svn/blob/master/trunk/src/examples/development/data-prototype.pdf){:target="_blank"}.  Other related OBI repository issues: [#870](https://github.com/obi-ontology/obi/issues/870){:target="_blank"}, [#945](https://github.com/obi-ontology/obi/issues/945){:target="_blank"} and [#833](https://github.com/obi-ontology/obi/issues/833){:target="_blank"}.
+Explanations of the different types of categorical, numeric and datetime value specifications are contained in the [`Data Types`](data-types.md) documentation. Background information on how the value specification concept was developed is [here](https://github.com/obi-ontology/obi-legacy-svn/blob/master/trunk/src/examples/development/data-prototype.pdf){:target="_blank"}.  Other related OBI repository issues: [#870](https://github.com/obi-ontology/obi/issues/870){:target="_blank"}, [#945](https://github.com/obi-ontology/obi/issues/945){:target="_blank"} and [#833](https://github.com/obi-ontology/obi/issues/833){:target="_blank"}.
 
 <img align="right" src="/assets/images/docs/data_john_mass_value_spec.png">
 

@@ -14,13 +14,13 @@ The inability of [`data properties`](/docs/data_properties/) to provide units, v
 
 <img src="/assets/images/docs/data_value_specs.png">
 
-- A `string value specification` includes a **[`has specified value`](http://purl.obolibrary.org/obo/OBI_0002135){:target="_blank"}** as described in the `data properties` section.
+- A `string value specification` class includes a **[`has specified value`](http://purl.obolibrary.org/obo/OBI_0002135){:target="_blank"}** as described in the `data properties` section.
 
-- A `scalar value specification` includes a `has specified value` as described in the `data properties` section, and a `has measurement unit label` to define permitted unit classes.    
+- A [`scalar value specification`](http://purl.obolibrary.org/obo/OBI_0001931) class includes a `has specified value` as described in the `data properties` section, and a `has measurement unit label` to define permitted unit classes.    
 
-- A `categorical value specification` includes a `specifies value of` object property pointing to a root term in an ontology branch of terms which should be considered choices of the categorical value.
+- A [`categorical value specification`](http://purl.obolibrary.org/obo/OBI_0001930) class includes a `specifies value of` object property pointing to a root term in an ontology branch of terms which are thereby considered choices of the categorical value. Instances of `specifies value of` are selections within the class of choices.  
 
-- Datetime and duration value specifications enable a date, time or duration, and associated units, to be described e.g. "5 days", or "week of 2018/01/01".
+- Datetime and duration value specification classes enable a date or time duration, and associated units, to be described e.g. "5 days", or "week of 2018/01/01".
 
 Explanations of the different types of categorical, numeric and datetime value specifications are contained in the [`Data Types`](data-types.md) documentation. Background information on how the value specification concept was developed is [here](https://github.com/obi-ontology/obi-legacy-svn/blob/master/trunk/src/examples/development/data-prototype.pdf){:target="_blank"}.  Other related OBI repository issues: [#870](https://github.com/obi-ontology/obi/issues/870){:target="_blank"}, [#945](https://github.com/obi-ontology/obi/issues/945){:target="_blank"} and [#833](https://github.com/obi-ontology/obi/issues/833){:target="_blank"}.
 

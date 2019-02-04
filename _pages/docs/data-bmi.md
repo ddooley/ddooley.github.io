@@ -7,7 +7,7 @@ sidebar:
   nav: "docs"
 ---
 
-The Body Mass Index example explains how OBI models the basic BMI calculation (mass / height^2) in terms of processes, datums, qualities, and value specifications.  The actual BMI value calculation would likely be set by SPARQL say, rather than a reasoner which is ok at comparisons but no arithmetic. The entity property diagram states what type of thing the inputs and outputs for BMI are.
+The Body Mass Index example explains how OBI models the basic BMI calculation (mass / height^2) in terms of processes, datums, qualities, and value specifications.  The actual BMI value calculation would likely be set by SPARQL say, rather than a reasoner which is ok at comparisons but not arithmetic. The entity property diagram states what type of thing the inputs and outputs for BMI are.
 
 <img src="/assets/images/docs/data_john_bmi_properties.png">
 

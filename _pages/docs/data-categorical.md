@@ -64,28 +64,28 @@ For example, an "E-coli K antigen value specification" can be represented as:
 
 This allows a reasoner to raise the unsatisfiable alarm when an instance of `E-coli K antigen value specification`  `has specified value` 'K17a'.
 
-One can potentially leave the `has specified value` axiom out, in which case validation enforcement would need to occur outside the OWL reasoning context.
+One can potentially leave the classes `has specified value` axiom out, in which case validation enforcement would need to occur outside the OWL reasoning context. (This is especially true if the computation load of validation by reasoner is too high.)
 
-Note that in the past OBI used/tried [`categorical measurement datum`](http://purl.obolibrary.org/obo/OBI_0000938){:target="_blank"} for enumerating categorical choices, with a [`has category label`](http://purl.obolibrary.org/obo/OBI_0000999){:target="_blank"} object property that linked to a set or class of permissible terms (as shown in OBI's existing `handedness value specification` example). This class and relation is being discouraged in favour of the categorical value specification approach.
+Note that in the past OBI used/tried [`categorical measurement datum`](http://purl.obolibrary.org/obo/OBI_0000938){:target="_blank"} for enumerating categorical choices, with a [`has category label`](http://purl.obolibrary.org/obo/OBI_0000999){:target="_blank"} object property (see OBI's existing `handedness value specification` example), but this class and relation is being discouraged.
 
 ### Ordinal Variables
 
 OBI does not currently have a recommendation about how to define an ordered categorical variable. A ranking data property for each choice could be used; or potentially previous/next relations could be established between choices.
-x
+
 ## "Other" values
 
-???
+A qualitative survey question may canvass users for an open-ended response if the given selections are inadequate or should be elaborated on. OBI would require a separate string value specification to capture this input.
 
 ## Other approaches
 
-Other ontologies might promote the use of their own **object properties**, which we shy away from adopting for these [reasons](https://ddooley.github.io/docs/vs-vs-dp/).
+Other ontologies might use their own **object properties**, which OBI avoids (see [reasons](https://ddooley.github.io/docs/data-properties/)).
 
 <img align="right" src="/assets/images/docs/data_john_sex_op.png">
 
 Here `has phenotypic sex` would be an object property - a subclass of `has quality` - existing between a BFO independent continuent entity (the bearer) and a specifically dependent continuent that is about an organism's sexuality. The quality is represented as a categorical value. The range of `has phenotypic sex` can be constrained to PATO `phenotypic sex`.
 
-Other ontologies may allow a string value (or number code) via a specially defined **data property**, a variant on `has specified value`. One could add a regular expression to validate a string to match possible values of a categorical variable as in above H antigen example.
+Other ontologies may allow a string value (or number code) via a specially defined **data property**, a variant on `has specified value`. One could add a regular expression to validate a string to match possible values of a categorical variable as in above E-coli K antigen example.
 
 <img align="right" src="/assets/images/docs/data_john_sex_dp.png">
 
-Here "has phenotypic sex" is a data property existing between a BFO independent continuent entity (a physical organism) and a string literal code representing its sexuality. For any kind of axioms to work reliably with these values, the literals must be normalized to categorical values of sexuality.
+Here `has phenotypic sex` is a data property existing between a BFO independent continuent entity (a physical organism) and a string literal code representing its sexuality. For axioms to work reliably with these values, the literals must be normalized to categorical values of sexuality.

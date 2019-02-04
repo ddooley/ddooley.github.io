@@ -15,7 +15,7 @@ The aim here is to provide a way to point to an ontology class or instance ident
 
 <img align="right" src="/assets/images/docs/data_john_sex_property.png">
 
-The 'has quality' relation can capture this directly by pointing straight to the phenotypic quality, for example "male" is a subclass of "phenotypic sex", and one can express "An anonymous node of type Homo sapiens (representing John) 'has quality' another anonymous node of type 'male'".
+The `has quality` relation can capture this directly by pointing straight to the phenotypic quality, for example [`male`](http://purl.obolibrary.org/obo/PATO_0000384) is a subclass of [`phenotypic sex`](http://purl.obolibrary.org/obo/PATO_0001894), and one can express that an anonymous node of type `Homo sapiens` (representing John) `has quality` another anonymous node of type `male`.
 
 <br clear="both">
 
@@ -84,7 +84,7 @@ Other ontologies might use their own **object properties**, which OBI avoids (se
 
 Here `has phenotypic sex` would be an object property - a subclass of `has quality` - existing between a BFO independent continuent entity (the bearer) and a specifically dependent continuent that is about an organism's sexuality. The quality is represented as a categorical value. The range of `has phenotypic sex` can be constrained to PATO `phenotypic sex`.
 
-Other ontologies may allow a string value (or number code) via a specially defined **data property**, a variant on `has specified value`. One could add a regular expression to validate a string to match possible values of a categorical variable as in above E-coli K antigen example.
+Other ontologies may allow a string value (or number code) via a  **data property**, as shown below. One could add a regular expression to validate a string to match possible values of a categorical variable as in above E-coli K antigen example.
 
 <img align="right" src="/assets/images/docs/data_john_sex_dp.png">
 

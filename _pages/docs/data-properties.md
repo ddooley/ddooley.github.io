@@ -10,11 +10,11 @@ sidebar:
 
 This brings us to the collection of data - where specific protocols or instruments are used, generating data on particular scales and scientific units.  
 
-FOR BJORN!: *First, OBI makes the distinction between values that can be placed directly on a categorical or numeric scale, and those that require some further parsing to extract atomic elements from, e.g. the strings "20g", "20 grams", and "0.02kg" which are the same quantity, but which differ by string comparison.  For this "undigested data" OBI provides a [`has representation`]() annotation, a string or a resource identifier which is not expected to play a direct role in OWL data-related axioms.*
+FOR BJORN!: *First, OBI makes the distinction between values that can be placed directly on a categorical or numeric scale, and those that require some further parsing to extract atomic elements from, e.g. the strings "20g", "20 grams", and "0.02kg" which are the same quantity, but which differ by string comparison.  For this "undigested data" OBI provides a [`has representation`]() annotation that holds a string or a resource identifier which is not expected to play a direct role in OWL data-related axioms.*
 
 <img align="right" src="/assets/images/docs/data_lee_data_property_age.png">
 
-An ontology **`data property`** is a relation from an entity instance straight to some literal datatype (xsd:decimal, xsd:string, xsd:anyURI, etc.) that is a measure/estimate of what that data property is about. In an ontology one might find a `has age` data property used to express that Lee's age is 12, as shown to the right. OBI doesn't promote this approach, as explained below,  
+An ontology **`data property`** is a relation from an entity instance straight to some literal datatype value (an RDF number or string for example) that is a measure/estimate of what that data property is about. In an ontology one might find a `has age` data property used to express that Lee's age is 12, as shown to the right. OBI shies away from this approach, as explained below.  
 
 <br clear="both">
 
@@ -26,9 +26,9 @@ The label of the data property tells humans in hopefully plain language what the
 
 <img align="right" src="/assets/images/docs/data_age_measurement_datums.png">
 
-In fact there are many kinds of [`ages`](http://purl.obolibrary.org/obo/OBI_0001167) in the biomedical and biological research realm; a number from OBI are listed here. We're either faced with creating a litany of data properties, or of trying another approach to supply measurements and their semantics. OBI has chosen a data modelling vocabulary that focuses on describing a core entity's role, quality, information content and other descriptive components rather than directly connecting semantically opaque data properties. **This is not to say non-OBI `data properties` are forbidden in application ontologies - but having a conversion path that defines a custom data property in terms of a generic BFO set of terms is a good exercise that anticipates data conversion issues.**
+In fact there are many kinds of [`ages`](http://purl.obolibrary.org/obo/OBI_0001167) in the biomedical and biological research realm; a number from OBI are listed here. Rather than creating a litany of data properties, OBI has chosen an alternative approach - a data modelling vocabulary that focuses on describing a core entity's role, quality, information content and other descriptive components rather than directly connecting semantically opaque data properties. **This is not to say non-OBI `data properties` are forbidden in application ontologies - but going through the exercise of defining them in terms of a generic BFO set of terms is a good exercise that may anticipate data conversion issues.**
 
-Below is an example focusing on providing values for information content entities (typical personal information like email address, street address, and social security number) connected to a person instance.
+Below is an example focusing on providing values for information content entities typically connected to a person instance.
 
 <img src="/assets/images/docs/data_lee_has_specified_value.png">
 
@@ -54,7 +54,7 @@ Now, back to the age example, it looks like we could supply various age measurem
 
 <img src="/assets/images/docs/data_lee_object_property_ages.png">
 
-Rather than establish a `has age` data property, OBI expresses that [`age`](http://purl.obolibrary.org/obo/PATO_0000011) is a quality of our entity, and then focuses on defining the semantics of it and its subclasses.  However, there are some limitations of the `has ... value` data property that this diagram and the one below expose.
+To summarize, rather than establish a `has age` data property, OBI expresses that [`age`](http://purl.obolibrary.org/obo/PATO_0000011) is a quality of our entity, and then focuses on defining the semantics of it and its subclasses.  However, there are some limitations of the `has ... value` data property that this diagram and the one below expose.
 
 <img align="right" src="/assets/images/docs/data_lee_data_properties.png">
 

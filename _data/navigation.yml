@@ -20,9 +20,6 @@ docs:
       - title: Core Classes
         url: /docs/core-classes/
 
-  - title: Robot Templates
-    url: /docs/robot-intro/
-
   - title: Process modelling
     children:
       - title: ...
@@ -62,3 +59,6 @@ docs:
         url: /docs/data-boolean/
       - title: Date, Time, Duration
         url: /docs/data-time/
+
+  - title: Robot Templates
+    url: /docs/robot-intro/

@@ -17,7 +17,7 @@ The aim here is to provide a way to point to an ontology class or instance ident
 
 The `has quality` relation can capture this directly by pointing straight to the phenotypic quality, for example [`male`](http://purl.obolibrary.org/obo/PATO_0000384) is a subclass of [`phenotypic sex`](http://purl.obolibrary.org/obo/PATO_0001894), and one can express that an anonymous node of type `Homo sapiens` (representing John) `has quality` another anonymous node of type `male`.
 
-<br clear="both">
+<br clear="right">
 
 One can detail which assay was used to make this assessment:
 
@@ -27,7 +27,7 @@ One can detail which assay was used to make this assessment:
 
 A categorical value specification can point to the possible choices (which will vary depending on experimental protocol):
 
-<br clear="both">
+<br clear="right">
 
 The complete contextual view:
 

@@ -6,7 +6,7 @@ permalink: /projects/
 
 Contact us to add your ontology-driven project if it makes use of OBI!
 
-## Genomic Epidemiology Ontology (GenEpiO), The FoodOn food ontology, and the Genomic Epidemiology Entity Mart (GEEM)
+### Genomic Epidemiology Ontology (GenEpiO), The FoodOn food ontology, and the Genomic Epidemiology Entity Mart (GEEM)
 
 [genepio.org](https://genepio.org){:target="_blank"}, [foodon.org](https://foodon.org){:target="_blank"}, [genepio.org/geem](https://genepio.org/geem){:target="_blank"}
 

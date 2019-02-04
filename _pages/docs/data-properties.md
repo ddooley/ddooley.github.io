@@ -16,13 +16,13 @@ FOR BJORN!: *First, OBI makes the distinction between values that can be placed 
 
 An ontology **`data property`** is a relation from an entity instance straight to some literal datatype value (an RDF number, string or date for example) that is a measure/estimate of what that data property is about. In an ontology one might find a `has age` data property used to express that Lee's age is 12, as shown to the right. OBI shies away from this approach, as explained below.  
 
-<br clear="both">
+<br clear="right">
 
 <img align="right" src="/assets/images/docs/data_lee_data_property_ages.png">
 
 The label of the data property tells humans in hopefully plain language what the value is about, but a reasoner will have a bad time guessing what the relation is equivalent to in other graphs that have differently named or identified relations that mean the same thing.  As shown, the problem is magnified if other age quantities are involved.
 
-<br clear="both">
+<br clear="right">
 
 <img align="right" src="/assets/images/docs/data_age_measurement_datums.png">
 

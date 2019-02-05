@@ -1,19 +1,17 @@
 ---
 layout: default
-title: ""
+title: "Process model basics"
 permalink: /docs/process-intro/
 toc: true
 sidebar:
   nav: "docs"
 ---
 
-# Process model basics
-
 [//]: # (Please put comments like this one into the text to communicate with other OBI-ers)
 
 Generally a **[`process`](http://purl.obolibrary.org/obo/BFO_0000015){:target="_blank"}** can have other processes as parts, and can have instances with start and end times associated with them.  A **[`planned process`](http://purl.obolibrary.org/obo/OBI_0000011){:target="_blank"}** is carried out by agent(s) who are guided by some kind of **[`plan specification`](http://purl.obolibrary.org/obo/IAO_0000104){:target="_blank"}**, an ICE which has **[`objective`](http://purl.obolibrary.org/obo/IAO_0000005){:target="_blank"}** and **[`action`](http://purl.obolibrary.org/obo/IAO_0000007){:target="_blank"}** components. A **[`study design`](http://purl.obolibrary.org/obo/OBI_0500000){:target="_blank"}** and its **[`protocol`](http://purl.obolibrary.org/obo/OBI_0000272){:target="_blank"}** part(s) are subclasses of `plan specification`. This is documented in the [`Core Classes`](/docs/core-classes/) page.
 
-<img align="right" src="/assets/images/docs/data_assay_2.png">
+<img align="right" src="/assets/images/docs/data_assay.png">
 
 A **process / datum model diagram** shows how material entities or data items can be an input or output of some process. This diagram often includes parts of entity property diagrams in order to reference components as inputs or in aboutness clauses.
 

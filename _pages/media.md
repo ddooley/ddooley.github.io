@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "OBI Papers"
+title: "Papers"
 permalink: /media/
 ---
 

@@ -6,9 +6,12 @@ sidebar:
   nav: "docs"
 ---
 
-This brings us to the collection of data - where specific protocols or instruments are used, generating data on particular scales and scientific units.  
+This brings us to the collection of data - where specific protocols or instruments are used, generating data on particular scales and scientific units.  A transformation is usually required from data sources like text files, relational databases, spreadsheets, and even RDF triple store graphs, into a structure that brings the best out of OBI, BFO, and other OBO Foundry ontologies.
 
-FOR BJORN!: *First, OBI makes the distinction between values that can be placed directly on a categorical or numeric scale, and those that require some further parsing to extract atomic elements from, e.g. the strings "20g", "20 grams", and "0.02kg" which are the same quantity, but which differ by string comparison.  For this "undigested data" OBI provides a [`has representation`]() annotation that holds a string or a resource identifier which is not expected to play a direct role in OWL data-related axioms.*
+
+<img align="right" src="/assets/images/docs/data_raw.png">
+
+First, OBI makes the distinction between values that can be placed directly on a categorical or numeric scale, and those that require some further parsing to extract atomic elements from, e.g. the strings "20g", "20 grams", and "0.02kg" which are the same quantity, but which differ by string comparison.  For this "undigested data" OBI provides a [`has representation`]() annotation that holds a string or a resource identifier which is not expected to play a direct role in OWL data-related axioms.*
 
 <img align="right" src="/assets/images/docs/data_lee_data_property_age.png">
 
@@ -24,13 +27,13 @@ The label of the data property tells humans in hopefully plain language what the
 
 <img align="right" src="/assets/images/docs/data_age_measurement_datums.png">
 
-In fact there are many kinds of [`ages`](http://purl.obolibrary.org/obo/OBI_0001167) in the biomedical and biological research realm; a number of related datums from OBI are listed here. Rather than creating a litany of data properties, OBI has chosen an alternative approach - a data modelling vocabulary that focuses on describing a core entity's role, quality, information content and other descriptive components rather than directly connecting semantically opaque data properties. **This is not to say non-OBI `data properties` are forbidden in application ontologies - but going through the exercise of defining them in terms of a generic BFO/OBI/OBO Foundry set of terms is a good exercise that may anticipate data sharing issues.**
+In fact there are many kinds of [`ages`](http://purl.obolibrary.org/obo/OBI_0001167) in the biomedical and biological research realm; a number of related datums from OBI are listed here. Rather than creating a litany of data properties, OBI has chosen an alternative approach - a data modelling vocabulary that focuses on describing a core entity's role, quality, information content and other descriptive components rather than directly connecting semantically opaque data properties. This is not to say non-OBI `data properties` are forbidden in application ontologies - but going through the exercise of defining them in terms of a generic BFO/OBI/OBO Foundry set of terms may help anticipate data sharing issues.
 
 Below is an example focusing on providing values for information content entities typically connected to a person instance.
 
 <img src="/assets/images/docs/data_lee_has_specified_value.png">
 
-OBI uses data properties in a limited way, via `has measurement value`,  `has specified value`, and `has specified numeric value`, and relies on the subject of the relation to provide `aboutness` semantics.  This approach reduces the amount of language needed to describe entities, at the cost of a bit more structure. *Most importantly it enables entities to be the focus of semantic elaboration (axioms) rather than being surrounded by opaque relations.* The `aboutness` details have the extra benefit of facilitating appropriate data exchange between ontology-driven systems.  By specifying that a string field is about a first name or a last name, maiden name, full name, SIN number, postal code, etc. this then provides the core 'aboutness' information that guides the merging and federated querying of triple store graphs.
+OBI uses data properties in a limited way, via [`has measurement value`(http://purl.obolibrary.org/obo/IAO_0000004),  [`has specified value`](http://purl.obolibrary.org/obo/OBI_0002135), and [`has specified numeric value`](http://purl.obolibrary.org/obo/OBI_0001937), and relies on the subject of the relation to provide `aboutness` semantics.  This approach reduces the amount of language needed to describe entities, at the cost of a bit more structure. *Most importantly it enables entities to be the focus of semantic elaboration (axioms) rather than being surrounded by opaque relations.* The `aboutness` details have the extra benefit of facilitating appropriate data exchange between ontology-driven systems.  By specifying that a string field is about a first name or a last name, maiden name, full name, SIN number, postal code, etc. this then provides the core 'aboutness' information that guides the merging and federated querying of triple store graphs.
 
 ## Missing values
 
@@ -56,7 +59,7 @@ Now, back to the age example, it seems like we could supply various age measurem
 
 To summarize, rather than establish a `has age` data property, OBI expresses that [`age`](http://purl.obolibrary.org/obo/PATO_0000011) is a quality of our entity, and then focuses on defining the semantics of it and its subclasses.  
 
-However, there are some limitations of the `has ... value` data property that this diagram and the one below expose.
+However, there are some limitations of data properties that this diagram and the one below expose.
 
 <img align="right" src="/assets/images/docs/data_lee_data_properties.png">
 

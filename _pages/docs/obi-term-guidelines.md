@@ -15,7 +15,7 @@ Before you submit a new term, please search [`OntoBee`](http://www.ontobee.org/)
 If you find a term that’s close enough, but would like additions or changes made to it, please submit a new ticket to our issue tracker and be sure to include:
 
 - the name of the term in the title of the ticket
-- the [`IRI`](https://en.wikipedia.org/wiki/Internationalized_resource_identifier) that identifies the term (something like [`http://pur l.obolibrary.org/obo/OBI_0000070`](http://purl.obolibrary.org/obo/OBI_0000070))
+- the [`IRI`](https://en.wikipedia.org/wiki/Internationalized_resource_identifier) that identifies the term (something like [`http://purl.obolibrary.org/obo/OBI_0000070`](http://purl.obolibrary.org/obo/OBI_0000070))
 - a description of the changes you would like made and reasons for the changes
 When you’re ready, follow this link to create a new ticket:
 

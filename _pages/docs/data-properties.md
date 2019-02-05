@@ -6,8 +6,6 @@ sidebar:
   nav: "docs"
 ---
 
-### Questions: Allow "has specified value" to have domain of any ICE?  Or introduce "has value" implementation?
-
 This brings us to the collection of data - where specific protocols or instruments are used, generating data on particular scales and scientific units.  
 
 FOR BJORN!: *First, OBI makes the distinction between values that can be placed directly on a categorical or numeric scale, and those that require some further parsing to extract atomic elements from, e.g. the strings "20g", "20 grams", and "0.02kg" which are the same quantity, but which differ by string comparison.  For this "undigested data" OBI provides a [`has representation`]() annotation that holds a string or a resource identifier which is not expected to play a direct role in OWL data-related axioms.*
@@ -56,7 +54,9 @@ Now, back to the age example, it seems like we could supply various age measurem
 
 <img src="/assets/images/docs/data_lee_object_property_ages.png">
 
-To summarize, rather than establish a `has age` data property, OBI expresses that [`age`](http://purl.obolibrary.org/obo/PATO_0000011) is a quality of our entity, and then focuses on defining the semantics of it and its subclasses.  However, there are some limitations of the `has ... value` data property that this diagram and the one below expose.
+To summarize, rather than establish a `has age` data property, OBI expresses that [`age`](http://purl.obolibrary.org/obo/PATO_0000011) is a quality of our entity, and then focuses on defining the semantics of it and its subclasses.  
+
+However, there are some limitations of the `has ... value` data property that this diagram and the one below expose.
 
 <img align="right" src="/assets/images/docs/data_lee_data_properties.png">
 

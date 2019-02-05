@@ -11,9 +11,13 @@ sidebar:
 This user manual is designed to explain the core functionality of OBI for newcomers, and to serve as a canonical reference for OBI developers. This is a work in progress, but here we detail and provide a roadmap for OBI building blocks.  In addition to reasoning prowess, using OBI and other OWL ontologies to detail types of assay data - parameters, measurables, independent and dependent variables - will encourage standardization of their usage, enable experimental reproducibility, and facilitate data exchange and conversion.
 
 * **[Core Class Definitions](/docs/core-classes/)**: basic formulation of the types found in the ontology - start here to learn components of a biomedical investigation
+
 * **[Data Modelling](/docs/data-intro/)**: explains how material entity qualities are modeled as process inputs and outputs, and how to define value specifications associated with them for data collection and analysis.)
+
 * **[Process Modelling](/docs/process-intro/)**: explains how to carry out a strategy of top-down modelling)
+
 * **[Data Types](/docs/data-types/)**: Basic ways to represent numeric, categorical, date, and duration datums)
+
 * **[Robot Driven Templates](/docs/robot-intro)**: Chunks of OBI are composed using ROBOT by reading spreadsheets of term definitions.
 
 <!-- 

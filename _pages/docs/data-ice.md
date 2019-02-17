@@ -17,7 +17,7 @@ The `information content entity` **[`data item`](http://purl.obolibrary.org/obo/
 * A **[`settings datum`](http://purl.obolibrary.org/obo/IAO_0000140){:target="_blank"}** class which enables modeling an apparatus control input.
 * A **[`predicted data item`](http://purl.obolibrary.org/obo/OBI_0302867){:target="_blank"}** class that applies to output of a [`prediction`](http://purl.obolibrary.org/obo/OBI_0302910){:target="_blank"} process.
 
-All ICEs are allowed a **[`value specification`](http://purl.obolibrary.org/obo/OBI_0001933){:target="_blank"}** that records some pertinent categorical or numeric value about an entity; more on this in the value specification [`section`](/docs/data-vs/).
+All ICEs are allowed a **[`value representation`](???)** or **[`value specification`](http://purl.obolibrary.org/obo/OBI_0001933){:target="_blank"}** that records some pertinent categorical or numeric value about an entity; more on this in the value [`representation`](https://obi-ontology.ontodev.com/docs/data-properties/#value-representation-compatible) and [`specification`](/docs/data-vs/) sections.
 
 ***
 <sup>1</sup>The ability of an ICE to bear information depends on the coding scheme and copyable medium it inheres in, hence it is a generically dependent continuant.

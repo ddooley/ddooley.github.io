@@ -7,22 +7,23 @@ sidebar:
   nav: "docs"
 ---
 
+OWL introduced the owl:real data type as the most generic numeric type, and owl:rational as its subbordinate. Under owl:rational is xml:decimal, the general basis of more specific integer and float datatypes; numeric conversion appears to be smooth between these types. Any number type can be paired with a unit as described below. 
+
+OBI generally has two ways to represent a datum's numeric value, depending on whether or not a unit needs to be included.  The simple, unit-less case can be handled by the numeric "has xsd:real" or subordinate "has xsd:decimal" or "has xsd:integer" data properties.  This makes sense for dimensionless numbers like counts.
+
+OBI currently also shows that datums can have a `has measurement unit label`
 Currently all numeric value specifications are handled under the [`scalar value specification`](http://purl.obolibrary.org/obo/OBI_0001931){:target="_blank"}{:target="_blank"} term, which implies that each must have a unit as well. 
 
-OWL introduced the owl:real data type as the most generic numeric type, and owl:rational as its subbordinate. Under owl:rational is xml:decimal, the general basis of more specific integer and float datatypes; numeric conversion appears to be smooth between these types. Any number type can be paired with a unit as described below. 
 
 OBI currently does not provide functionality for specifying numeric precision or error range. 
 
 ### Decimal
 
-<!--
-[//]: # (        Class 'decimal value specification'
-        subClassOf 'has specified value' only xsd:decimal
-)
-[//]: # (        subClassOf 'decimal value specification')
--->
+A [`pH measurement datum`](http://purl.obolibrary.org/obo/GENEPIO_0001736) is an example of a dimensionless measure that nevertheless has a unit: [`pH`](http://purl.obolibrary.org/obo/UO_0000196).  One could choose not to make the unit mandatory in this case, as there is no alternate unit possibility, in which case a simple data property will do:
 
-Here an example class you could compose (it isn't in OBI) for collecting a pH acidity measurement, using the Unit Ontology's  [`pH`](http://purl.obolibrary.org/obo/UO_0000196) unit, and GenEpiO's [`pH measurement`](http://purl.obolibrary.org/obo/GENEPIO_0001736). 
+
+
+Here an example class one could compose  for collecting a pH acidity measurement, using the Unit Ontology's  [`pH`](http://purl.obolibrary.org/obo/UO_0000196) unit, and GenEpiO's [`pH measurement`](http://purl.obolibrary.org/obo/GENEPIO_0001736). 
 
     Class 'ph value specification'
         subClassOf 'scalar value specification'

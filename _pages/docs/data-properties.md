@@ -12,31 +12,51 @@ Diagrammed on the left side are typical examples of field data related to a rese
 
 <img align="right" src="/assets/images/docs/data_raw.png">
 
-A given datum value from the left may match one of two scenarios:
+A given datum value from the left may match one of four scenarios, the first two involving a single data property, and the latter two involving a multi-component "value specification" representation:
 
-### Value specification compatible
-A value that can be placed on a numeric or categorical scale. In this case a [`value specifications`](/docs/data-vs) instance can be set up for it. For example:
+#### OWL RDF/XML datatype compatible
 
-- The strings "20g", "20 grams", and "0.02kg" may differ by string comparison, but can be translated into an equivalent or identical RDF triple store value + unit using OWL ontology vocabulary. All variants can be translated into the atomic components found on the right - a decimal 20.0 and the unit "gram". 
+OBI can generally express rdf/xml datatype values associated with ICE enties using a triple in the form "[ICE] `has xsd:Literal value` [value]".  This is suited to unit-less quantities, and covers common OWL-compatible [XML datatype schema](https://www.w3.org/TR/xmlschema-2/#built-in-datatypes) options, which can be further divided into:
 
-- A categorical variable like color can match selections from standardized color wheels. (Synonyms can be handled under this category too, e.g. "sienna, sepia, umber, terra cotta" -> `brown`)
+- `has owl:real value` for a datum whose textual content represents a number that is unit-less.  Has owl:real range.
+   - `has xsd:decimal value` subclass for unit-less decimal values.
+   - `has xsd:integer value` subclass for counts and other unit-less integers.
 
-### Value representation compatible 
-A datum value that has some (symbol) information in it that may or may not fit directly on a numeric or categorical scale; further parsing may yeild a data structure of more atomic components. It may be an identifier which can be compared with other values for a match. Use a `value representation` to hold "undigested" data (say, in preparation for parsing by SPARQL etc.; other directives may be provided to enable interpretation of the datum's value).  For example:
+
+- `has xsd:anyURI value` for a datum which contains a URI pointing to a document or other type of resource file.  Has xsd:anyURI range.  Example: an ICE [`analytical cytology data file`](http://purl.obolibrary.org/obo/OBI_0000210) specification ["https://onlinelibrary.wiley.com/doi/epdf/10.1002/cyto.990110303"](https://onlinelibrary.wiley.com/doi/epdf/10.1002/cyto.990110303)
+
+- `has xsd:dateTime value` for a datum containing a xsd:dateTime formatted date or time. Has xsd:dateTime range.
+- Similarly, a `has xsd:dateTimeStamp value` for a date or time that includes a time zone.
+
+- `has xsd:boolean value` for a datum which is represented as a yes/no or true/false value. Has xsd:boolean range.
+
+#### String representation compatible 
+
+A datum value that has linguistically or computationally coded textual content can be indicated by OBI's `has xsd:string representation` data property which has a xsd:string range.  It can hold "undigested" data, say, in preparation for parsing by SPARQL etc. into more atomic components.  Other object relations may be provided to enable interpretation of string representation datum values. It can store values that may or may not fit directly on a numeric or categorical scale, as well as linguistic content (words, phrases, sentences with optional OWL language facet.  It may be an identifier which can be compared with other values for a match.  For example:
 
 - The address "16500 Mullholland Dr., Los Angeles, CA, USA" needs parsing to extract house/apartment number, street, city, country, etc.
 
-- **The fictitious Social Security Number "000-11-2222", an identifier which is not really on a scale or a categorical value. It is essentially atomic; it serves a data matchmaking role.**
+- The fictitious Social Security Number "000-11-2222", an identifier which is not really on a scale or a categorical value. It is essentially atomic; it serves a data matchmaking role.
 
-- An ICE '[`analytical cytology data file`](http://purl.obolibrary.org/obo/OBI_0000210) specification "https://onlinelibrary.wiley.com/doi/epdf/10.1002/cyto.990110303"
+- "20g" may be held as a string representation en route to becoming a value specification.
 
-- "20g" may be held as a value representation en route to becoming a value specification.
+Such data could technically be stored as annotations but the potential for referencing it as input our output of process axioms is then lost.
 
-OBI uses a data property `has representation` to express triples in the form "[datum] `has representation` [value]"; Value representation semantics are further divided into `has string representation`, `has numeric representation`, and `has URI resource representation` (OR `has_electronic_document_representation`). 
+#### Scalar Value specification compatible
 
-### Data Property Implementation Approaches
+A value that can be placed on a numeric scale which includes a unit. In this case a [`scalar value specification`](http://purl.obolibrary.org/obo/OBI_0001931) instance can be set up for it (see [docs/data-vs](docs/data-vs)). For example:
 
-Before we detail the use of `has representation` and `has specified value` data properties, we will discuss OBI's philosophy about data properties in general. 
+- The strings "20g", "20 grams", and "0.02kg" may differ by string comparison, but can be translated into an equivalent or identical RDF triple store value + unit using OWL ontology vocabulary. All variants can be translated into atomic components: a decimal 20.0 and a "gram" mass unit. 
+
+- A duration of 20 days.
+
+#### Categorical value specification compatible
+
+A [`categorical value specification`](http://purl.obolibrary.org/obo/OBI_0001930) describes a categorical variable like color, which can match selections from a string list of terms, or from a branch of ontology terms (e.g. terms from a standardized color wheel). (Inputted synonyms can be handled too, e.g. "sienna, sepia, umber, terra cotta" -> "brown")
+
+## Data Property Implementation Approaches
+
+Before we detail the use of `has rdfs:Literal value` etc. and `has specified value` data properties, we will discuss OBI's philosophy about data properties in general. 
 
 <img align="right" src="/assets/images/docs/data_lee_data_property_age.png">
 
@@ -58,7 +78,7 @@ Below is an example focusing on providing values for information content entitie
 
 <img src="/assets/images/docs/data_lee_has_specified_value.png">
 
-OBI uses data properties in a limited way, via `has representation`, [`has specified value`](http://purl.obolibrary.org/obo/OBI_0002135), and [`has specified numeric value`](http://purl.obolibrary.org/obo/OBI_0001937), and relies on the subject of the relation to provide `aboutness` semantics.  This approach reduces the amount of language needed to describe entities, at the cost of a bit more structure. *Most importantly it enables entities to be the focus of semantic elaboration (axioms) rather than being surrounded by opaque relations.* The `aboutness` details have the extra benefit of facilitating appropriate data exchange between ontology-driven systems.  By specifying that a string field is about a first name or a last name, maiden name, full name, SIN number, postal code, etc. this then provides the core 'aboutness' information that guides the merging and federated querying of triple store graphs.
+OBI uses data properties in a limited way, via `has [xml/rdf/owl datatype] value`, [`has specified value`](http://purl.obolibrary.org/obo/OBI_0002135), and [`has specified numeric value`](http://purl.obolibrary.org/obo/OBI_0001937), and relies on the subject of the relation to provide `aboutness` semantics.  This approach reduces the amount of language needed to describe entities, at the cost of a bit more structure. *Most importantly it enables entities to be the focus of semantic elaboration (axioms) rather than being surrounded by opaque relations.* The `aboutness` details have the extra benefit of facilitating appropriate data exchange between ontology-driven systems.  By specifying that a string field is about a first name or a last name, maiden name, full name, SIN number, postal code, etc. this 'aboutness' information can guide the merging and federated querying of triple store graphs.
 
 ## Missing values
 
@@ -66,19 +86,21 @@ Data sources may mark missing values in a variety of ways - by an empty string, 
 
 - An entity's object property lacks a `has specified value` relation where one is expected.
 
-- For a value being described by a `categorical value specification` (CVS) class, if that value matches the CVS class's expressed  `specifies value of` target, then no choice has been made, and no information is carried.
+- For an instance value being described by a `categorical value specification` (CVS) class, if that value matches the CVS class's expressed  `specifies value of` target, then no choice has been made, and no information is carried.
 
 ## Suitable object properties
 
-It is straightforward to see an entity connected to a pertinent quality via `has quality`.  But what object properties should connect entities to ICES?
+It is straightforward to see a material entity connected to a pertinent quality via `has quality`, but there are other object properties that connect a material entity to other types of things:
 
-- `denotes` if the ICE is a type of **identifier**, such as a [`centrally registered identifier symbol`](http://purl.obolibrary.org/obo/IAO_0000577) like a [`specimen identifier`](http://purl.obolibrary.org/obo/OBI_0001616) or a NCIT [`identifier`](http://purl.obolibrary.org/obo/NCIT_C25364) for example.
-- 'location of' if the literal value X is locating the given entity by a geospatial reference. ????
-- `inheres in` or `bearer of` object property if ...???
+- **More broadly, an information content entity (ICE) [`inheres in`](http://purl.obolibrary.org/obo/RO_0000052) material entity or material entity [`bearer of`](http://purl.obolibrary.org/obo/RO_0000053) ICE if the ICE is calculated from qualities of the material entity ????????**
 
-One can also use cardinality to specify more than one data property is allowed or required. Note that some OWL reasoning profiles don't work with cardinality.
+- Thing [`denotes`](http://purl.obolibrary.org/obo/IAO_0000219) material entity if the thing is a type of **identifier**, such as a [`centrally registered identifier symbol`](http://purl.obolibrary.org/obo/IAO_0000577) like a [`specimen identifier`](http://purl.obolibrary.org/obo/OBI_0001616) or a NCIT [`identifier`](http://purl.obolibrary.org/obo/NCIT_C25364) for example.
 
-Now, back to the age example, it seems like we could supply various age measurements like this:
+- Material entity [`located in`](http://purl.obolibrary.org/obo/RO_0001025) geospatial reference.  Note the editor's note: "Most location relations will only hold at certain times, but this is difficult to specify in OWL." 
+
+One can also use cardinality to specify more than one data property is allowed or required. However, some OWL reasoning profiles don't work with cardinality.
+
+Now, back to the age example, it seems we could supply various age measurements like so:
 
 <img src="/assets/images/docs/data_lee_object_property_ages.png">
 
@@ -88,7 +110,7 @@ However, there are some limitations of data properties that this diagram and the
 
 <img align="right" src="/assets/images/docs/data_lee_data_properties.png">
 
-- A data property can't include a unit directly, so a second data property is required to eliminate ambiguity.  Is Lee a 12 year old youth, or a 12 month old toddler?  We need the **unit of measure**, in minutes, days, months, or years.   In the example diagram of Lee's data properties to right, is the `has weight` decimal value given in kilos or grams? Is height in meters or centimetres? Without an explicit unit, assumptions are made about units associated with a data property.
+- A data property can't include a unit directly, so a second data property is needed for that.  Is Lee a 12 year old youth, or a 12 month old toddler?  We need the **unit of measure**, in minutes, days, months, or years.  In the example diagram of Lee's data properties to right, is the `has weight` decimal value given in kilos or grams? Is height in meters or centimetres? Without an explicit unit, assumptions are made about units associated with a data property that may work internally to a system, but are likely to fail when exchanging information with other systems.
 
 - A data property doesn't support a relevant time of measurement value.  For example, when was Lee's `has height` observed, and was it the same time as `has weight`, such that an accurate BMI can be calculated?  Admittedly, time differentiated data is rather complex to model in OWL. A pragmatic approach, if workable, is to only expose to an OWL reasoner data that doesn't need to be differentiated by time. In the BMI example, we could assume height and weight data properties are adequately close in time that derivative calculations are ok. OBI does offer annother approach detailed in the `Time-stamped data` section to describe n-dimensional points that include time.
 
@@ -96,4 +118,8 @@ However, there are some limitations of data properties that this diagram and the
 
 - There is no direct way to indicate that an instance of paricular data property has a missing value since its object must have some value.  The data property as a whole could be omitted, and this may be sufficient for querying purposes.
 
-To answer the above needs, OBI introduced an additional `value specification` entity, as detailed in the next section.
+For a numeric one dimensional datum with a unit, that is, a datum that records a single value on a scale, it is possible to represent it directly using object and data properties.  Here an age datum has unit and value directly by way of `has measurement unit label` and `has xsd:decimal value`:
+
+<img align="right" src="/assets/images/docs/data_lee_object_property_age_unit.png">
+
+This doesn't provide the necessary structure for describing categorical and mulit-dimensional datums - time-stamped observations, or geographic lat/long location for example. To meet these needs, OBI has an additional `value specification` entity, as detailed in the next section.

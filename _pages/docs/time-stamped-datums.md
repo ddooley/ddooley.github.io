@@ -8,7 +8,45 @@ sidebar:
 
 Process models and data items can be enhanced with time information in a few ways.   
 
-- Assays and other processes can be marked with start and/or stop times, and therefore any specified output would have those time points to mark its relevance [**using which relations????**]. 
+- Assays and other processes can be marked with start and/or stop times, and therefore any specified output could have those time points to mark its relevance. 
+
+## ISSUE: Can we use the existing datum parthood, and not use the VS approach? 
+
+## Time stamped data via datum parthood
+
+Alan Ruttenberg, Melanie Courtot & others created this structure which is simple enough if connecting data properties directly; it ends up looking too complicated when used with value specifications. It illustrates datums being part of a datum, using `part of` subproperties to disambiguate the time dimension from the other (one or more) measurement datum components.
+
+Using:
+
+- [`time stamped measurement datum`](http://purl.obolibrary.org/obo/IAO_0000582)
+  - [`has time stamp`](http://purl.obolibrary.org/obo/IAO_0000416)
+    - [`time measurement datum`](http://purl.obolibrary.org/obo/IAO_0000416) that has only [`measurement unit label`](http://purl.obolibrary.org/obo/IAO_0000039) some [`time unit`]()
+  - [`has measurement datum`](http://purl.obolibrary.org/obo/IAO_0000583) 
+    - [`measurement datum`](http://purl.obolibrary.org/obo/IAO_0000109) 
+
+ 
+<img src="/assets/images/docs/data_timestamp_structure.png">
+
+Instance
+
+<img src="/assets/images/docs/data_timestamp_length.png">
+
+An application 
+
+    `time stamped measurement datum`:
+    - `has time stamp` exactly 1 `time measurement datum` // subproperty of 'has part'
+    - `has measurement datum` exactly 1 `measurement datum`
+
+    `geolocation coordinate datum`:
+    - `has part` exactly 1 `latitude datum` 
+    - `has part` exactly 1 `longitude datum`
+
+    `time stamped geolocation coordinate datum`:
+    - `has part` exactly 1 `time stamped measurement datum` 
+    - `has part` exactly 1 `geolocation coordinate datum`
+
+
+## Time stamped data via value specifications
 
 - Any datum's existing value specification(s) can be accompanied by a time value specification, effectively making it a 2-dimensional or n-dimensional observation. In other words, value specifications, as long as they are unambiguously about (`specifies value of`) different things, are additive. 
 
@@ -24,4 +62,3 @@ In summary, n-dimensional datums are achieved by the additive or conjunctive nat
 
 <img src="/assets/images/docs/data_timestamp_datum_conjunction.png">
 
-In OBI a [`time stamped measurement datum`](http://purl.obolibrary.org/obo/IAO_0000582) exists to associate time directly with a datum; however this older term is complex (it offers a datum within a datum) and may be retired.

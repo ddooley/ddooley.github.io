@@ -21,13 +21,10 @@ This user manual is designed to explain the core functionality of OBI for newcom
 
 * **[Robot Driven Templates](/docs/robot-intro)**: Chunks of OBI are composed using ROBOT by reading spreadsheets of term definitions.
 
-<!-- 
-* **Extended Class Definitions** (working models for specific subdomains and specializations of OBI beyond the core classes) 
-* **Example Use Cases** (how we describe specific use cases with OBI) 
-* **Implementation and Development Notes** (how we develop, extend and implement the ontology)
-* **Community** (Description of the OBI development community. Who were are and what our goals are for this work)
-
--->
+[//]: # (* **Extended Class Definitions** (working models for specific subdomains and specializations of OBI beyond the core classes) 
+[//]: # (* **Example Use Cases** (how we describe specific use cases with OBI) 
+[//]: # (* **Implementation and Development Notes** (how we develop, extend and implement the ontology)
+[//]: # (* **Community** (Description of the OBI development community. Who were are and what our goals are for this work)
 
 More background and detail on OBI vocabulary and functionality is available in papers listed on the [Media](/media/) page.
 

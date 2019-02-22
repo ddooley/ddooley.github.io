@@ -43,7 +43,7 @@ docs:
       - title: Body Mass Index Example
         url: /docs/data-bmi/
       - title: Time-stamped Data
-        url: /docs/time-stamped-datums/ 
+        url: /docs/time-stamped-data/ 
       - title: Datasets
         url: /docs/data-sets/
 

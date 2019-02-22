@@ -33,3 +33,9 @@ Then this would be a datum-data-property focused solution, which echoes previous
 And here is a `value specificaiton` friendly approach, which has only 1 `has string representation` linkage to `data item`; all other uses of `rdfs:Literal` find themselves inside new `value specification` subclasses.  This doesn't provide a `data item` rdfs:integer or rdfs:decimal shortcut to set a unitless number, or a string identifier, URI, etc.
 
 ![Datum + Value Specification ](/assets/images/docs/data_overview_vs.png)
+
+<hr/>
+
+### Notes about current OBI setup:
+
+#### A `has xsd:Literal value` or `has measurement value` data property can be attached directly to an instance of a quality in the case of numeric measurements, and those qualities inherently come with `has measurement unit label` abstractly set to the base SI unit of quality dimension in question, so its easy to express "length of 2m", "weight of 50kg" that way.  What motivates us to use a value spec in this case?  The theoretical distinction exists between a datum as a process input/output that should only describe its aboutness; and a value specification that specifies the measurement value's form, seems to be blown with respect to qualities about SI dimensions. The current feature of allowing datums to be associated with units would need to be dropped to enforce the distinction. But this seems to deny the fundamental semantics of what these SI datums have?!**

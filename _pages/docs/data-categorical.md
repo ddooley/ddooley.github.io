@@ -35,6 +35,12 @@ The complete contextual view:
 
 <img src="/assets/images/docs/data_john_sex_context.png">
 
+## Missing values
+
+For an instance value being described by a `categorical value specification` (CVS) class, if that value matches the CVS class's expressed  `specifies value of` target, then no choice has been made, and no information is carried.
+
+## Categorical value specification choices as instances 
+
 In a different approach, an OBI example using categorical value specification focuses on describing a tumor grading standard [`histologic grade according to AJCC 7th edition`](http://purl.obolibrary.org/obo/OBI_0002205){:target="_blank"}.  Here the value specification class has individuals which are each interpreted as grades, and which could potentially be augmented with data properties that detail their assessment differentiae.  This approach is suited to cases where selections are not already established (and would not be in the future) as ontology classes situated within their own hierarchic context. 
 
 ## Complications - punning

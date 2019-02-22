@@ -32,6 +32,8 @@ docs:
         url: /docs/data-ice/
       - title: Process Basics
         url: /docs/process-intro/
+      - title: Process Timing
+        url: /docs/process-timing/
       - title: Precomposed terms
         url: /docs/data-precomposed/
       - title: Data Properties

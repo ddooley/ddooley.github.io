@@ -1,21 +1,13 @@
 ---
 layout: default
-title: ""
+title: "Value Specifications"
 permalink: /docs/data-vs/
 #toc: true
 sidebar:
    nav: "docs"
 ---
 
-# Value Specifications
-
-## Question: a `has xsd:Literal value` or `has measurement value` data property can be attached directly to an instance of a quality in the case of numeric measurements, and those qualities inherently come with `has measurement unit label` abstractly set to the base SI unit of quality dimension in question, so its easy to express "length of 2m", "weight of 50kg" that way.  What motivates us to use a value spec in this case?  The theoretical distinction exists between a datum as a process input/output that should only describe its aboutness; and a value specification that specifies the measurement value's form, seems to be blown with respect to qualities about SI dimensions. Allowing datums to be associated with units would need to be dropped to enforce the distinction.**
-
-## Another way to put it: M object relations and N data properties are available to describe both aboutness and content of a datum.  One choice is to move the content related ones out to a value specification.  But the semantics of these relations are distinct even if used together on a datum, so informatically this is the simplest way.  Subclasses of datum can constrain both aboutness and content form.**
-
-<hr>
-
-The inability of [`data properties`](/docs/data_properties/) to provide units, valid categorical choices or timestamped datums has led OBI to introduce a **[`value specification`](http://purl.obolibrary.org/obo/OBI_0001933){:target="_blank"}** (VS) class which more explicitly [`specifies value of`](http://purl.obolibrary.org/obo/OBI_0001927) a quality, datum, or postcomposed expression that it is about.  There are a few different kinds of `value specification` for capturing needed details of numeric, string and categorical variables, organized in OBI by their value datatypes:
+OBI has introduced a **[`value specification`](http://purl.obolibrary.org/obo/OBI_0001933){:target="_blank"}** (VS) class which more explicitly [`specifies value of`](http://purl.obolibrary.org/obo/OBI_0001927) a quality, datum, or postcomposed expression that it is about.  A value specification can be separated from a ICE by way of a "[ICE] `has value specification` [value specification]" object property.  There are a few different kinds of `value specification` for capturing needed details of numeric, string and categorical variables, which echo the combinations possible from direct connection of a datum to data properties:
 
 <img src="/assets/images/docs/data_value_specs.png">
 

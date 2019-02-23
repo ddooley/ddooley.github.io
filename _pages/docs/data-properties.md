@@ -20,9 +20,9 @@ OBI can attach a number of [`OWL-compatible RDF/XML datatype`](https://www.w3.or
 
 #### Scalar datum
 
-- `has xsd:float value` data property for storing floating point decimal values.  Has xsd:float range.
-- `has xsd:decimal value` data property for storing decimal values.  Has xsd:decimal range.
-  - `has xsd:integer value` data property for storing counts and other integers, e.g. a pH measurement.  Has xsd:integer range.
+- `has xsd:float value` data property for storing floating point decimal values.
+- `has xsd:decimal value` data property for storing decimal values.
+  - `has xsd:integer value` data property for storing counts and other integers, e.g. a pH measurement.
 
 - `has xsd:dateTime value` or `has xsd:dateTimeStamp value` (includes time zone)for a datum containing a xsd:dateTime formatted date or time. Has xsd:dateTime or xsd:dateTimeStamp range, respectively. Examples of use are in the [`Time stamped data`](/docs/time-stamped-data/) section
 
@@ -30,7 +30,7 @@ If a numeric or datetime value needs a unit associated with it (e.g. metre, kilo
 
 #### Boolean datum
 
-- `has xsd:boolean value` for a datum which is represented as a yes/no or true/false value. Has xsd:boolean range.
+- `has xsd:boolean value` for a datum which is represented as a yes/no or true/false value.
 
 #### String (symbol????) datum
 
@@ -38,7 +38,7 @@ If a numeric or datetime value needs a unit associated with it (e.g. metre, kilo
 
 #### Other resource datum
 
-- `has xsd:anyURI value` for a datum which contains a URI pointing to a document or other type of resource file.  Has xsd:anyURI range.  Example: an ICE [`analytical cytology data file`](http://purl.obolibrary.org/obo/OBI_0000210) specification ["https://onlinelibrary.wiley.com/doi/epdf/10.1002/cyto.990110303"](https://onlinelibrary.wiley.com/doi/epdf/10.1002/cyto.990110303)
+- `has xsd:anyURI value` for a datum which contains a URI pointing to a document or other type of resource file.  Example: an ICE [`analytical cytology data file`](http://purl.obolibrary.org/obo/OBI_0000210) specification ["https://onlinelibrary.wiley.com/doi/epdf/10.1002/cyto.990110303"](https://onlinelibrary.wiley.com/doi/epdf/10.1002/cyto.990110303)
 
 ### String representation compatible
 
@@ -56,7 +56,7 @@ OBI implementers may prefer to isolate the value data collected from assays from
 
 ### Categorical value specification compatible
 
-A [`categorical value specification`](http://purl.obolibrary.org/obo/OBI_0001930) describes a categorical variable like color, which can match selections from a string list of terms, or from a branch of ontology terms (e.g. terms from a standardized color wheel). (Inputted synonyms can be handled too, e.g. "sienna, sepia, umber, terra cotta" -> "brown").  See [docs/data-vs](docs/data-vs) for more details.
+A [`categorical value specification`](http://purl.obolibrary.org/obo/OBI_0001930) describes a categorical variable like color, which can match selections from a string list of terms, or from a branch of ontology terms (e.g. terms from a standardized color wheel).  See [docs/data-vs](docs/data-vs) for more details.
 
 ## Data Property Implementation Approach
 

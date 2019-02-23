@@ -9,6 +9,10 @@ sidebar:
 
 A categorical value is a selection from a flat list or hierarchic tree structure containing a finite number of pre-determined choices ranging from organisms in a taxonomy, diseases, countries of the world or levels of an experimental variable.  Here we provide for choices whose values are either ontology terms, or a controlled set of literal xsd:string strings.
 
+Note that synonyms which are normally described using [`hasSynonym`](http://www.geneontology.org/formats/oboInOwl#hasSynonym) or [`hasExactSynonym`](http://www.geneontology.org/formats/oboInOwl#hasExactSynonym)  etc. annotations can be applied in software to enhance categorical selection options.  For example, synonyms such as "sienna, sepia, umber, terra cotta" can be mapped to the ontology-driven categorical [`brown`](http://purl.obolibrary.org/obo/PATO_0000952).
+
+It is a more complicated matter to attempt equivalencies of categorical values between different ontologies.
+
 ### Categorical ontology choice
 
 The aim here is to provide a way to point to an ontology class or instance identifiers within existing ontologies as selections for a categorical variable.

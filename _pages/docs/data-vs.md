@@ -17,7 +17,7 @@ OBI has introduced a **[`value specification`](http://purl.obolibrary.org/obo/OB
 
 - `Datetime` and `duration` value specification classes enable a date or time duration, and associated units, to be described e.g. "5 days", or "week of 2018/01/01".
 
-- A `boolean value specification` class indicates the presence (true) or absence (false) of a feature. This is distinct from a binary (two-choice) categorization which is a subclass of categorical variable.)
+- A `boolean value specification` class indicates the presence (true) or absence (false) of a feature. This is semantically distinct from a binary (two-choice) categorization which is a categorical variable.)
 
 Explanations of the different types of categorical, numeric and datetime value specifications are contained in the [`Data Types`](data-types.md) documentation. Background information on how the value specification concept was developed is [here](https://github.com/obi-ontology/obi-legacy-svn/blob/master/trunk/src/examples/development/data-prototype.pdf){:target="_blank"}.  Other related OBI repository issues: [#870](https://github.com/obi-ontology/obi/issues/870){:target="_blank"}, [#945](https://github.com/obi-ontology/obi/issues/945){:target="_blank"} and [#833](https://github.com/obi-ontology/obi/issues/833){:target="_blank"}.
 

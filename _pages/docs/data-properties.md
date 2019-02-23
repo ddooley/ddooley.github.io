@@ -12,7 +12,7 @@ Diagrammed on the left side are typical examples of field data related to a rese
 
 <img align="right" src="/assets/images/docs/data_raw.png">
 
-A given datum value from the left may match one of four scenarios, the first two involving a data properties directly, and the latter two involving a multi-component "value specification" representation as described below.
+A given datum value from the left may match one of four scenarios, the first two involving a data properties directly, and the latter two involving a multi-component "value specification" representation as described below. There is also the need to handle [`composite datums`](/docs/data-properties/#composite-datum/) which are composed of datum parts.
 
 ### OWL datum - data property compatible
 
@@ -26,7 +26,7 @@ OBI can attach a number of [`OWL-compatible RDF/XML datatype`](https://www.w3.or
 
 - `has xsd:dateTime value` or `has xsd:dateTimeStamp value` (includes time zone)for a datum containing a xsd:dateTime formatted date or time. Has xsd:dateTime or xsd:dateTimeStamp range, respectively. Examples of use are in the [`Time stamped data`](/docs/time-stamped-data/) section
 
-If a numeric or datetime value needs a unit associated with it (e.g. metre, kilogram, hour, minute) the [`has measurement unit label`(http://purl.obolibrary.org/obo/IAO_0000039) object property can be used to point to a unit entity.  For example, the strings "20g", "20 grams", and "0.02kg" may differ by string comparison, but can be translated into identical value + unit atomic components: a decimal 20.0 and a "gram" mass unit.
+If a numeric or datetime value needs a unit associated with it (e.g. metre, kilogram, hour, minute) the [`has measurement unit label`](http://purl.obolibrary.org/obo/IAO_0000039) object property can be used to point to a unit entity.  For example, the strings "20g", "20 grams", and "0.02kg" may differ by string comparison, but can be translated into identical value + unit atomic components: a decimal 20.0 and a "gram" mass unit.
 
 #### Boolean datum
 

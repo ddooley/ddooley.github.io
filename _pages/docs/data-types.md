@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Data Types
-permalink: /docs/data-types/
+permalink: /docs/datatypes/
 sidebar:
   nav: "docs"
 ---

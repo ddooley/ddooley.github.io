@@ -43,24 +43,24 @@ docs:
       - title: Body Mass Index Example
         url: /docs/data-bmi/
       - title: Time-stamped Data
-        url: /docs/time-stamped-data/ 
+        url: /docs/data-time-stamped/ 
       - title: Datasets
         url: /docs/data-sets/
 
   - title: Data Types
     children:
       - title: Introduction
-        url: /docs/data-types/
+        url: /docs/datatypes/
       - title: Numeric
-        url: /docs/data-numeric/
+        url: /docs/datatype-numeric/
       - title: String
-        url: /docs/data-string/
+        url: /docs/datatype-string/
       - title: Categorical
-        url: /docs/data-categorical/
+        url: /docs/datatype-categorical/
       - title: Boolean
-        url: /docs/data-boolean/
+        url: /docs/datatype-boolean/
       - title: Date, Time, Duration
-        url: /docs/data-time/
+        url: /docs/datatype-time/
 
   - title: Robot Templates
     url: /docs/robot-intro/

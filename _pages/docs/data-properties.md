@@ -14,45 +14,56 @@ Diagrammed on the left side are typical examples of field data related to a rese
 
 A given datum value from the left may match one of four scenarios, the first two involving a data properties directly, and the latter two involving a multi-component "value specification" representation as described below. There is also the need to handle [`composite datums`](/docs/data-properties/#composite-datum/) which are composed of datum parts.
 
-### OWL datum - data property compatible
+### Datum / data property compatible
 
-OBI can attach a number of [`OWL-compatible RDF/XML datatype`](https://www.w3.org/2007/OWL/wiki/DatatypeRescue) values directly to `atomic` ICE datums using a `has xsd:Literal value` data property or one of its sub-properties, as described below. (Representation of [`rational`](https://www.w3.org/2007/OWL/wiki/OWL_Rational) numbers is a bit more tricky.)
+OBI can attach a number of [OWL-compatible RDF/XML datatype](https://www.w3.org/2007/OWL/wiki/DatatypeRescue) values directly to `atomic` ICE datums using a [`has xsd:Literal value`](???) data property or one of its sub-properties, as described below.
 
 #### Scalar datum
 
-- `has xsd:float value` data property for storing floating point decimal values.
-- `has xsd:decimal value` data property for storing decimal values.
-  - `has xsd:integer value` data property for storing counts and other integers, e.g. a pH measurement.
+- [`has xsd:decimal value`](???) data property for storing decimal values.
+- [`has xsd:integer value`](???) data property for storing counts and other integers, e.g. a pH measurement.
+- [`has xsd:float value`](???) data property for storing floating point decimal values.
 
-- `has xsd:dateTime value` or `has xsd:dateTimeStamp value` (includes time zone)for a datum containing a xsd:dateTime formatted date or time. Has xsd:dateTime or xsd:dateTimeStamp range, respectively. Examples of use are in the [`Time stamped data`](/docs/time-stamped-data/) section
+(Numeric datatypes are detailed in the [Numeric Datums](/docs/datatype-numeric/) section.)
 
-If a numeric or datetime value needs a unit associated with it (e.g. metre, kilogram, hour, minute) the [`has measurement unit label`](http://purl.obolibrary.org/obo/IAO_0000039) object property can be used to point to a unit entity.  For example, the strings "20g", "20 grams", and "0.02kg" may differ by string comparison, but can be translated into identical value + unit atomic components: a decimal 20.0 and a "gram" mass unit.
+- [`has xsd:dateTime value`](???) or [`has xsd:dateTimeStamp value`](???) (includes time zone)for a datum containing a xsd:dateTime formatted date or time. Has xsd:dateTime or xsd:dateTimeStamp range, respectively. Details are in [Date, Time, and Duration Datums](/docs/datatype-time/); examples of use are in the [Time stamped data](/docs/data-time-stamped/) section.
+
+Representation of [rational](https://www.w3.org/2007/OWL/wiki/OWL_Rational) numbers is a bit more tricky.  In the future numeric datums will likely include precision and error attributes.
+
+#### Units
+
+If a numeric or datetime value needs a unit associated with it (e.g. metre, kilogram, hour, minute) the [`has measurement unit label`](http://purl.obolibrary.org/obo/IAO_0000039) object property can be used to point to a [`measurement unit label`](http://purl.obolibrary.org/obo/IAO_0000003) entity such as one of the [`Units of Measure Ontology`](http://purl.obolibrary.org/obo/UO_0000000) terms.  For example, the strings "20g", "20 grams", and "0.02kg" may differ by string comparison, but can be translated into identical value + unit atomic components: a decimal 20.0 and a "gram" mass unit.
+
+A 2009 comment explains the history of this term: *"[We decided to hedge on what units of measure are, instead talking about measurement unit labels, which are the information content entities that are about whatever measurement units are. For IAO we need that information entity in any case. See the term measurement unit label]"*
+
 
 #### Boolean datum
 
-- `has xsd:boolean value` for a datum which is represented as a yes/no or true/false value.
+- [`has xsd:boolean value`](???) for a datum which is represented as a yes/no or true/false value.  See [Boolean Datums](/docs/datatype-boolean/).
 
 #### String (symbol????) datum
 
-- `has xsd:string value` for a textual datum that does not fit on a categorical scale but which can be compared (like a token) to other strings.  Example: The (fictitious) [Social Security Number](http://purl.obolibrary.org/obo/NCIT_C25686) "000-11-2222", an identifier which is not really on a scale or a categorical value.  It is essentially atomic; it serves a data matchmaking role.
+- [`has xsd:string value`](???) for a textual datum that does not fit on a categorical scale but which can be compared (like a token) to other strings.  See [String Datums](/docs/datatype-string/).  Example: The (fictitious) [`Social Security Number`](http://purl.obolibrary.org/obo/NCIT_C25686) "000-11-2222", an identifier which is not really on a scale or a categorical value.  It is essentially atomic; it serves a data matchmaking role.
+
+- Note that one can actually define categorical options for a string value, as described in String Datums section. However such choices are not ontology entities, and so have no properties or relations.
 
 #### Other resource datum
 
-- `has xsd:anyURI value` for a datum which contains a URI pointing to a document or other type of resource file.  Example: an ICE [`analytical cytology data file`](http://purl.obolibrary.org/obo/OBI_0000210) specification ["https://onlinelibrary.wiley.com/doi/epdf/10.1002/cyto.990110303"](https://onlinelibrary.wiley.com/doi/epdf/10.1002/cyto.990110303)
+- [`has xsd:anyURI value`](???) for a datum which contains a URI pointing to a document or other type of resource file.  Example: an ICE [`analytical cytology data file`](http://purl.obolibrary.org/obo/OBI_0000210) specification ["https://onlinelibrary.wiley.com/doi/epdf/10.1002/cyto.990110303"](https://onlinelibrary.wiley.com/doi/epdf/10.1002/cyto.990110303)
 
 ### String representation compatible
 
-A datum can have a linguistically or computationally coded textual value using OBI's `has xsd:string representation` data property.  A string representation value can hold "undigested" data, say, in preparation for parsing by SPARQL etc. into more atomic components.  Other object relations may be provided to enable interpretation of such values. It can store values that may or may not fit directly on a numeric or categorical scale, as well as linguistic content (words, phrases, sentences with an optional OWL language facet.  For example:
+A datum can have a linguistically or computationally coded textual value using OBI's [`has xsd:string representation`](???) data property.  A string representation value can hold "undigested" data, say, in preparation for parsing by SPARQL etc. into more atomic components.  Other object relations may be provided to enable interpretation of such values. It can store values that may or may not fit directly on a numeric or categorical scale, as well as linguistic content (words, phrases, sentences with an optional OWL language facet.  For example:
 
 - The address "16500 Mullholland Dr., Los Angeles, CA, USA" can be attached to a [`street address`](http://purl.obolibrary.org/obo/NCIT_C25690) datum. The value needs parsing to extract house/apartment number, street, city, country, etc.
 
-- "20g" may be held as a string representation en route to becoming a scalar value + unit data property pair or a [`scalar value specification`](/docs/data-vs/).
+- "20g" may be held as a string representation en route to becoming a scalar value + unit data property pair or [scalar value specification](/docs/data-vs/).
 
 Such data could technically be stored as annotations but the potential for referencing it as input our output of process axioms (e.g. in natural language processing) is then lost.
 
 ### Scalar value specification compatible
 
-OBI implementers may prefer to isolate the value data collected from assays from the `measurement datum` representation level of assay output.  OBI provides a `has value specification` object property that points to a [`scalar value specification`](http://purl.obolibrary.org/obo/OBI_0001931) which can take on the same value and measurement unit label data and object properties as described in the Scalar datum section above.  See [docs/data-vs](docs/data-vs) for more details.
+OBI implementers may prefer to isolate the value data collected from assays from the [`measurement datum`](http://purl.obolibrary.org/obo/IAO_0000109) representation level of assay output.  OBI provides a [`has value specification`]() object property that points to a [`scalar value specification`](http://purl.obolibrary.org/obo/OBI_0001931) which can take on the same value and measurement unit label data and object properties as described in the Scalar datum section above.  See [docs/data-vs](docs/data-vs) for more details.
 
 ### Categorical value specification compatible
 
@@ -78,30 +89,40 @@ The label of the data property tells humans in hopefully plain language what the
 
 In fact there are many kinds of [`ages`](http://purl.obolibrary.org/obo/OBI_0001167) in the biomedical and biological research realm; a number of related datums from OBI are listed here. Rather than creating a litany of data properties, OBI has chosen an alternative approach - a data modelling vocabulary that focuses on describing a core entity's role, quality, information content and other descriptive components rather than directly connecting semantically opaque data properties. This is not to say non-OBI `data properties` are forbidden in application ontologies - but going through the exercise of defining them in terms of a generic BFO/OBI/OBO Foundry set of terms may help anticipate data sharing issues.
 
-OBI allows an age datum instance's value and unit to be represented by way of `has xsd:decimal value` and `has measurement unit label`:
+<br clear = "both">
+
+### OBI Object Property "Aboutness" Approach
+
+Rather than establish a `has age` data property, OBI expresses that [`age`](http://purl.obolibrary.org/obo/PATO_0000011) is a quality of our entity, and then focuses on defining the semantics of it and its subclasses.  This approach reduces the amount of language needed to describe entities, at the cost of a bit more structure. *Most importantly it enables entities to be the focus of semantic elaboration (axioms) rather than being surrounded by opaque relations.* Below, an age datum instance's value and unit are represented by way of `has xsd:decimal value` and `has measurement unit label`:
 
 <img src="/assets/images/docs/data_lee_object_property_age_unit.png">
 
-Stating units is especially important for enabling data exchange unambiguously - units associated with a data property that may work internally to a system, but are likely to fail when exchanging information with other systems. OBI provides a [`has measurement unit label`](http://purl.obolibrary.org/obo/IAO_0000039) object property for this reason.  In the diagram below, other types of age measurements are described. The need for units is evident:
+Stating units is especially important for enabling data exchange unambiguously - units implicitly assumed for a data property may work internally to a system, but are likely to fail when exchanging information with other systems. OBI provides a [`has measurement unit label`](http://purl.obolibrary.org/obo/IAO_0000039) object property for this reason.
+
+The `aboutness` details have the extra benefit of facilitating appropriate data exchange between ontology-driven systems.  By specifying that a string field is about a first name or a last name, maiden name, full name, SIN number, postal code, etc. this 'aboutness' information can guide the merging and federated querying of triple store graphs.  
+
+In the diagram below, other types of age measurements are described. The need for units is evident:
 
 <img src="/assets/images/docs/data_lee_object_property_ages.png">
-
-To summarize, rather than establish a `has age` data property, OBI expresses that [`age`](http://purl.obolibrary.org/obo/PATO_0000011) is a quality of our entity, and then focuses on defining the semantics of it and its subclasses.  This approach reduces the amount of language needed to describe entities, at the cost of a bit more structure. *Most importantly it enables entities to be the focus of semantic elaboration (axioms) rather than being surrounded by opaque relations.* The `aboutness` details have the extra benefit of facilitating appropriate data exchange between ontology-driven systems.  By specifying that a string field is about a first name or a last name, maiden name, full name, SIN number, postal code, etc. this 'aboutness' information can guide the merging and federated querying of triple store graphs.   
 
 Below is another example focusing on providing values for information content entities typically connected to a person instance.
 
 <img src="/assets/images/docs/data_lee_has_specified_value.png">
 
-And here is a pH measurement example, showing the datum as an output of a process, and also with a unit (which some may argue is optional because there is only one unit possible):
-\
+And here is a pH measurement example, showing the datum as an output of a process, and also with a unit (which some may allow as optional because there is only one unit possible).
+
 <img src="/assets/images/docs/data_ph_object_property.png">
+
+Here is John's mass measurement. In the instance expressions, it isn't necessary to mention the `quality` class here insofar as the `mass measurement datum` can be said to be `about` the instance of John directly. 
+
+<img src="/assets/images/docs/data_john_mass_data_property.png">
 
 
 ## Missing values
 
 Data sources may mark missing values in a variety of ways - by an empty string, or a hyphen instead of a number or date for example.  Instance subject-verb-object triples don't have an equivalent way to express this. However there are a few ways one could indicate missing values.
 
-- A datum instance lacks a `has rdfs:Literal value` data property or subproperty where one is indicated in the datum class.
+- A datum instance lacks a `has rdfs:Literal value` data property or subproperty (especially if one is indicated in the datum class).
 
 ## Suitable object properties
 
@@ -121,12 +142,22 @@ Besides the need to specify measurement units, there are a few other limitations
 
 <img align="right" src="/assets/images/docs/data_lee_data_properties.png">
 
-- A data property doesn't directly support a relevant time of measurement value.  For example, when was Lee's `has height` observed, and was it the same time as `has weight`, such that an accurate BMI can be calculated?  Admittedly, time differentiated data is rather complex to model in OWL. A pragmatic approach, if workable, is to only expose to an OWL reasoner data that doesn't need to be differentiated by time. In the BMI example, we could assume height and weight data properties are adequately close in time that derivative calculations are ok. OBI does offer annother approach detailed in the [`Time-stamped data`](/docs/time-stamped-datums) section to describe n-dimensional points that include time.
+- A data property doesn't directly support a relevant time of measurement value.  For example, when was Lee's `has height` observed, and was it the same time as `has weight`, such that an accurate BMI can be calculated?  Admittedly, time differentiated data is rather complex to model in OWL. A pragmatic approach, if workable, is to only expose to an OWL reasoner data that doesn't need to be differentiated by time. In the BMI example, we could assume height and weight data properties are adequately close in time that derivative calculations are ok. OBI does offer annother approach detailed in the [`Time-stamped data`](/docs/data-time-stamped/) section to describe n-dimensional points that include time.
 
-- A data property cannot directly specify the range of ontology term choices (which are classes or individuals) for a categorical value since data property ranges can only be drawn from xml/rdf data types. "Lee `has handedness` "http://purl.obolibrary.org/obo/PATO_0002201^^xsd:anyURI"" but the URI could point to anything on the internet. We can't express in OWL that the 'has handedness' data property URI range must fall within the class of PATO `handedness`. An object property is required for this reference.
+- A data property cannot directly specify the range of ontology term choices (which are classes or individuals) for a categorical value since data property ranges can only be drawn from xml/rdf data types, none of which incorporates ontology term entities. One could express a `has handedness` data property instance
 
-This doesn't provide the necessary structure for describing multi-dimensional datums - time-stamped observations, or geographic lat/long location for example. To meet these needs, one either needs to use a `composite datum` or one needs an additional `value specification` entity.
+   Lee `has handedness` "http://purl.obolibrary.org/obo/PATO_0002201^^xsd:anyURI"
+
+but the above URI could point to any internet URI, and so could not be validated as a categorical choice. We can't express in OWL that the 'has handedness' data property URI range must fall within the class of PATO `handedness` (it could only be done via a string pattern matcher). 
+
+Multi-dimensional datums - time-stamped observations, or geographic lat/long location for example - require a more complicated datum structure. To meet these needs, one either needs to use `composite datum` or `value specification` entities.
 
 ## Composite datum
 
 ...
+
+
+## Other metadata
+
+Other metadata may need to be marked e.g. how to deal with: “In some cases, a component is detected in the food matrix, but it cannot be quantified precisely. The analytical result can therefore be considered as ‘trace’” (see [here](https://ciqual.anses.fr/cms/sites/default/files/inline-files/TableCiqual2017_XML_docENG.pdf)). Another case is where a data item exists but has been obfuscated for privacy reasons.  OBI does not currently have a metadata standard that addresses these cases.
+

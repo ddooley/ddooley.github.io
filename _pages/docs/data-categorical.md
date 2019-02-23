@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Categorical Datum
-permalink: /docs/data-categorical/
+permalink: /docs/datatype-categorical/
 toc: true
 sidebar:
   nav: "docs"

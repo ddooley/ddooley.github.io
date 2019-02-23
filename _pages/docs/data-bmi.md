@@ -15,11 +15,15 @@ Here the various processes for generating input and output are detailed.
 
 <img src="/assets/images/docs/data_john_bmi_process.png">
 
-The value specification diagram details the tripple store or tabular data metadata required to carry out the calculation.
+Here a direct datum / data property structure is illustrated, showing (in ABox) instance data that can be used to carry out the calculation. Mass, Length and body fat ratio terms are shown for contextual information but aren't necessary as far as instance data is concerned.
+
+<img src="/assets/images/docs/data_john_bmi_data_properties.png">
+
+The alternative value specification diagram.
 
 <img src="/assets/images/docs/data_john_bmi_vs.png">
 
-The full context view shows an instance of the subject, processes applied, and measured or calculated output. 
+The value specification full context view shows an instance of the subject, processes applied, and measured or calculated output. 
 
 <img src="/assets/images/docs/data_john_bmi_context.png">
 [full-sized image](/assets/images/docs/data_john_bmi_context.png)

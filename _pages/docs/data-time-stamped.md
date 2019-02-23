@@ -1,20 +1,20 @@
 ---
 layout: default
 title: Time stamped data
-permalink: /docs/time-stamped-data/
+permalink: /docs/data-time-stamped/
 sidebar:
   nav: "docs"
 ---
 
 Process models and data items can be enhanced with time information in a few ways.   
 
-- Assays and other processes can be marked with start and/or stop times, and therefore any specified output could have those time points to mark its relevance. 
-
-## OBI allows time-stamped datums via both datum parthood, and via the VS approach!
+- Assays and other processes can be marked with start and/or stop times, and therefore any specified output could have those time points to mark its relevance.
+ 
+- OBI provides time-stamped datum description by data properties directly, and via the value specification approach.
 
 ## Time stamped data via datum parthood
 
-Alan Ruttenberg, Melanie Courtot & others created this structure which is simple enough if connecting data properties directly; it ends up looking too complicated when used with value specifications. It illustrates datums being part of a datum, using `part of` subproperties to disambiguate the time dimension from the other (one or more) measurement datum components.
+Alan Ruttenberg, Melanie Courtot & others created this structure which is simple enough if connecting data properties directly; it would be rather complex if used with value specifications. It illustrates datums being part of a datum, using `part of` subproperties to disambiguate the time dimension from the other (one or more) measurement datum components.
 
 Using:
 
@@ -27,7 +27,7 @@ Using:
  
 <img src="/assets/images/docs/data_timestamp_length.png">
 
-An example, using `has content datum` rather than `has measurement datum` when object isn't necessarily a measurement datum. `has time stamp` is a subproperty of `has part`
+An example, using `has content datum` rather than `has measurement datum` when object isn't necessarily a measurement datum. `has time stamp` is a subproperty of `has part`.
 
     `time stamped measurement datum`:
     - `has time stamp` exactly 1 `time measurement datum` 

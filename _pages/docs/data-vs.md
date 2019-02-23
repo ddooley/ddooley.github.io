@@ -7,7 +7,7 @@ sidebar:
    nav: "docs"
 ---
 
-OBI has introduced a **[`value specification`](http://purl.obolibrary.org/obo/OBI_0001933){:target="_blank"}** (VS) class which more explicitly [`specifies value of`](http://purl.obolibrary.org/obo/OBI_0001927) a quality, datum, or postcomposed expression that it is about.  A value specification can be separated from a ICE by way of a "[ICE] `has value specification` [value specification]" object property.  There are a few different kinds of `value specification` for capturing needed details of numeric, string and categorical variables, which echo the combinations possible from direct connection of a datum to data properties:
+OBI has introduced a **[`value specification`](http://purl.obolibrary.org/obo/OBI_0001933)** (VS) class which more explicitly [`specifies value of`](http://purl.obolibrary.org/obo/OBI_0001927) a quality, datum, or postcomposed expression that it is about.  A value specification can be separated from a ICE by way of a "[ICE] [`has value specification`](http://purl.obolibrary.org/obo/OBI_0001938) [value specification]" object property.  There are a few different kinds of `value specification` for capturing needed details of numeric, string and categorical variables, which echo the combinations possible from direct connection of a datum to data properties:
 
 <img src="/assets/images/docs/data_value_specs.png">
 
@@ -17,9 +17,9 @@ OBI has introduced a **[`value specification`](http://purl.obolibrary.org/obo/OB
 
 - `Datetime` and `duration` value specification classes enable a date or time duration, and associated units, to be described e.g. "5 days", or "week of 2018/01/01".
 
-- A `boolean value specification` class indicates the presence (true) or absence (false) of a feature. This is semantically distinct from a binary (two-choice) categorization which is a categorical variable.)
+- A `boolean value specification` class indicates the presence (true) or absence (false) of a feature. This is semantically distinct from a binary (two-choice) categorization which is a categorical variable.
 
-Explanations of the different types of categorical, numeric and datetime value specifications are contained in the [`Data Types`](data-types.md) documentation. Background information on how the value specification concept was developed is [here](https://github.com/obi-ontology/obi-legacy-svn/blob/master/trunk/src/examples/development/data-prototype.pdf){:target="_blank"}.  Other related OBI repository issues: [#870](https://github.com/obi-ontology/obi/issues/870){:target="_blank"}, [#945](https://github.com/obi-ontology/obi/issues/945){:target="_blank"} and [#833](https://github.com/obi-ontology/obi/issues/833){:target="_blank"}.
+Explanations of the different types of categorical, numeric and datetime value specifications are contained in the [`Data Types`](data-types.md) documentation. Background information on how the value specification concept was developed is [here](https://github.com/obi-ontology/obi-legacy-svn/blob/master/trunk/src/examples/development/data-prototype.pdf).  Other related OBI repository issues: [#870](https://github.com/obi-ontology/obi/issues/870), [#945](https://github.com/obi-ontology/obi/issues/945) and [#833](https://github.com/obi-ontology/obi/issues/833).
 
 <img align="right" src="/assets/images/docs/data_john_mass_value_spec.png">
 
@@ -27,7 +27,7 @@ A **value specification diagram** can have data about entities which bear variou
 
 The diagram shows a "[`mass value specification`](http://purl.obolibrary.org/obo/OBI_0001929){:target="_blank"} `specifies value of` some [`mass`](http://purl.obolibrary.org/obo/PATO_0000125){:target="_blank"}", as shown above. An instance of the VS `specifies value of` an instance of the mass quality which inheres in John. The VS instance has a kilogram unit, and a decimal value of 70.0 .
 
-The connection between a measurement datum (or any ICE term) and a value specification is accomplished with the **[`has value specification`](http://purl.obolibrary.org/obo/OBI_0001938){:target="_blank"}** object property. Thus an [`age measurement datum`](http://purl.obolibrary.org/obo/OBI_0001167){:target="_blank"} could be linked to a numeric value specification which details the unit - year, month, day etc. of the measure. It could alternately be provided as a [`categorical value`](/docs/data-categorical/) for "mature", "immature", "neonatal", etc.
+The connection between a measurement datum (or any ICE term) and a value specification is accomplished with the **[`has value specification`](http://purl.obolibrary.org/obo/OBI_0001938)** object property. Thus an [`age measurement datum`](http://purl.obolibrary.org/obo/OBI_0001167) could be linked to a numeric value specification which details the unit - year, month, day etc. of the measure. It could alternately be provided as a [`categorical value`](/docs/datatype-categorical/) for "mature", "immature", "neonatal", etc.
 
 In the case where a value specification and/or measurement datum is about the conjunction of a few different things, the aboutness target can be a postcomposed expression of those components, with one component, usually a quality, providing the primary type of the measure.  For example "eye color" is primarily about color - and so limited to ways that can be reported, but secondarily about the body part being observed, and finally - in the instance, references a particular organism being observed. 
 
@@ -39,16 +39,9 @@ This is our first example of measuring a quality of a part of something. An inst
 
 "Homo sapiens has part some eye" is a parthood simplification for what some might need to model in a more complicated way.  For example, ophthalmologists need to distinguish left and right eyes, and allow each to have different iris colors (it happens!), and to describe the color of sclera or conjunctiva (e.g. for red eye or pink eye).  Uberon supports this with `left eye` and `right eye` terms as subclasses of `eye`, and says "`eye` `part of` some `visual system`" but it stops short of establishing a parthood chain between `eye` and `mammalia`.  In the future such standardizing axioms may be introduced which client ontologies and triple store databases can employ to ensure data structure compatibility.  Regardless, it is usually ok to use a simple `part of` relation to abbreviate a more intricate parthood chain if it fits your needed granularity of description.
 
-Note that different assays may output the same measurement datum and value specification combination.  For example an [`age since planting measurement datum`](http://purl.obolibrary.org/obo/OBI_0001156){:target="_blank"} and integer year value specification could be output from assays that calculate or estimate by input tree ring count, carbon 14 analysis, planting date, height of species etc.  It is up to an ontology implementer to define a more specific process as a sub-class of an existing general process if needed; if it falls within the scope of OBI, it may be a candidate for inclusion.
+Note that different assays may output the same measurement datum and value specification combination.  For example an [`age since planting measurement datum`](http://purl.obolibrary.org/obo/OBI_0001156) and integer year value specification could be output from assays that calculate or estimate by input tree ring count, carbon 14 analysis, planting date, height of species etc.  It is up to an ontology implementer to define a more specific process as a sub-class of an existing general process if needed; if it falls within the scope of OBI, it may be a candidate for inclusion.
 
 Below, value specifications are used to supply catagorical values, units are provided, and qualities of parts of organisms are unambiguously described.
 
 <img align="right" src="/assets/images/docs/data_lee_properties_as_vs.png">
 
-<br clear="both">
-
-## Other metadata
-
-Other metadata may need to be marked e.g. how to deal with: “In some cases, a component is detected in the food matrix, but it cannot be quantified precisely. The analytical result can therefore be considered as ‘trace’” (see [here](https://ciqual.anses.fr/cms/sites/default/files/inline-files/TableCiqual2017_XML_docENG.pdf)). Another case is where a data item exists but has been obfuscated for privacy reasons.  OBI does not currently have a metadata standard that addresses these cases.
-
-*In the future numeric value specifications will likely include precision and error attributes.*

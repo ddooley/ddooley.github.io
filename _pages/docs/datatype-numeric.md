@@ -11,11 +11,11 @@ OWL introduced the owl:real data type as the most generic numeric type, and owl:
 
 OBI generally has two ways to represent a datum's numeric value, depending on whether or not a unit needs to be included.  The simple, unit-less case can be handled by the numeric "has xsd:real" or subordinate "has xsd:decimal" or "has xsd:integer" data properties.  This makes sense for dimensionless numbers like counts.
 
-OBI currently also shows that datums can have a `has measurement unit label`
-Currently all numeric value specifications are handled under the [`scalar value specification`](http://purl.obolibrary.org/obo/OBI_0001931){:target="_blank"}{:target="_blank"} term, which implies that each must have a unit as well. 
+A numeric datum can also have a `has measurement unit label`.
 
+Representation of [rational](https://www.w3.org/2007/OWL/wiki/OWL_Rational) numbers is a bit more tricky.
 
-OBI currently does not provide functionality for specifying numeric precision or error range. 
+OBI currently does not provide functionality for specifying numeric precision or error range, but this will likely be added.
 
 ### Decimal
 

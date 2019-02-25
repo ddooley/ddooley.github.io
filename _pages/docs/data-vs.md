@@ -29,15 +29,17 @@ The diagram shows a "[`mass value specification`](http://purl.obolibrary.org/obo
 
 The connection between a measurement datum (or any ICE term) and a value specification is accomplished with the **[`has value specification`](http://purl.obolibrary.org/obo/OBI_0001938)** object property. Thus an [`age measurement datum`](http://purl.obolibrary.org/obo/OBI_0001167) could be linked to a numeric value specification which details the unit - year, month, day etc. of the measure. It could alternately be provided as a [`categorical value`](/docs/datatype-categorical/) for "mature", "immature", "neonatal", etc.
 
-In the case where a value specification and/or measurement datum is about the conjunction of a few different things, the aboutness target can be a postcomposed expression of those components, with one component, usually a quality, providing the primary type of the measure.  For example "eye color" is primarily about color - and so limited to ways that can be reported, but secondarily about the body part being observed, and finally - in the instance, references a particular organism being observed. 
+Here is a full-context value specification view of John's mass:
 
-<img align="right" src="/assets/images/docs/data_john_eye.png">
+<img align="right" src="/assets/images/docs/data_john_mass_context.png">
 
-An example generic value specification and measurement datum both pointing to John's eye color being brown (in this case "specifies value of" points directly to the value specification's essentially categorical value. 
+In this example, instance data shows `age measurement datum`  `is about` Lee. Currently value specifications can be attached directly ICEs, but not to material entities, so in that case reference to an intermediate datum or quality is required.
 
-This is our first example of measuring a quality of a part of something. An instance of the Uberon ontology [`eye`](http://purl.obolibrary.org/obo/UBERON_0000970) is part of an instance of Homo sapiens, and 'has quality' some instance of PATO [`brown`](http://purl.obolibrary.org/obo/PATO_0000952).  An instance of the add-on `color value specification` class points to the `brown` instance as well. `color value specification` class points to any subclass of [`color`](http://purl.obolibrary.org/obo/PATO_0000952) as being permitted for the instance.
+<img src="/assets/images/docs/data_lee_age_value_specification.png">
 
-"Homo sapiens has part some eye" is a parthood simplification for what some might need to model in a more complicated way.  For example, ophthalmologists need to distinguish left and right eyes, and allow each to have different iris colors (it happens!), and to describe the color of sclera or conjunctiva (e.g. for red eye or pink eye).  Uberon supports this with `left eye` and `right eye` terms as subclasses of `eye`, and says "`eye` `part of` some `visual system`" but it stops short of establishing a parthood chain between `eye` and `mammalia`.  In the future such standardizing axioms may be introduced which client ontologies and triple store databases can employ to ensure data structure compatibility.  Regardless, it is usually ok to use a simple `part of` relation to abbreviate a more intricate parthood chain if it fits your needed granularity of description.
+Here is a pH measurement datum value specification.
+
+<img src="/assets/images/docs/data_ph_measurement_vs.png">
 
 Note that different assays may output the same measurement datum and value specification combination.  For example an [`age since planting measurement datum`](http://purl.obolibrary.org/obo/OBI_0001156) and integer year value specification could be output from assays that calculate or estimate by input tree ring count, carbon 14 analysis, planting date, height of species etc.  It is up to an ontology implementer to define a more specific process as a sub-class of an existing general process if needed; if it falls within the scope of OBI, it may be a candidate for inclusion.
 

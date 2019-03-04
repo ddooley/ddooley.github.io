@@ -103,7 +103,7 @@ Below is another example focusing on providing values for information content en
 
 <img src="/assets/images/docs/data_lee_has_specified_value.png">
 
-And here is a pH measurement example, showing the datum as an output of a process, and alternately with a unit (which some may allow as optional - UO has the "pH" unit though techically the calculation is a unitless logarithm).
+And here is a pH measurement example, showing the datum as an output of a process, and alternately with a unit (which some may allow as optional - UO has the "pH" unit, though techically the formula yields a dimensionless number).
 
 <img src="/assets/images/docs/data_ph_object_property.png">
 

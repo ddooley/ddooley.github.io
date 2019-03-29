@@ -13,9 +13,9 @@ Aligning with [BFO](http://basic-formal-ontology.org), OBI divides references ab
 
 The following documentation sections will focus on various parts needed to detail processes and their input and output data.  The diagram below shows how OBI expresses the statement "John's mass is 70kg" using object and data properties, and the related material entity, process, datum, quality and value specification ontology components hovering in the background.  It shows the big picture - by tracing classes further up the inheritance hierarchy, we can see the impact on instance data. Details on each of these sections follow.
 
-<img align="right" src="/assets/images/docs/data_john_mass_context.png">
+<img align="right" src="/assets/images/docs/data_john_mass_context_dp.png">
 
-([full-sized image](/assets/images/docs/data_john_mass_context.png){:target="_blank"})
+([full-sized image](/assets/images/docs/data_john_mass_context_dp.png){:target="_blank"})
 
 ## Material entities and their properties/qualities
 

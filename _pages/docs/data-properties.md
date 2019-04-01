@@ -22,7 +22,7 @@ OBI can attach a number of [OWL-compatible RDF/XML datatype](https://www.w3.org/
 
 - A [`xsd:boolean`](???) datum represents a yes/no or true/false value.  See [Boolean Datums](/docs/datatype-boolean/).
 
-#### String datum
+#### String datum 
 
 - A [`xsd:string`](???) textual datum can at the very least be compared to other strings.  See [String Datums](/docs/datatype-string/).  Example: The (fictitious) [`Social Security Number`](http://purl.obolibrary.org/obo/NCIT_C25686) "000-11-2222", an identifier which serves a data matchmaking role, and which is for practical purposes atomic (although sub-sequences of 0's do signal fictitious records).
 

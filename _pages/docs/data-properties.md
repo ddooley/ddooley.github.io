@@ -32,7 +32,7 @@ A specific numeric datatype can be indicated to capture the numeric type of a sp
 
 ### Categorical value specification compatible
 
-A [`categorical value specification`](http://purl.obolibrary.org/obo/OBI_0001930) describes a categorical variable like color, which can match selections from a string list of terms, or from a branch of ontology terms (e.g. terms from a standardized color wheel).  See [docs/data-vs](docs/data-vs) for more details.
+A [`categorical value specification`](http://purl.obolibrary.org/obo/OBI_0001930) describes a categorical variable like color, which can match selections from a string list of terms or from a branch of ontology terms (e.g. terms from a standardized color wheel).  See [docs/data-vs](docs/data-vs) for more details.
 
 #### Boolean datum
 

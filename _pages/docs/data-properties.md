@@ -18,19 +18,6 @@ A given datum value from the left may match one of four scenarios, the first two
 
 OBI can attach a number of [OWL-compatible RDF/XML datatype](https://www.w3.org/2007/OWL/wiki/DatatypeRescue) values directly to "atomic" ICE datums using a [`has literal value`](???) data property.
 
-#### Boolean datum
-
-- A [`xsd:boolean`](???) datum represents a yes/no or true/false value.  See [Boolean Datums](/docs/datatype-boolean/).
-
-#### String datum 
-
-- A [`xsd:string`](???) textual datum can at the very least be compared to other strings.  See [String Datums](/docs/datatype-string/).  Example: The (fictitious) [`Social Security Number`](http://purl.obolibrary.org/obo/NCIT_C25686) "000-11-2222", an identifier which serves a data matchmaking role, and which is for practical purposes atomic (although sub-sequences of 0's do signal fictitious records).
-
-#### Resource datum
-
-- A [`xsd:anyURI`](???) value contains a URI pointing to a document or other type of resource file.  Example: an ICE [`analytical cytology data file`](http://purl.obolibrary.org/obo/OBI_0000210) specification ["https://onlinelibrary.wiley.com/doi/epdf/10.1002/cyto.990110303"](https://onlinelibrary.wiley.com/doi/epdf/10.1002/cyto.990110303)
-
-
 #### Scalar datum
 
 A specific numeric datatype can be indicated to capture the numeric type of a spreadsheet field for example.  Numeric datatypes are detailed in the [Numeric Datums](/docs/datatype-numeric/) section.  Also note the [measurement unit](/docs/data-properties/#measurement-units) description below. Suffice to say, the strings "20g", "20 grams", and "0.02kg" may differ by string comparison, but can be translated into identical value + unit atomic components: a decimal 20.0 and a "gram" mass unit.
@@ -46,6 +33,19 @@ A specific numeric datatype can be indicated to capture the numeric type of a sp
 ### Categorical value specification compatible
 
 A [`categorical value specification`](http://purl.obolibrary.org/obo/OBI_0001930) describes a categorical variable like color, which can match selections from a string list of terms, or from a branch of ontology terms (e.g. terms from a standardized color wheel).  See [docs/data-vs](docs/data-vs) for more details.
+
+#### Boolean datum
+
+- A [`xsd:boolean`](??) datum represents a yes/no or true/false value.  See [Boolean Datums](/docs/datatype-boolean/).
+
+#### String datum 
+
+- A [`xsd:string`](???) textual datum can at the very least be compared to other strings.  See [String Datums](/docs/datatype-string/).  Example: The (fictitious) [`Social Security Number`](http://purl.obolibrary.org/obo/NCIT_C25686) "000-11-2222", an identifier which serves a data matchmaking role, and which is for practical purposes atomic (although sub-sequences of 0's do signal fictitious records).
+
+#### Resource datum
+
+- A [`xsd:anyURI`](???) value contains a URI pointing to a document or other type of resource file.  Example: an ICE [`analytical cytology data file`](http://purl.obolibrary.org/obo/OBI_0000210) specification ["https://onlinelibrary.wiley.com/doi/epdf/10.1002/cyto.990110303"](https://onlinelibrary.wiley.com/doi/epdf/10.1002/cyto.990110303)
+
 
 
 ### Textual representation

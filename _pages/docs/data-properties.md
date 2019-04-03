@@ -28,7 +28,6 @@ A specific numeric datatype can be indicated to capture the numeric type of a sp
 
 - [`xsd:dateTime`](???)  for a datum containing a xsd:dateTime formatted date or time, or [`xsd:dateTimeStamp`](???), which includes time zone too.  Details are in [Date, Time, and Duration Datums](/docs/datatype-time/); examples of use are in the [Time stamped data](/docs/data-time-stamped/) section.
 
-[//]: #(### Scalar value specification compatible: OBI implementers may prefer to isolate the value data collected from assays from the [`measurement datum`](http://purl.obolibrary.org/obo/IAO_0000109) representation level of assay output.  OBI provides a [`has value specification`]() object property that points to a [`scalar value specification`](http://purl.obolibrary.org/obo/OBI_0001931) which can take on the same value and measurement unit label data and object properties as described above.  See [docs/data-vs](docs/data-vs) for more details.)
 
 ### Categorical value specification compatible
 
@@ -153,4 +152,8 @@ Multi-dimensional datums - time-stamped observations, or geographic lat/long loc
 ## Other metadata
 
 Other metadata may need to be marked e.g. how to deal with: “In some cases, a component is detected in the food matrix, but it cannot be quantified precisely. The analytical result can therefore be considered as ‘trace’” (see [here](https://ciqual.anses.fr/cms/sites/default/files/inline-files/TableCiqual2017_XML_docENG.pdf)). Another case is where a data item exists but has been obfuscated for privacy reasons.  OBI does not currently have a metadata standard that addresses these cases.
+
+
+DISCUSS:
+### Scalar value specification compatible: OBI implementers may prefer to isolate the value data collected from assays from the [`measurement datum`](http://purl.obolibrary.org/obo/IAO_0000109) representation level of assay output.  OBI provides a [`has value specification`]() object property that points to a [`scalar value specification`](http://purl.obolibrary.org/obo/OBI_0001931) which can take on the same value and measurement unit label data and object properties as described above.  See [docs/data-vs](docs/data-vs) for more details.
 

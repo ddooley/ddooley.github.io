@@ -1,0 +1,2634 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/anonymous/ontologies/obi-examples.owl#"
+     xml:base="http://www.semanticweb.org/anonymous/ontologies/obi-examples.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/anonymous/ontologies/obi-examples.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
+        <rdfs:label xml:lang="en">definition</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000117">
+        <rdfs:label xml:lang="en">term editor</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000054 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000054">
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-05T05:55:32Z</dc:date>
+        <rdfs:label xml:lang="en">realized in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000005 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000005">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000110"/>
+        <rdfs:comment>ISSUE: want to just reuse &apos;has time stamp&apos; but it is under transitive &apos;has part&apos; which means tha for composite datums, a sub-component time stamp value is inferred to be directly a part of the composite datum, which is a problem.</rdfs:comment>
+        <rdfs:label xml:lang="en">has datum time stamp</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000019 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000019">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
+        <rdfs:label xml:lang="en">has performer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000026 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000026">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:label xml:lang="en">has part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000027 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000027">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000026"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
+        <rdfs:label xml:lang="en">has measurement datum</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000040 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000040">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000109"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000095"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000312"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000293"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000999"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">Testing property chain - inferrs that the categorical unit choice being input to a measurement process yields a &apos;has unit&apos; association of output datum to that unit. Final version would need reflexive checks on appropriate input / output entities.
+
+is_specified_output_of o has_specified_input o &apos;has categorical choice&apos;</rdfs:comment>
+        <rdfs:label xml:lang="en">has unit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000054 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000054">
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-08T01:42:44Z</dc:date>
+        <rdfs:label xml:lang="en">participates in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000131 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000131">
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-09T02:42:03Z</dc:date>
+        <rdfs:label xml:lang="en">specifies value of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000141 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000141">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000110"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <owl:propertyDisjointWith rdf:resource="http://purl.obolibrary.org/obo/IAO_0000581"/>
+        <rdfs:comment>Like &apos;has measurement datum&apos; but can apply to predictions, settings, etc.
+
+Could possibly use &apos;has component&apos; since per defn. that isn&apos;t transitive... but it appears practically to be transitive as it is inheriting &quot;part of&quot; transitivity.
+
+Similar to &apos;has value specification&apos; but domain is ONLY composite datum.  There is no &quot;composite value specification&quot; currently as transitivity is confounding that.</rdfs:comment>
+        <rdfs:label xml:lang="en">has component</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000039 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000039">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000026"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
+        <rdfs:label xml:lang="en">has measurement unit label</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000136 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000136">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000312"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000293"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment>Testing aboutness inference - that the output of a process is about the input.
+
+is_specified_output_of o has_specified_input</rdfs:comment>
+        <rdfs:label xml:lang="en">is about</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000219 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000219">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">denotes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000221 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000221">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label xml:lang="en">is quality measurement of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000581 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000581">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000026"/>
+        <rdfs:comment>The IAO definition forces this to apply to measurement datum rather than generic datum.</rdfs:comment>
+        <rdfs:label xml:lang="en">has time stamp</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000293 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000293">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000295"/>
+        <rdfs:label xml:lang="en">has_specified_input</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000295 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000295">
+        <owl:equivalentProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+            </rdf:Description>
+        </owl:equivalentProperty>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000054"/>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-08T01:43:06Z</dc:date>
+        <rdfs:label xml:lang="en">is_specified_input_of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000299 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000299">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+        <rdfs:label xml:lang="en">has_specified_output</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000312 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000312">
+        <owl:equivalentProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
+            </rdf:Description>
+        </owl:equivalentProperty>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000054"/>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-08T01:42:53Z</dc:date>
+        <rdfs:label xml:lang="en">is_specified_output_of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000999 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000999">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000026"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:comment xml:lang="en">Like &quot;has category label&quot; but no &quot;categorical measurement datum&quot; for domain.  
+
+&quot;categorical datum&quot; can be INFERRED by &apos;has categorical choice&apos; eminating from a datum. Transitivity ok here?</rdfs:comment>
+        <rdfs:label xml:lang="en">has categorical choice</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0001938 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0001938">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000026"/>
+        <rdfs:label xml:lang="en">has value specification</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000052 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000052">
+        <rdfs:label xml:lang="en">inheres in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000053 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000053">
+        <rdfs:label xml:lang="en">bearer of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000057 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000057">
+        <rdfs:label xml:lang="en">has participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000086 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000086">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <rdfs:label xml:lang="en">has quality</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000087 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000087">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <rdfs:label xml:lang="en">has role</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0001025 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001025">
+        <rdfs:label xml:lang="en">located in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002351 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002351">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000026"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:label xml:lang="en">has member</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000403 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/STATO_0000403">
+        <rdfs:comment xml:lang="en">A STATO object property where datum approximates the quality or phenomena being measured. (Could be sub-property of &apos;is about&apos; ?)</rdfs:comment>
+        <rdfs:label xml:lang="en">estimate of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000002 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000002">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</xsd:minInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">An example data property which is NOT present in OBI, and not advocated.</rdfs:comment>
+        <rdfs:label xml:lang="en">has age</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000006 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000006">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000002"/>
+        <rdfs:comment xml:lang="en">An example data property which is NOT present in OBI, and not advocated.</rdfs:comment>
+        <rdfs:label xml:lang="en">has age since birth</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000007 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000007">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000002"/>
+        <rdfs:comment xml:lang="en">An example data property which is NOT present in OBI, and not advocated.</rdfs:comment>
+        <rdfs:label xml:lang="en">has age since fertilization</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000009 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000009">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <owl:propertyDisjointWith rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000078"/>
+        <rdfs:label xml:lang="en">has literal value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000078 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000078">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <obo:IAO_0000115 xml:lang="en">&apos;has textual representation&apos; attaches between a datum and a string value that contains linguistically or computationally coded text from which the datum can be derived.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">has textual representation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0001937 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0001937">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0002135"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/OBI_0001933"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+        <rdfs:label xml:lang="en">has specified numeric value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0002135 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0002135">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/OBI_0001933"/>
+        <rdfs:label xml:lang="en">has specified value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-09T02:37:57Z</dc:date>
+        <rdfs:label xml:lang="en">disposition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000017 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000017">
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-05T05:49:36Z</dc:date>
+        <rdfs:label xml:lang="en">realizable entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000019">
+        <rdfs:label xml:lang="en">quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000023 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000023">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-05T05:49:55Z</dc:date>
+        <rdfs:label xml:lang="en">role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000040 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000040">
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-09T02:36:05Z</dc:date>
+        <rdfs:label xml:lang="en">material entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHMO_0002354 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHMO_0002354">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000070"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000004"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="en">pH measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_11166 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_11166">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-08T09:33:22Z</dc:date>
+        <rdfs:label xml:lang="en">papilomavirus infectious disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000065"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000040"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000196"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000009"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14.0</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The pH unit isn&apos;t necessary if something has been declaired a pH datum.</rdfs:comment>
+        <rdfs:label xml:lang="en">pH datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000010">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000065"/>
+        <rdfs:comment>Subclass datums have no unit.</rdfs:comment>
+        <rdfs:label xml:lang="en">count datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000011">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000044"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000066"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000107"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000119"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000148"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000149"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCIT_C16358"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000065"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000040"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000095"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">This datum has either a number or a datetime value as well as a unit that is one of one of the SI unit dimensions or a composite thereof.
+
+Closing off this class speeds up reasoning.</rdfs:comment>
+        <rdfs:label xml:lang="en">dimensional unit datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000013 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000013">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001066"/>
+        <rdfs:label xml:lang="en">ACME Precision Balance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000014 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000014">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000445"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000019"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000013"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000025"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000018"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Testing 
+
+subClassOf:
+
+has_specified_input some &apos;ounce / gram unit setting&apos;
+has_specified_output some &apos;ACME™ precision balance datum&apos;
+&apos;has performer&apos; some &apos;ACME Precision Balance&apos;</rdfs:comment>
+        <rdfs:label xml:lang="en">ACME precision balance assay</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000018 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000018">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000414"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000014"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Does this lead to circular / wasteful reasoning?
+
+&apos;mass measurement datum&apos;
+ and (is_specified_output_of some &apos;ACME precision balance assay&apos;)</rdfs:comment>
+        <rdfs:label xml:lang="en">ACME™ precision balance datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000025 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000025">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000140"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000999"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000020"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000021"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000140"/>
+        <rdfs:comment xml:lang="en">Testing: It appears to be a burden on reasoner to put the settings into an equivalence statement:
+
+equivalentTo
+&apos;setting datum&apos;
+ and &apos;has categorical choice&apos; some { gram , ounce}</rdfs:comment>
+        <rdfs:label xml:lang="en">ounce / gram unit setting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000044 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000044">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000040"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000002"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000009"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000011"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000125"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">mass datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000065 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000065">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000109"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000009"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+                                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+                                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+                                    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#real"/>
+                                </owl:unionOf>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Note: in equivalency expression, owl:real doesn&apos;t seem to cover xsd:decimal; had to add xsd:decimal to allow decimal, integer datums to be covered.</rdfs:comment>
+        <rdfs:label xml:lang="en">scalar datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000066 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000066">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000009"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+                        </owl:unionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000011"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000040"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000003"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>There are other types of unit for time besides year/month/week/day/hour/minute/second/millisecond?  Quartz vibration?  Solar revolutions?  Moon revolutions?</rdfs:comment>
+        <rdfs:label xml:lang="en">time calendar datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000069 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000069">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000119"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000011"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="en">age datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000070 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000070">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000069"/>
+        <rdfs:label xml:lang="en">age since birth datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000071 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000071">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000069"/>
+        <rdfs:label xml:lang="en">age since fertilization datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000095 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000095">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000009"/>
+        <rdfs:label xml:lang="en">unit label</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000096 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000096">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000027"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000999"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:label xml:lang="en">categorical entity datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000107 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000107">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000040"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000001"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000009"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000011"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000122"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">length datum</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000107"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000122"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Not saying &apos;is quality measurement of&apos; here because aboutness doesn&apos;t necessarily involve a measurement process.  Could be a prediction.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000109 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000109">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000027"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000009"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000110"/>
+        <obo:IAO_0000115 xml:lang="en">An atomic literal datum is a datum having a single value whose data type conforms to the OWL rdfs:Literal datatype scheme.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">atomic literal datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000110 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000110">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000027"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000141"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000115 xml:lang="en">A composite datum is a datum that has one or more atomic or composite datums as parts.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">composite datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000111 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000111">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000009"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000109"/>
+        <rdfs:label xml:lang="en">string datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000112 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000112">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_40674"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">body fat ratio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000113 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000113">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000070"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000107"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="en">length measurement assay</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000114 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000114">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0200000"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000044"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000107"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCIT_C16358"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">BMI calculation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000118 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000118">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000109"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000009"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Illustrates how to infer a datum class by value xsd:datatype</rdfs:comment>
+        <rdfs:label xml:lang="en">resource URI datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000119 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000119">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000040"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000003"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000009"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000011"/>
+        <rdfs:label xml:lang="en">time duration datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000129 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000129">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001933"/>
+        <rdfs:comment xml:lang="en">This is essentially equivalent to &quot;dimensional unit datum&quot;
+
+Tried adding equivalency that would catch both integer and decimal values but only decimal values get through due to integer subClass somehow.</rdfs:comment>
+        <rdfs:label xml:lang="en">scalar value specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000136 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000136">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000009"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000140"/>
+        <rdfs:comment xml:lang="en">This is just experimental.  Its purpose is to determine which xsd:integers reasoners will infer.
+
+The test on xsd:integer is causing OWL to look at &apos;has literal value&apos; to see if it fits integer without any conversion loss, i.e. no decimal point in number.</rdfs:comment>
+        <rdfs:label xml:lang="en">integer datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000139 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000139">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000009"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000140"/>
+        <rdfs:comment>This is just experimental.  OWL is checking to see which atomic datum &apos;has literal value&apos; numbers include a decimal point; those that don&apos;t are integers and are filtered out. 
+
+One can also manually declare a datum to be numeric, decimal or integer.</rdfs:comment>
+        <rdfs:label xml:lang="en">decimal datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000140 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000140">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000136"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000139"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000065"/>
+        <rdfs:comment>This is just experimental.  Testing
+
+Due to integer subClass of decimal, the integer instances aren&apos;t being listed here I think.</rdfs:comment>
+        <rdfs:label xml:lang="en">numeric datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000143 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000143">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000110"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000581"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000066"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000110"/>
+        <rdfs:label xml:lang="en">time stamped datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000147 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000147">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000110"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000141"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000148"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000141"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000149"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000110"/>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-09T06:46:30Z</dc:date>
+        <rdfs:label xml:lang="en">geolocation datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000148 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000148">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000011"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000040"/>
+                <owl:hasValue rdf:resource="http://purl.obolibrary.org/obo/UO_0000185"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-09T06:48:26Z</dc:date>
+        <rdfs:label xml:lang="en">latitude coordinate datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000149 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000149">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000011"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000040"/>
+                <owl:hasValue rdf:resource="http://purl.obolibrary.org/obo/UO_0000185"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">longitude coordinate datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000156 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000156">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000109"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000009"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Illustrates how to infer a datum class by value xsd:datatype</rdfs:comment>
+        <rdfs:label xml:lang="en">boolean datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000003">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000095"/>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000040"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="en">measurement unit label</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:label xml:lang="en">datum label</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000027 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000027">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:label xml:lang="en">data item</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000028 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000028">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:label xml:lang="en">symbol</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000030">
+        <rdfs:label xml:lang="en">information content entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000032 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000032">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000065"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000109"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
+        <rdfs:label xml:lang="en">scalar measurement datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000109 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000109">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000027"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000070"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:label xml:lang="en">measurement datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000140 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000140">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:comment>Can&apos;t just say &quot;&apos;data item&apos; and (is_specified_input_of some assay) &quot; since that gets analyte confused with setting.</rdfs:comment>
+        <rdfs:label xml:lang="en">setting datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000414 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000414">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000044"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000109"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000221"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000125"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000445"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">mass measurement datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000416 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000416">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000066"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000109"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="en">time measurement datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000422 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000422">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000577"/>
+        <rdfs:label>postal address</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000429 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000429">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000577"/>
+        <rdfs:label>email address</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000577 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000577">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000028"/>
+        <rdfs:label>centrally registered identifier symbol</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_40674 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_40674">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000002"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Mammalia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_9606 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_9606">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_40674"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25690"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Homo sapiens</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C16358 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C16358">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000011"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000040"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000086"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/STATO_0000403"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000112"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Body Mass Index</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C25191 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C25191">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000577"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000219"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Person Name</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C25686 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C25686">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000577"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000219"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Social Security Number</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C25690 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C25690">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000577"/>
+        <rdfs:label xml:lang="en">Street Address</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000011">
+        <rdfs:label xml:lang="en">planned process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000067 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000067">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:label xml:lang="en">evaluant role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000070 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000070">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHMO_0002354"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000113"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000445"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
+        <rdfs:comment xml:lang="en">Closing off assay really speeds up reasoning. This would have to be relaxed though to enable other ontologies to position their own assay terms.</rdfs:comment>
+        <rdfs:label xml:lang="en">assay</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000445 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000445">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000070"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000044"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="en">mass measurement assay</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0001066 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001066">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:label xml:lang="en">top loading balance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0001167 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001167">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000069"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000109"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="en">age measurement datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0001168 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001168">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001167"/>
+        <rdfs:label xml:lang="en">age since fertilization measurement datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0001169 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001169">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001167"/>
+        <rdfs:label xml:lang="en">age since birth measurement datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0001929 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001929">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000129"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000131"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000125"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">mass value specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0001933 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001933">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:label xml:lang="en">value specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0200000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0200000">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
+        <rdfs:label xml:lang="en">data transformation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0302867 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0302867">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000027"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0302910"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:label xml:lang="en">predicted data item</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0302910 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0302910">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
+        <rdfs:label xml:lang="en">prediction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OGMS_0000031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000031">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-08T09:32:23Z</dc:date>
+        <rdfs:label xml:lang="en">disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OGMS_0000073 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000073">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:label xml:lang="en">diagnosis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OGMS_0000104 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000104">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
+        <rdfs:label xml:lang="en">diagnostic process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000011">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001237"/>
+        <rdfs:label xml:lang="en">age</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000047 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000047">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001995"/>
+        <rdfs:label xml:lang="en">biological sex</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000122 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000122">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label xml:lang="en">length</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000125 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000125">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label xml:lang="en">mass</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000383 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000383">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000047"/>
+        <rdfs:label xml:lang="en">female</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000384 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000384">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000047"/>
+        <rdfs:label xml:lang="en">male</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001237 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001237">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label xml:lang="en">quality of a single entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001309 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001309">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label xml:lang="en">duration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001340 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001340">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000047"/>
+        <rdfs:label xml:lang="en">hermaphrodite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001995 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001995">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label xml:lang="en">organismal quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0002201 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002201">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0002202 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002202">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002201"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0002203 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002203">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002201"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0002204 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002204">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002201"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000465 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000465">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:label xml:lang="en">material anatomical entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000970 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000970">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000465"/>
+        <rdfs:label xml:lang="en">eye</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UO_0000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000095"/>
+        <rdfs:label xml:lang="en">length unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UO_0000002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000095"/>
+        <rdfs:label xml:lang="en">mass unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UO_0000003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000095"/>
+        <rdfs:label xml:lang="en">time unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000086 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UO_0000086">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000095"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000122 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UO_0000122">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000095"/>
+        <rdfs:label xml:lang="en">plane angle unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000196 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UO_0000196">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000095"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000000 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000000">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+        <obo:RO_0001025 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000422/EXAMPLE_00000001"/>
+        <obo:EXAMPLE_00000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12</obo:EXAMPLE_00000002>
+        <obo:EXAMPLE_00000006 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12</obo:EXAMPLE_00000006>
+        <obo:EXAMPLE_00000007 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19</obo:EXAMPLE_00000007>
+        <rdfs:label xml:lang="en">Lee</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000001 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000001">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000429"/>
+        <rdfs:label xml:lang="en">Lee email address</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000003 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000003">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+        <obo:RO_0000086 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000042"/>
+        <obo:RO_0000086 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000108"/>
+        <rdfs:label xml:lang="en">John</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000015 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000015">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0000445"/>
+        <obo:OBI_0000293 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000003"/>
+        <obo:OBI_0000299 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000041"/>
+        <rdfs:label xml:lang="en">John mass measurement assay</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000016 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000016">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25191"/>
+        <obo:IAO_0000219 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000000"/>
+        <obo:EXAMPLE_00000009 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lee Helmholz</obo:EXAMPLE_00000009>
+        <rdfs:label xml:lang="en">Lee full name</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000017 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000017">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25686"/>
+        <obo:IAO_0000219 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000000"/>
+        <obo:EXAMPLE_00000009 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">000 56 7890</obo:EXAMPLE_00000009>
+        <rdfs:label xml:lang="en">Lee SSN</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000020 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000020">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/UO_0000002"/>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-02T20:53:03Z</dc:date>
+        <rdfs:label xml:lang="en">gram</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000021 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000021">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/UO_0000002"/>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-02T20:53:10Z</dc:date>
+        <rdfs:label xml:lang="en">ounce</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000023 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000023">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0001168"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000000"/>
+        <obo:EXAMPLE_00000009 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.4</obo:EXAMPLE_00000009>
+        <rdfs:label xml:lang="en">Lee fertilization age</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000024 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000024">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000070"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000000"/>
+        <obo:EXAMPLE_00000009 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</obo:EXAMPLE_00000009>
+        <rdfs:comment>Issue: we can&apos;t categorize this as a time measurement datum because time measurement datums don&apos;t include duration.</rdfs:comment>
+        <rdfs:label xml:lang="en">Lee birth age</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000029 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000029">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000018"/>
+        <obo:EXAMPLE_00000009 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70000</obo:EXAMPLE_00000009>
+        <rdfs:comment xml:lang="en">If one activates the property chains for &apos;has unit&apos; and &apos;is about&apos;, one will see inferences of both here. However, its a bit odd that &apos;is about&apos; inferences appear equally about John, and about the &apos;ACME balance unit setting&apos;, though technically true!</rdfs:comment>
+        <rdfs:label xml:lang="en">ACME balance datum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000030 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000030">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000014"/>
+        <obo:EXAMPLE_00000019 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000031"/>
+        <obo:OBI_0000293 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000003"/>
+        <obo:OBI_0000293 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000037"/>
+        <obo:OBI_0000299 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000029"/>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-05T05:40:45Z</dc:date>
+        <rdfs:label xml:lang="en">ACME balance process</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000031 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000031">
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-05T05:44:39Z</dc:date>
+        <rdfs:label xml:lang="en">ACME Precision Balance #1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000035 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000035">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0000067"/>
+        <obo:BFO_0000054 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000030"/>
+        <obo:RO_0000052 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000003"/>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-05T05:53:42Z</dc:date>
+        <rdfs:label xml:lang="en">ACME evaluant role</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000037 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000037">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000025"/>
+        <obo:OBI_0000999 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000020"/>
+        <rdfs:label xml:lang="en">ACME balance unit setting</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000041 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000041">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000044"/>
+        <obo:EXAMPLE_00000040 rdf:resource="http://purl.obolibrary.org/obo/UO_0000009"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000042"/>
+        <obo:EXAMPLE_00000009 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70.0</obo:EXAMPLE_00000009>
+        <obo:EXAMPLE_00000078 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">70 kilograms</obo:EXAMPLE_00000078>
+        <obo:EXAMPLE_00000078>heavy guy</obo:EXAMPLE_00000078>
+        <rdfs:label xml:lang="en">John mass datum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000042 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000042">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label xml:lang="en">John mass quality</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000080 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000080">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+        <rdfs:label xml:lang="en">patient 1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000081 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000081">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000577"/>
+        <obo:IAO_0000219 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000080"/>
+        <rdfs:label xml:lang="en">ID #12345</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000082 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000082">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBI_0000070"/>
+        <obo:OBI_0000293 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000080"/>
+        <rdfs:label xml:lang="en">patient 1 assay</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000084 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000084">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000104"/>
+        <obo:EXAMPLE_00000026 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000082"/>
+        <obo:OBI_0000299 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000085"/>
+        <rdfs:label xml:lang="en">patient 1 diagnostic process</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000085 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000085">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000073"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000086"/>
+        <rdfs:label xml:lang="en">patient 1 diagnosis</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000086 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000086">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/DOID_11166"/>
+        <obo:RO_0000052 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000080"/>
+        <rdfs:label xml:lang="en">patient 1 papilomavirus infectious disease</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000089 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000089">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000069"/>
+        <obo:EXAMPLE_00000040 rdf:resource="http://purl.obolibrary.org/obo/UO_0000036"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000000"/>
+        <obo:EXAMPLE_00000009 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12</obo:EXAMPLE_00000009>
+        <rdfs:label xml:lang="en">Lee age datum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000090 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000090">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+        <rdfs:label xml:lang="en">Lee baby</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000091 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000091">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000070"/>
+        <obo:EXAMPLE_00000040 rdf:resource="http://purl.obolibrary.org/obo/UO_0000035"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000090"/>
+        <obo:EXAMPLE_00000009 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</obo:EXAMPLE_00000009>
+        <rdfs:label xml:lang="en">Lee baby age since birth datum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000092 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000092">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000071"/>
+        <obo:EXAMPLE_00000040 rdf:resource="http://purl.obolibrary.org/obo/UO_0000035"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000090"/>
+        <obo:EXAMPLE_00000009 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19</obo:EXAMPLE_00000009>
+        <rdfs:label xml:lang="en">Lee baby age since fertilization datum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000104 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000104">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000004"/>
+        <obo:EXAMPLE_00000009 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12</obo:EXAMPLE_00000009>
+        <rdfs:label xml:lang="en">pH datum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000105 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000105">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/CHMO_0002354"/>
+        <obo:OBI_0000299 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000104"/>
+        <rdfs:label xml:lang="en">pH assay</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000106 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000106">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000107"/>
+        <obo:EXAMPLE_00000040 rdf:resource="http://purl.obolibrary.org/obo/UO_0000008"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000108"/>
+        <obo:EXAMPLE_00000009 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.53</obo:EXAMPLE_00000009>
+        <rdfs:label xml:lang="en">John length datum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000108 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000108">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/PATO_0000122"/>
+        <rdfs:label xml:lang="en">john length quality</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000115 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000115">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000114"/>
+        <obo:OBI_0000293 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000041"/>
+        <obo:OBI_0000293 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000106"/>
+        <obo:OBI_0000299 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000117"/>
+        <rdfs:label xml:lang="en">John BMI calculation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000117 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000117">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCIT_C16358"/>
+        <obo:EXAMPLE_00000040 rdf:resource="http://purl.obolibrary.org/obo/UO_0000086"/>
+        <obo:STATO_0000403 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000134"/>
+        <obo:EXAMPLE_00000009 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29.9</obo:EXAMPLE_00000009>
+        <rdfs:label xml:lang="en">John BMI datum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000123 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000123">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+        <rdfs:label xml:lang="en">Srin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000134 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000134">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000112"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000003"/>
+        <rdfs:label xml:lang="en">John body fat ratio</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000144 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000144">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000143"/>
+        <obo:EXAMPLE_00000005 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000145"/>
+        <obo:EXAMPLE_00000141 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000146"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000123"/>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damion Dooley</obo:IAO_0000117>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-09T06:32:54Z</dc:date>
+        <rdfs:label xml:lang="en">Srin time stamped datum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000145 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000145">
+        <obo:EXAMPLE_00000009 rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-01T00:00:00</obo:EXAMPLE_00000009>
+        <rdfs:comment xml:lang="en">Shows inference of time calendar datum</rdfs:comment>
+        <rdfs:label xml:lang="en">Srin time datum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000146 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000146">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000107"/>
+        <obo:EXAMPLE_00000040 rdf:resource="http://purl.obolibrary.org/obo/UO_0000008"/>
+        <obo:EXAMPLE_00000009 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.1</obo:EXAMPLE_00000009>
+        <rdfs:label xml:lang="en">Srin height datum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000150 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000150">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000110"/>
+        <obo:EXAMPLE_00000005 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000153"/>
+        <obo:EXAMPLE_00000141 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000151"/>
+        <obo:EXAMPLE_00000141 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000152"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000123"/>
+        <rdfs:comment xml:lang="en">Illustrates inference of geolocation datum</rdfs:comment>
+        <rdfs:label xml:lang="en">Srin geolocation datum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000151 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000151">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000148"/>
+        <obo:EXAMPLE_00000009 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">49.2827</obo:EXAMPLE_00000009>
+        <rdfs:label xml:lang="en">Srin geolocation latitude</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000152 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000152">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000149"/>
+        <obo:EXAMPLE_00000009 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">123.1207</obo:EXAMPLE_00000009>
+        <rdfs:label xml:lang="en">Srin geolocation longitude</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000153 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000153">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000066"/>
+        <obo:EXAMPLE_00000040 rdf:resource="http://purl.obolibrary.org/obo/UO_0000010"/>
+        <obo:EXAMPLE_00000009 rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-01T00:00:00</obo:EXAMPLE_00000009>
+        <rdfs:label xml:lang="en">Srin geolocation time</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000155 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000155">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000109"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000123"/>
+        <obo:EXAMPLE_00000009 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</obo:EXAMPLE_00000009>
+        <rdfs:comment xml:lang="en">Simple boolean datum example about whether Srin has had tonsil removed or not. Here type is &apos;atomic literal datum&apos; just to show that &apos;boolean datum&apos; is inferred in this case.</rdfs:comment>
+        <rdfs:label xml:lang="en">Srin tonsil present datum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/EXAMPLE_00000157 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000157">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+        <obo:RO_0000086 rdf:resource="http://purl.obolibrary.org/obo/PATO_0002202"/>
+        <rdfs:label xml:lang="en">Sami</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0002201 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/PATO_0002201">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0002202 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/PATO_0002202">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/PATO_0002201"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0002203 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/PATO_0002203">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/PATO_0002201"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0002204 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/PATO_0002204">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/PATO_0002201"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000008 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000008">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/UO_0000001"/>
+        <rdfs:label xml:lang="en">meter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000009 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000009">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/UO_0000002"/>
+        <rdfs:label xml:lang="en">kilogram</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000010 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000010">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/UO_0000003"/>
+        <rdfs:label xml:lang="en">second</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000035 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000035">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/UO_0000003"/>
+        <rdfs:label xml:lang="en">month</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000036 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000036">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/UO_0000003"/>
+        <rdfs:label xml:lang="en">year</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000086 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000086">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/UO_0000086"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000185 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000185">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/UO_0000122"/>
+        <rdfs:label xml:lang="en">degree</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000196 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000196">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/UO_0000196"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000422/EXAMPLE_00000001 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000422/EXAMPLE_00000001">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25690"/>
+        <obo:EXAMPLE_00000078 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">123 Aderondac Ave</obo:EXAMPLE_00000078>
+        <rdfs:label xml:lang="en">Lee street address</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002201">
+        <rdfs:label xml:lang="en">handedness</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002202">
+        <rdfs:label xml:lang="en">left handedness</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002203">
+        <rdfs:label xml:lang="en">right handedness</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002204">
+        <rdfs:label xml:lang="en">ambidextrous handedness</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000086">
+        <rdfs:label xml:lang="en">kilogram per square meter</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000196">
+        <rdfs:label xml:lang="en">pH</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHMO_0002354"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000113"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000445"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000044"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000066"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000107"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000119"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000148"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000149"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCIT_C16358"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000065"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000111"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000118"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000156"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000414"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000416"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0001167"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_40674"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0001066"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UBERON_0000465"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000001"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000002"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000003"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000086"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000196"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000000"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000003"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000080"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000090"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000123"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000157"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000020"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/EXAMPLE_00000021"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000009"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+

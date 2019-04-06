@@ -185,7 +185,7 @@ Similar to &apos;has value specification&apos; but domain is ONLY composite datu
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000312"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000293"/>
         </owl:propertyChainAxiom>
-        <rdfs:comment>Testing aboutness inference - that the output of a process is about the input.
+        <rdfs:comment xml:lang="en">Testing aboutness inference. Can state that the output of a process is about the input BUT need to guarantee that the input is a material thing through reflexive relation or else &apos;is about&apos; range breaks.
 
 is_specified_output_of o has_specified_input</rdfs:comment>
         <rdfs:label xml:lang="en">is about</rdfs:label>
@@ -615,7 +615,9 @@ is_specified_output_of o has_specified_input</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/EXAMPLE_00000095"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">This datum has either a number or a datetime value as well as a unit that is one of one of the SI unit dimensions or a composite thereof.
+        <rdfs:comment xml:lang="en">This is pretty close to the current OBI scalar value specification, but it includes time.
+
+This datum has either a number or a datetime value as well as a unit that is one of one of the SI unit dimensions or a composite thereof.
 
 Closing off this class speeds up reasoning.</rdfs:comment>
         <rdfs:label xml:lang="en">dimensional unit datum</rdfs:label>
